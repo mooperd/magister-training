@@ -1,0 +1,1356 @@
+{
+  "metadata": {
+    "source": "NICE HTG352",
+    "title": "Total prosthetic replacement of the temporomandibular joint",
+    "published": "2014-08-27",
+    "supersedes": "IPG500",
+    "migrated": "2026-01-01 (IPG500 → HTG352)",
+    "specialty": ["Oral and Maxillofacial Surgery", "TMJ Surgery"],
+    "specialty_societies": [
+      "British Association of TMJ Surgeons",
+      "British Association of Oral and Maxillofacial Surgeons"
+    ],
+    "nice_recommendation_tier": "normal_arrangements",
+    "evidence_tier": "adequate",
+    "graph_version": "1.0",
+    "graph_created": "2026-05-28",
+    "total_patients_in_evidence": 3936,
+    "evidence_studies": "1 non-randomised comparative study, 6 case series",
+    "uk_national_registry": "British Association of TMJ Surgeons UK register (NICE mandates submission)"
+  },
+  "nodes": [
+    {
+      "id": "tmj_total_replacement",
+      "type": "INTERVENTION",
+      "label": "Total prosthetic replacement of the temporomandibular joint",
+      "aliases": [
+        "TMJ TJR", "total joint replacement TMJ", "alloplastic TMJ replacement",
+        "HTG352 procedure", "IPG500"
+      ],
+      "properties": {
+        "definition": "Replacement of BOTH the fossa (skull base socket) AND the mandibular condyle with prostheses",
+        "distinction": "Total = both components; partial/hemi = only condyle or fossa alone",
+        "indication_threshold": "When alternative treatments have failed",
+        "aims": ["re-establish TMJ function", "relieve pain"],
+        "nice_recommendation": "adequate_evidence_normal_arrangements",
+        "anaesthesia": "general anaesthesia",
+        "incisions": [
+          "Pre-auricular incision for fossa component",
+          "Submandibular or retromandibular incision for condylar component"
+        ],
+        "optional_concurrent_procedure": "Coronoidectomy (coronoid process removal) sometimes performed to improve post-operative mobility",
+        "prosthesis_types": ["stock (off-the-shelf)", "custom (patient-specific)"],
+        "specialist_adviser_view": "Established practice, no longer new",
+        "ukpractice": "16 surgeons submitting data to BAOMS database at time of guidance; only 5 doing >10/year"
+      }
+    },
+    {
+      "id": "tmj_joint",
+      "type": "ANATOMICAL_STRUCTURE",
+      "label": "Temporomandibular joint",
+      "aliases": ["TMJ", "jaw joint", "craniomandibular joint"],
+      "properties": {
+        "components": ["mandibular condyle", "articular fossa (glenoid fossa of temporal bone)", "articular disc", "joint capsule", "ligaments"],
+        "function": "Hinge and gliding joint allowing mouth opening, closing, chewing, speech",
+        "unique_features": "Bilateral joint - the only bilateral joint in the body where both sides must function in concert",
+        "replaced_components": "Fossa (skull base) + condyle (mandible) in total replacement"
+      }
+    },
+    {
+      "id": "mandibular_condyle",
+      "type": "ANATOMICAL_STRUCTURE",
+      "label": "Mandibular condyle",
+      "aliases": ["condylar head", "condyle", "mandibular condyle component"],
+      "properties": {
+        "location": "Superior process of the mandibular ramus, articulating with the temporal bone",
+        "pathology": ["condylar resorption", "avascular necrosis", "ankylosis", "fracture", "erosion from arthritis"],
+        "replaced_by": "Mandibular component of TMJ prosthesis",
+        "access": "Submandibular or retromandibular incision"
+      }
+    },
+    {
+      "id": "articular_fossa",
+      "type": "ANATOMICAL_STRUCTURE",
+      "label": "Articular fossa (glenoid fossa)",
+      "aliases": ["TMJ socket", "temporal fossa", "skull base component", "fossa component"],
+      "properties": {
+        "location": "Concavity in the temporal bone of the skull, anterior to external auditory meatus",
+        "inferior_relation": "Middle cranial fossa structures lie just superior",
+        "replaced_by": "Fossa component of TMJ prosthesis",
+        "access": "Pre-auricular incision",
+        "risk_of_damage": "Middle cranial fossa structures - only at risk after erosion from disease process (specialist adviser)"
+      }
+    },
+    {
+      "id": "coronoid_process",
+      "type": "ANATOMICAL_STRUCTURE",
+      "label": "Coronoid process of the mandible",
+      "aliases": ["coronoid process", "coronoid"],
+      "properties": {
+        "location": "Anterior projection of the mandibular ramus",
+        "function": "Insertion of temporalis muscle",
+        "removal_indication": "Coronoidectomy performed during TJR to allow greater post-operative mouth opening mobility",
+        "incidence_in_evidence": "7/74 patients had coronoidectomy at time of procedure (Sidebottom 2013)"
+      }
+    },
+    {
+      "id": "facial_nerve_temporal_branch",
+      "type": "ANATOMICAL_STRUCTURE",
+      "label": "Temporal branch of facial nerve",
+      "aliases": ["temporal branch CN VII", "frontal branch facial nerve"],
+      "properties": {
+        "function": "Motor: frontalis muscle (brow elevation), corrugator supercilii, orbicularis oculi (partial)",
+        "at_risk_during": "Pre-auricular dissection for fossa component insertion",
+        "injury_incidence": "31% (23/74) temporary weakness in Sidebottom 2013",
+        "resolution": "22/23 resolved within 6 months; 1 needed brow lift (long-term)",
+        "tacit": "31% is an extremely high nerve injury rate by any surgical standard. This must be disclosed prominently in consent and should be contextualised: temporary weakness is almost universal and expected to resolve, but long-term weakness (with brow lift requirement) does occur."
+      }
+    },
+    {
+      "id": "facial_nerve_marginal_mandibular",
+      "type": "ANATOMICAL_STRUCTURE",
+      "label": "Marginal mandibular branch of facial nerve",
+      "aliases": ["marginal mandibular branch", "lower facial nerve branch"],
+      "properties": {
+        "function": "Motor: depressor anguli oris, depressor labii inferioris (lower lip and mouth corner depression)",
+        "at_risk_during": "Submandibular incision for condylar component insertion",
+        "injury_incidence": "11% (8/74) temporary palsy in Sidebottom 2013",
+        "resolution": "7/8 by 6 weeks; remaining patient by 6 months"
+      }
+    },
+    {
+      "id": "auriculotemporal_nerve",
+      "type": "ANATOMICAL_STRUCTURE",
+      "label": "Auriculotemporal nerve",
+      "aliases": ["auriculotemporal nerve", "AT nerve"],
+      "properties": {
+        "type": "Branch of mandibular nerve (CN V3)",
+        "function": "Sensory: skin of temporal region, external ear, and TMJ; parasympathetic relay to parotid",
+        "at_risk_during": "TMJ surgery - nerve passes around neck of mandible",
+        "injury_incidence": "Long-term (permanent) sensory loss in 14% (10/74) in Sidebottom 2013",
+        "permanence": "PERMANENT in most reported cases",
+        "tacit": "14% permanent auriculotemporal nerve sensory loss is the most clinically significant long-term nerve complication because it is not transient. Patients experience numbness over the temporal region and anterior external ear. This is frequently underemphasised in consent compared to the more dramatic (but usually temporary) facial nerve weakness."
+      }
+    },
+    {
+      "id": "external_carotid_artery",
+      "type": "ANATOMICAL_STRUCTURE",
+      "label": "External carotid artery (terminal branches)",
+      "aliases": ["external carotid", "ECA terminal branches", "maxillary artery", "superficial temporal artery"],
+      "properties": {
+        "at_risk": "Bleeding during TMJ surgery can require ligation of terminal branches",
+        "documented_case": "1/74 patients required neck opening to ligate terminal branches (Sidebottom 2013)",
+        "clinical_consequence": "Major intraoperative haemorrhage requiring escalation to cervical approach"
+      }
+    },
+    {
+      "id": "tmj_disorder",
+      "type": "CONDITION",
+      "label": "Temporomandibular joint disorder",
+      "aliases": ["TMD", "TMJ disease", "temporomandibular disorder"],
+      "properties": {
+        "causes": [
+          "Inflammatory arthritis (rheumatoid, psoriatic, ankylosing spondylitis)",
+          "Degenerative arthritis / osteoarthritis",
+          "Condylar resorption",
+          "Trauma (fractures, ankylosis)",
+          "Infection",
+          "Complications of previous surgery",
+          "Congenital skeletal deformity",
+          "Avascular necrosis",
+          "Malignancy / benign neoplasm",
+          "Failed previous implant"
+        ],
+        "gender_predominance": "Predominantly female (88-93% across studies)",
+        "typical_age": "Mean 40-47 years at time of TJR"
+      }
+    },
+    {
+      "id": "tmj_ankylosis",
+      "type": "CONDITION",
+      "label": "TMJ ankylosis",
+      "aliases": ["bony ankylosis", "fibrous ankylosis", "TMJ fusion"],
+      "properties": {
+        "definition": "Fusion of condyle to fossa - bony (true ankylosis) or fibrous (fibrous adhesions)",
+        "consequence": "Severely restricted or absent mouth opening",
+        "mio_at_presentation": "Often <20mm; as low as 10-15mm",
+        "prevalence_in_series": "Major indication in Lobo Leandro n=300 (171/300 with ankylosis) and Loveless 2010 (all patients had documented bony or fibrous ankylosis)",
+        "tacit": "Ankylosis patients have often been operated on multiple times before reaching TJR. Each prior operation increases scar tissue and makes the next surgery more difficult. Mean previous operations in Loveless TJR group = 3.7. This history of multiple prior procedures is the defining feature of the TJR patient population."
+      }
+    },
+    {
+      "id": "condylar_resorption",
+      "type": "CONDITION",
+      "label": "Condylar resorption",
+      "aliases": ["idiopathic condylar resorption", "progressive condylar resorption", "ICR"],
+      "properties": {
+        "definition": "Progressive loss of condylar bone volume",
+        "associations": ["young females", "autoimmune conditions", "post-orthognathic surgery"],
+        "consequence": "Anterior open bite, retrognathia, TMJ pain, limited opening",
+        "prevalence_in_series": "45/300 in Lobo Leandro; 11 had prior orthognathic surgery"
+      }
+    },
+    {
+      "id": "wilkes_classification",
+      "type": "CLINICAL_SCALE",
+      "label": "Wilkes classification of TMJ pathology",
+      "aliases": ["Wilkes staging", "Wilkes class"],
+      "properties": {
+        "stages": {
+          "I": "Painless clicking, no restricted motion",
+          "II": "Occasional painful clicking, intermittent locking, headache",
+          "III": "Frequent pain, joint tenderness, headache, locking, restricted motion, painful chewing",
+          "IV": "Chronic pain, headache, restricted motion",
+          "V": "Variable pain, joint crepitus, painful function"
+        },
+        "tjr_threshold": "Classes IV and V (94% of Giannakopoulos n=288 patients were class IV or V)",
+        "tacit": "The TJR decision threshold is not explicit in guidance text but the evidence implies it: TJR is for Wilkes class IV-V patients who have failed all conservative and lesser surgical options. Performing TJR on class I-III patients would be inappropriate - this is a last-resort surgical intervention within an already-surgical population."
+      }
+    },
+    {
+      "id": "tmj_pain",
+      "type": "SYMPTOM",
+      "label": "TMJ and facial pain",
+      "aliases": ["jaw pain", "facial pain", "TMJ pain", "craniofacial pain"],
+      "properties": {
+        "description": "Chronic pain from TMJ pathology - can be severe and disabling",
+        "vas_scores_at_presentation": "7.2-8.0 out of 10 across case series",
+        "improvement_post_tjr": {
+          "lobo_leandro_n300": "1.18→0.0 at 6 months (VAS 0-5)",
+          "giannakopoulos_n288": "8.0→2.6 at 3 years (VAS 0-10)",
+          "sidebottom_n74": "7.2→0.8 at 1 year (VAS 0-10)"
+        },
+        "opioid_consideration": "Patients on long-term opiates for pain may not be able to relinquish use post-operatively (Birmingham experience)",
+        "tacit": "The opioid dependency issue is crucial tacit knowledge not in the main guidance text but flagged by specialist advisers. A patient with central sensitisation from years of chronic pain may continue reporting pain even after technically successful TJR. Pre-operative opioid assessment should be part of the selection process."
+      }
+    },
+    {
+      "id": "limited_mouth_opening",
+      "type": "SYMPTOM",
+      "label": "Limited mouth opening (restricted MIO)",
+      "aliases": ["trismus", "restricted mouth opening", "limited inter-incisal opening"],
+      "properties": {
+        "measurement": "Maximum Inter-incisal Opening (MIO) in mm",
+        "normal_mio": "~40-50mm in healthy adults",
+        "presentation_mio_range": "10.3-22.4mm across case series",
+        "improvement_post_tjr": {
+          "lobo_leandro_n300": "11.3→38.9mm at 1 year; plateaus after year 3 (~41.8mm)",
+          "giannakopoulos_n288": "20.4→29.5mm at 3 years",
+          "sidebottom_n74": "22.4→33.7mm at 1 year"
+        },
+        "plateau_timing": "Significant improvement ceases at ~4 years post-procedure (Lobo Leandro 10-year data)",
+        "tacit": "MIO plateau at 3-4 years is important prognostically. Patients who expect continued improvement after year 3 should be counselled that gains have stabilised. The plateau is not failure - it represents the mechanical limit of the reconstruction."
+      }
+    },
+    {
+      "id": "dietary_restriction",
+      "type": "SYMPTOM",
+      "label": "Dietary restriction from TMJ disorder",
+      "aliases": ["diet limitation", "inability to eat normal diet", "liquid/soft diet dependence"],
+      "properties": {
+        "description": "Severe restriction to liquid or soft diet due to pain on chewing and limited mouth opening",
+        "impact": "Nutritional, social, and quality-of-life consequences",
+        "vas_at_presentation": "3.8-8.2 out of 10 across series",
+        "improvement_post_tjr": "80% of Lobo Leandro patients had general diet with no limitations at 6 months",
+        "long_term": "Diet scores maintained to 10-year follow-up (Lobo Leandro VAS 4.85 at 10yr vs 4.96 at 1yr)"
+      }
+    },
+    {
+      "id": "biomet_lorenz_system",
+      "type": "MATERIAL",
+      "label": "Biomet/Lorenz Microfixation TMJ Replacement System",
+      "aliases": ["Biomet Microfixation", "Biomet TMJ", "Lorenz system"],
+      "properties": {
+        "type": "Stock (off-the-shelf) prosthetic system",
+        "manufacturer": "Biomet Microfixation (formerly Lorenz Surgical), Jacksonville, USA",
+        "used_in": "Lobo Leandro n=300; Giannakopoulos n=288 (442 joints)",
+        "follow_up_data": "Up to 10-year data (Lobo Leandro); up to 15-year international Biomet data (adviser)",
+        "no_mechanical_failures": "No device-related mechanical failures reported in Giannakopoulos despite complications"
+      }
+    },
+    {
+      "id": "tmj_concepts_custom",
+      "type": "MATERIAL",
+      "label": "TMJ Concepts custom prosthesis",
+      "aliases": ["TMJ Concepts", "Techmedica prosthesis", "patient-fitted TMJ implant"],
+      "properties": {
+        "type": "Custom (patient-specific/patient-fitted) prosthetic system",
+        "manufacturer": "TMJ Concepts, Ventura, USA (formerly Techmedica)",
+        "used_in": "Sidebottom n=74; Loveless n=14; Mercuri 2007 n=61 (14-year follow-up)",
+        "long_term_data": "20-year data shows no failures due to UHMWPE debris (unlike knee replacements from 15yr)",
+        "conflict_note": "Mercuri 2007 author is Medical Consultant to TMJ Concepts"
+      }
+    },
+    {
+      "id": "christensen_system",
+      "type": "MATERIAL",
+      "label": "Christensen TMJ system (TMJ Implants Inc.)",
+      "aliases": ["Christensen prosthesis", "TMJ Implants", "TMJ Implants Inc."],
+      "properties": {
+        "manufacturer": "TMJ Implants Inc. (formerly Christensen), Golden, USA",
+        "types": ["metal-on-acrylic PMMA (original)", "metal-on-metal (from 1996)"],
+        "used_in": "Christensen 2004 retrospective + prospective data; Speculand 2009 adverse events",
+        "conflict_note": "Primary author of Christensen 2004 is the inventor of the prosthesis system"
+      }
+    },
+    {
+      "id": "all_titanium_prosthesis",
+      "type": "MATERIAL",
+      "label": "All-titanium prosthesis (for metal-allergic patients)",
+      "aliases": ["titanium-only implant", "metal allergy prosthesis"],
+      "properties": {
+        "indication": "Patients with allergy to standard cobalt-chromium metal components",
+        "evidence": "Hussain 2014 (n=55, 1yr): outcomes similarly favourable to non-allergic patients with standard prosthesis; no hypersensitivity reactions; no failures",
+        "patch_testing": "Patch testing is recommended/commonly done to guide prosthesis choice (Committee comment 6.2)",
+        "tacit": "Metal allergy testing is a pre-operative selection criterion that is easily overlooked. If a patient is implanted with cobalt-chromium without patch testing and develops hypersensitivity, the implant may require removal. Testing is far cheaper than revision surgery."
+      }
+    },
+    {
+      "id": "proplast_teflon_implant",
+      "type": "MATERIAL",
+      "label": "Proplast-Teflon implant (discontinued)",
+      "aliases": ["Proplast-Teflon", "Teflon-Proplast", "failed historical implant"],
+      "properties": {
+        "status": "DISCONTINUED - no longer manufactured",
+        "failure_mechanism": "Debris and foreign-body giant cell reaction within joint",
+        "clinical_relevance": "Some patients may still carry these implants; TJR revision is common indication in previously implanted patients",
+        "prevalence_in_evidence": "46% of Mercuri 2007 patients had previous Proplast-Teflon implant"
+      }
+    },
+    {
+      "id": "coronoidectomy",
+      "type": "INTERVENTION",
+      "label": "Coronoidectomy",
+      "aliases": ["coronoid process removal", "coronoidectomy"],
+      "properties": {
+        "definition": "Surgical removal of the coronoid process of the mandible",
+        "purpose": "Removes restriction to mouth opening from tight temporalis muscle; allows greater post-operative mobility",
+        "incidence": "7/74 patients in Sidebottom 2013 had coronoidectomy at time of TMJ TJR",
+        "indication": "Severe ankylosis or restricted opening where coronoid is expected to limit mobility gain",
+        "tacit": "Coronoidectomy decision is made intraoperatively based on achieved mouth opening with the prosthesis in situ. If MIO under general anaesthesia is still limited with prosthesis placed, coronoidectomy is added. This intraoperative flexibility is not described in the guidance text."
+      }
+    },
+    {
+      "id": "costochondral_graft",
+      "type": "INTERVENTION",
+      "label": "Costochondral rib graft reconstruction",
+      "aliases": ["costochondral graft", "rib graft TMJ", "biological TMJ reconstruction"],
+      "properties": {
+        "type": "Biological (autologous rib and cartilage graft)",
+        "success_rate": "Successful long-term in approximately one-third of patients (specialist adviser)",
+        "reserved_for": "Children - because it has growth capacity",
+        "current_status": "Still standard practice in developing countries; previously standard in all settings",
+        "tacit": "The specialist adviser's explicit statement that the only real alternative to alloplastic TJR is costochondral graft with ~33% long-term success is important context for patient selection. A patient who understands that the biological alternative succeeds in only 1/3 of cases long-term will have a very different risk-benefit perception of TJR."
+      }
+    },
+    {
+      "id": "interpositional_arthroplasty",
+      "type": "INTERVENTION",
+      "label": "Interpositional arthroplasty",
+      "aliases": ["IA", "gap arthroplasty with interposition", "arthroplasty"],
+      "properties": {
+        "definition": "Creation of joint space by condylectomy/fossa remodelling with interposition of a biological or alloplastic material",
+        "materials": ["temporalis fascia flap", "dermis fat graft", "cartilage"],
+        "comparator_to_tjr": "Loveless 2010 compared TJR to IA in ankylosis patients",
+        "mio_outcome": "MIO change: TJR +9.4mm vs IA +18mm (p=0.02 unadjusted; NS after adjustment)",
+        "patient_group": "IA patients had fewer prior operations (mean 1.1 vs 3.7 for TJR) - important baseline difference",
+        "tacit": "The Loveless comparison is heavily confounded: TJR group had 3.7x more previous operations. The unadjusted result favouring IA becomes non-significant after adjustment. Comparing outcomes between groups with fundamentally different prior surgery histories is problematic. TJR is typically the later intervention in heavily-operated patients."
+      }
+    },
+    {
+      "id": "rest_nsaids_physiotherapy",
+      "type": "INTERVENTION",
+      "label": "Conservative management (rest, NSAIDs, bite splints, physiotherapy)",
+      "aliases": ["conservative TMJ treatment", "non-surgical management"],
+      "properties": {
+        "components": ["Rest", "NSAIDs", "Bite splints / occlusal splints", "Physiotherapy"],
+        "indication": "First-line management of TMJ disorders",
+        "failure_required": "TJR only considered when alternative treatments have failed (NICE 3.1)",
+        "nice_section": "2.2"
+      }
+    },
+    {
+      "id": "tmj_arthroscopy",
+      "type": "INTERVENTION",
+      "label": "TMJ arthroscopic surgery",
+      "aliases": ["TMJ arthroscopy", "arthroscopic TMJ"],
+      "properties": {
+        "type": "Minimally invasive surgical joint washout/debridement",
+        "indication": "Early-to-mid stage TMJ disorders; before open surgery",
+        "failure_required_before_tjr": true
+      }
+    },
+    {
+      "id": "partial_tmj_replacement",
+      "type": "INTERVENTION",
+      "label": "Partial TMJ replacement (disc, fossa, or condyle alone)",
+      "aliases": ["hemi-replacement", "partial joint replacement", "disc replacement", "condyle replacement"],
+      "properties": {
+        "distinction": "Replaces only ONE component (disc, fossa, or condyle) rather than both",
+        "excluded_from_htg352": "HTG352 covers only TOTAL replacement (both components)",
+        "position_in_ladder": "After conservative and arthroscopic failure; before total joint replacement"
+      }
+    },
+    {
+      "id": "facial_nerve_temporal_weakness",
+      "type": "COMPLICATION",
+      "label": "Temporal branch facial nerve weakness",
+      "aliases": ["brow ptosis", "brow drop", "temporal branch palsy"],
+      "properties": {
+        "incidence": "31% (23/74) in Sidebottom 2013",
+        "resolution": "22/23 resolved within 6 months; 1 required brow lift (long-term)",
+        "mechanism": "Traction or stretch injury during pre-auricular dissection",
+        "clinical_appearance": "Inability to raise eyebrow on affected side; brow ptosis",
+        "long_term_consequence": "1/74 (1.4%) required brow lift procedure for permanent weakness",
+        "tacit": "31% is one of the highest nerve injury rates in elective surgery. This must be disclosed but contextualised: 96% of cases resolve spontaneously within 6 months. The brow lift requirement (1/74) is a useful concrete consequence to explain to patients about the permanent risk."
+      }
+    },
+    {
+      "id": "marginal_mandibular_palsy",
+      "type": "COMPLICATION",
+      "label": "Marginal mandibular palsy (temporary)",
+      "aliases": ["lower lip weakness", "marginal mandibular nerve palsy"],
+      "properties": {
+        "incidence": "11% (8/74) in Sidebottom 2013",
+        "resolution": "7/8 by 6 weeks; 1 by 6 months",
+        "mechanism": "Stretch or compression during submandibular dissection",
+        "clinical_appearance": "Weakness of lower lip depression; asymmetric smile"
+      }
+    },
+    {
+      "id": "total_facial_palsy",
+      "type": "COMPLICATION",
+      "label": "Total facial palsy (temporary)",
+      "aliases": ["complete facial palsy", "total CN VII palsy"],
+      "properties": {
+        "incidence": "3% (2/74) in Sidebottom 2013",
+        "resolution": "Both resolved within 6 weeks",
+        "mechanism": "More extensive nerve traction or compression"
+      }
+    },
+    {
+      "id": "auriculotemporal_sensory_loss",
+      "type": "COMPLICATION",
+      "label": "Long-term auriculotemporal nerve sensory loss",
+      "aliases": ["auriculotemporal neuropathy", "temporal numbness", "pre-auricular numbness"],
+      "properties": {
+        "incidence": "14% (10/74) in Sidebottom 2013",
+        "permanence": "Long-term / permanent",
+        "territory": "Distribution of auriculotemporal nerve: skin of temporal region and anterior external ear",
+        "management": "No treatment; patients warned pre-operatively",
+        "tacit": "This is the most commonly under-discussed TMJ TJR complication. 14% permanent numbness in a sensory territory patients notice daily (hairbrushing, touching the side of the face). Surgeons may emphasise the impressive pain relief and focus attention away from this smaller but permanent deficit. Proactive, clear consent disclosure is essential."
+      }
+    },
+    {
+      "id": "peri_implant_infection_tmj",
+      "type": "COMPLICATION",
+      "label": "Peri-implant infection",
+      "aliases": ["TMJ implant infection", "prosthesis infection", "joint infection"],
+      "properties": {
+        "incidence_range": "1.5-3% across studies",
+        "speculand_2009": "2.09% (44/2106) TMJ Concepts; 1.6% TMJ Implants; 2.6% Biomet",
+        "mercuri_2011": "1.5% of joints (51/3368); mean onset 6 months (range 2 weeks to 12 years)",
+        "sidebottom_2013": "3% (2/74): periapical dental infection → biofilm; otitis externa + cellulitis + biofilm",
+        "consequence_of_infection": "Device removal and replacement (both Sidebottom cases successfully revised)",
+        "revision_success": "Successful revision with new prosthesis in both Sidebottom cases",
+        "improving_over_time": "Giannakopoulos: infection rate decreased as procedure duration shortened, instrumentation improved, infection control became more stringent",
+        "antibiotic_guidelines": "Mercuri 2011 developed preliminary perioperative/postoperative/prophylactic antibiotic guidelines",
+        "tacit": "Infection onset up to 12 years post-implantation (Mercuri 2011) means lifelong vigilance is required. Dental procedures are a potential haematogenous seeding risk. This is analogous to hip/knee arthroplasty dental prophylaxis protocols, yet no formal NICE recommendation on this is made."
+      }
+    },
+    {
+      "id": "prosthesis_dislocation",
+      "type": "COMPLICATION",
+      "label": "Prosthesis dislocation",
+      "aliases": ["TMJ implant dislocation", "condyle dislocation"],
+      "properties": {
+        "incidence": "1% (14/2106) in Speculand 2009; 6.8% (5/74) in Sidebottom 2013",
+        "sidebottom_detail": "4/5 recognised on operating table; 1 developed within hours post-op",
+        "management": "Light elastic intermaxillary fixation for 1 week",
+        "outcome": "None recurred; all had successful outcomes at 1 year",
+        "tacit": "Dislocation management with 1-week elastic IMF is specific procedural knowledge. The difference between intraoperative and early post-operative dislocation management is the same: elastic IMF. The key tacit point is that recognition on the operating table allows immediate correction; post-operative dislocation within hours still has the same benign outcome with conservative management."
+      }
+    },
+    {
+      "id": "heterotopic_bone_formation",
+      "type": "COMPLICATION",
+      "label": "Heterotopic bone formation",
+      "aliases": ["ectopic bone", "heterotopic ossification", "peri-prosthetic bone formation"],
+      "properties": {
+        "incidence": "<1% (11/2106) in Speculand 2009; contributes to 3.2% implant removal rate in Giannakopoulos",
+        "consequence": "Can restrict joint mobility; may require implant removal",
+        "mechanism": "Aberrant bone formation in soft tissues around implant"
+      }
+    },
+    {
+      "id": "intraoperative_haemorrhage",
+      "type": "COMPLICATION",
+      "label": "Major intraoperative haemorrhage",
+      "aliases": ["operative bleeding", "haemorrhage requiring transfusion"],
+      "properties": {
+        "incidence": "3% (2/74) required blood transfusion in Sidebottom 2013",
+        "severe_case": "1 patient required neck opening to ligate terminal branches of external carotid artery",
+        "tacit": "The carotid artery ligation case illustrates that TMJ surgery can rapidly escalate to life-threatening haemorrhage. This reflects proximity to major head and neck vasculature. Preoperative imaging of local vasculature and clear surgical planning of vessel exposure is essential."
+      }
+    },
+    {
+      "id": "malocclusion_malposition",
+      "type": "COMPLICATION",
+      "label": "Malocclusion / malposition / displacement of prosthesis",
+      "aliases": ["prosthesis malposition", "dental malocclusion post-TJR", "implant displacement"],
+      "properties": {
+        "incidence": "1% (19/2106) in Speculand 2009",
+        "management": "Not described in Speculand review",
+        "tacit": "Post-operative malocclusion after TMJ TJR may be structural (implant position) or neuromuscular (muscle rebalancing as pain resolves). Distinguishing early is important: structural malocclusion may need revision; neuromuscular malocclusion often self-corrects with jaw exercises."
+      }
+    },
+    {
+      "id": "frey_syndrome",
+      "type": "COMPLICATION",
+      "label": "Frey's syndrome (gustatory sweating)",
+      "aliases": ["auriculotemporal syndrome", "gustatory sweating"],
+      "properties": {
+        "status": "Anecdotal adverse effect (specialist advisers)",
+        "mechanism": "Aberrant regeneration of auriculotemporal nerve fibres - parasympathetic fibres reinnervate sweat glands instead of parotid",
+        "clinical_presentation": "Sweating of pre-auricular skin during eating or anticipation of food",
+        "management": "Botulinum toxin injection; topical anticholinergics"
+      }
+    },
+    {
+      "id": "hearing_changes",
+      "type": "COMPLICATION",
+      "label": "Changes in hearing",
+      "aliases": ["post-operative hearing changes", "conductive hearing loss TMJ"],
+      "properties": {
+        "status": "Anecdotal adverse effect (specialist advisers)",
+        "duration": "Mostly short-term but long-term reported",
+        "mechanism": "External auditory meatus proximity; eustachian tube dysfunction",
+        "tacit": "Proximity of the TMJ to the external ear canal and middle ear means even non-catastrophic surgical manipulation can alter eustachian tube function and middle ear pressure. Ear examination should be part of pre-operative and post-operative assessment."
+      }
+    },
+    {
+      "id": "prior_operations_predictor",
+      "type": "DECISION_CRITERION",
+      "label": "Prior operations as outcome predictor",
+      "aliases": ["surgical history predictor", "multiple prior operations", "previously operated joint"],
+      "properties": {
+        "evidence": "Mercuri 2007: each additional prior operation increases pain by 0.63 units (95% CI 0.04-1.2) and function by 0.68 units",
+        "loveless_group_difference": "TJR group had mean 3.7 prior operations vs 1.1 for IA group - key confounder",
+        "tacit": "Prior operations are the most important negative prognostic factor. A patient with 5+ previous failed procedures on the same joint has a fundamentally worse prognosis than a patient having TJR as primary joint surgery. This must be incorporated into pre-operative counselling about expected outcomes."
+      }
+    },
+    {
+      "id": "metal_allergy_criterion",
+      "type": "DECISION_CRITERION",
+      "label": "Metal allergy as prosthesis selection criterion",
+      "aliases": ["metal hypersensitivity", "cobalt-chromium allergy", "patch testing"],
+      "properties": {
+        "committee_comment": "NICE Committee 6.2: patients with metal allergies may react to certain prostheses; patch testing commonly done to guide choice",
+        "management": "All-titanium prosthesis for allergic patients",
+        "evidence_for_all_ti": "Hussain 2014 (n=55): all-titanium outcomes equally favourable at 1 year; no hypersensitivity reactions",
+        "tacit": "Patch testing is a pre-operative selection step that determines prosthesis type, not whether to proceed with surgery. Omitting patch testing risks implanting a cobalt-chromium prosthesis in an allergic patient, requiring later revision. This should be standard pre-operative workup."
+      }
+    },
+    {
+      "id": "specialist_unit_criterion",
+      "type": "DECISION_CRITERION",
+      "label": "Specialist unit and regular practice requirement",
+      "aliases": ["specialist centre requirement", "regular practice requirement", "volume threshold"],
+      "properties": {
+        "nice_1_2": "Patient selection in specialist units by team with regular practice and specific expertise",
+        "minimum_volume_suggested": "5 cases per year (2 specialist advisers)",
+        "uk_reality": "16 surgeons submit to BAOMS database; only 5 do >10/yr",
+        "controversy": "Procedure was controversially introduced in UK by representative to any willing surgeon (specialist adviser)",
+        "cost_issue": "Cost not met within standard procedural costs; national centres of excellence with appropriate funding needed",
+        "tacit": "The specialist adviser's warning about 'overuse by inadequately trained surgeons' and 'controversial introduction to any surgeon who would like to try one' reflects a real-world governance failure at the time of guidance. The NICE requirement for specialist unit and regular practice is a direct response to this. A surgeon who performs TJR once per year is unlikely to maintain the skill level required."
+      }
+    },
+    {
+      "id": "baoms_national_registry",
+      "type": "GOVERNANCE_REQUIREMENT",
+      "label": "BAOMS/BATMJS UK national registry submission",
+      "aliases": ["BAOMS database", "TMJ register", "national outcomes registry"],
+      "properties": {
+        "nice_1_4": "Clinicians should submit details on all patients to the British Association of TMJ Surgeons UK register",
+        "purpose": "Long-term safety and efficacy data on various prostheses",
+        "mandatory": true,
+        "rationale": "Range of prostheses available that may differ in long-term safety and efficacy (Committee 6.1)",
+        "uk_baseline_data": "Idle 2014 (n=402): UK TMJ replacement database baseline report - 3 primary systems (TMJ Concepts, Biomet, Christensen)",
+        "tacit": "Registry submission is mandatory, not optional. Prosthesis-specific long-term data is essential because the Committee explicitly acknowledged that different prostheses may have different long-term profiles. Without systematic registry data, individual surgeons cannot know whether their prosthesis is performing appropriately compared to benchmarks."
+      }
+    },
+    {
+      "id": "specific_training_requirement",
+      "type": "GOVERNANCE_REQUIREMENT",
+      "label": "Specific training and experience requirement",
+      "aliases": ["training requirement", "experience requirement", "surgical training"],
+      "properties": {
+        "nice_1_3": "Procedure only by clinicians with specific training AND experience",
+        "training_components": [
+          "Basic training in anatomical cadaveric workshop",
+          "Initial cases supervised by recognised experienced surgeon",
+          "Good experience in ALL forms of TMJ surgery (not just total replacement)"
+        ],
+        "tacit": "The cadaveric workshop and supervised initial cases requirement is important tacit guidance not quantified in NICE text. A surgeon who has not done this specific surgical simulation before their first live case is operating without foundational training. The complexity of the surgical approaches (pre-auricular + submandibular) and proximity to facial nerve and major vessels makes this non-negotiable."
+      }
+    },
+    {
+      "id": "patient_selection_baoms_guidelines",
+      "type": "GOVERNANCE_REQUIREMENT",
+      "label": "BAOMS patient selection guidelines",
+      "aliases": ["BAOMS guidelines", "patient selection criteria", "Giannakopoulos criteria"],
+      "properties": {
+        "nice_1_2": "Patient selection should include consideration of all relevant medical and surgical options; BAOMS has produced guidelines",
+        "giannakopoulos_explicit_criteria": [
+          "Considerable pain and/or limited function",
+          "Clinical and imaging evidence consistent with anatomic joint pathology",
+          "Previous failure of non-surgical treatment or failed implant",
+          "High probability of improvement from surgical treatment",
+          "No serious compromising general medical conditions"
+        ],
+        "exclusion_criteria": [
+          "Active infection",
+          "Insufficient bone quantity or quality to support device",
+          "Skeletal immaturity",
+          "Severe hyperfunctional habits",
+          "Long-term steroid therapy"
+        ]
+      }
+    },
+    {
+      "id": "lobo_leandro_2013",
+      "type": "EVIDENCE_ITEM",
+      "label": "Lobo Leandro 2013 (n=300)",
+      "aliases": ["Lobo Leandro Brazil series", "Biomet 300 case series"],
+      "properties": {
+        "authors": "Leandro LF, Ono HY, Loureiro CC et al.",
+        "title": "A ten-year experience and follow-up of three hundred patients fitted with the Biomet/Lorenz Microfixation TMJ replacement system",
+        "journal": "International Journal of Oral & Maxillofacial Surgery",
+        "year": 2013,
+        "volume": 42,
+        "pages": "1007-13",
+        "study_type": "Prospective case series",
+        "country": "Brazil",
+        "n": 300,
+        "implant": "Biomet/Lorenz Microfixation (stock)",
+        "follow_up": "Mean 3.5 years (range 1-10)",
+        "bilateral": "99 patients",
+        "key_positive": "No infections, no prosthetic system removals, no loosened screw adjustments at any follow-up",
+        "conflict_of_interest": "None"
+      }
+    },
+    {
+      "id": "giannakopoulos_2012",
+      "type": "EVIDENCE_ITEM",
+      "label": "Giannakopoulos 2012 (n=288, 442 joints)",
+      "aliases": ["Giannakopoulos Biomet series", "Biomet 288 study"],
+      "properties": {
+        "authors": "Giannakopoulos HE, Sinn DP, Quinn PD",
+        "title": "Biomet Microfixation Temporomandibular Joint Replacement System: a 3-year follow-up study",
+        "journal": "Journal of Oral & Maxillofacial Surgery",
+        "year": 2012,
+        "volume": 70,
+        "pages": "787-94",
+        "study_type": "Case series",
+        "country": "USA",
+        "n": 288,
+        "joints": 442,
+        "implant": "Biomet Microfixation (stock)",
+        "follow_up": "3 years",
+        "bilateral": 154,
+        "wilkes_distribution": "94% class IV or V",
+        "mean_symptom_duration": "11 years",
+        "conflict_of_interest": "Statistical analysis provided by Director of Research at Biomet"
+      }
+    },
+    {
+      "id": "sidebottom_2013",
+      "type": "EVIDENCE_ITEM",
+      "label": "Sidebottom 2013 (n=74, 103 joints)",
+      "aliases": ["Sidebottom UK series", "TMJ Concepts UK study"],
+      "properties": {
+        "authors": "Sidebottom AJ, Gruber E",
+        "title": "One year prospective outcome analysis and complications following total replacement of the temporomandibular joint with the TMJ Concepts system",
+        "journal": "British Journal of Oral and Maxillofacial Surgery",
+        "year": 2013,
+        "volume": 51,
+        "pages": "620-4",
+        "study_type": "Prospective case series",
+        "country": "UK",
+        "n": 74,
+        "joints": 103,
+        "implant": "TMJ Concepts custom",
+        "follow_up": "1 year",
+        "single_surgeon": true,
+        "bilateral": 29,
+        "mean_prior_open_procedures": "2 (range 0-12)",
+        "conflict_of_interest": "None",
+        "key_value": "Only UK single-centre prospective study; most detailed nerve complication data"
+      }
+    },
+    {
+      "id": "speculand_2009",
+      "type": "EVIDENCE_ITEM",
+      "label": "Speculand 2009 (n=2620 adverse events review)",
+      "aliases": ["Speculand UK review", "adverse events database"],
+      "properties": {
+        "authors": "Speculand B",
+        "title": "Current status of replacement of the temporomandibular joint in the United Kingdom",
+        "journal": "British Journal of Oral and Maxillofacial Surgery",
+        "year": 2009,
+        "volume": 47,
+        "pages": "37-41",
+        "study_type": "Review of current practice with manufacturer adverse event data",
+        "country": "UK",
+        "n_infection_data": "2620 (2106 TMJ Concepts, 246 TMJ Implants, 268 Biomet)",
+        "n_other_outcomes": "2106 (TMJ Concepts only)",
+        "key_value": "Largest adverse events dataset; 20-year UK experience review"
+      }
+    },
+    {
+      "id": "mercuri_2011",
+      "type": "EVIDENCE_ITEM",
+      "label": "Mercuri 2011 antibiotic survey (n=2476)",
+      "aliases": ["Mercuri antibiotic guidelines", "TMJ infection survey"],
+      "properties": {
+        "authors": "Mercuri LG, Psutka D",
+        "title": "Perioperative, postoperative, and prophylactic use of antibiotics in alloplastic total temporomandibular joint replacement surgery: a survey and preliminary guidelines",
+        "journal": "Journal of Oral & Maxillofacial Surgery",
+        "year": 2011,
+        "volume": 69,
+        "pages": "2106-11",
+        "study_type": "Retrospective survey",
+        "n": 2476,
+        "key_finding": "1.5% infected joints; 62.7% of infected joints required removal/replacement; preliminary antibiotic guidelines"
+      }
+    },
+    {
+      "id": "loveless_2010",
+      "type": "EVIDENCE_ITEM",
+      "label": "Loveless 2010 (n=36, comparative study)",
+      "aliases": ["Loveless TJR vs IA comparison"],
+      "properties": {
+        "authors": "Loveless TP, Bjornland T, Dodson TB et al.",
+        "title": "Efficacy of temporomandibular joint ankylosis surgical treatment",
+        "journal": "Journal of Oral & Maxillofacial Surgery",
+        "year": 2010,
+        "volume": 68,
+        "pages": "1276-82",
+        "study_type": "Non-randomised retrospective comparative study",
+        "countries": "USA, Norway",
+        "n": 36,
+        "groups": "14 TJR vs 22 interpositional arthroplasty",
+        "key_limitation": "TJR group had 3.7x more prior operations - major confounder; groups not comparable at baseline"
+      }
+    },
+    {
+      "id": "mercuri_2007",
+      "type": "EVIDENCE_ITEM",
+      "label": "Mercuri 2007 (n=61, 14-year follow-up)",
+      "aliases": ["Mercuri long-term follow-up", "14-year TMJ data"],
+      "properties": {
+        "authors": "Mercuri LG, Edibam NR, Giobbie-Hurder A",
+        "title": "Fourteen-year follow-up of a patient-fitted total temporomandibular joint reconstruction system",
+        "journal": "Journal of Oral & Maxillofacial Surgery",
+        "year": 2007,
+        "volume": 65,
+        "pages": "1140-8",
+        "study_type": "Long-term follow-up (postal survey)",
+        "n": 61,
+        "follow_up": "Mean 11.4 years (max 14 years)",
+        "response_rate": "41% of eligible patients",
+        "conflict_of_interest": "Author is Medical Consultant to TMJ Concepts",
+        "key_predictors": "Prior operations increase pain; each additional operation adds 0.63 pain units; age weakly predicts poor QoL"
+      }
+    },
+    {
+      "id": "christensen_2004",
+      "type": "EVIDENCE_ITEM",
+      "label": "Christensen 2004 (n=69 prospective + 488 retrospective)",
+      "aliases": ["Christensen registry data", "TMJ Implants registry"],
+      "properties": {
+        "authors": "Christensen RW, Alexander R, Curry JT et al.",
+        "title": "Hemi and total TMJ reconstruction using the Christensen prostheses: a retrospective and prospective evaluation",
+        "journal": "Surgical Technology International",
+        "year": 2004,
+        "volume": 12,
+        "pages": "292-303",
+        "study_type": "Registry data + prospective case series",
+        "n_prospective": 69,
+        "n_retrospective": "488+ (cross-sectional 425, cohort 63)",
+        "conflict_of_interest": "Primary author is inventor of the Christensen joint system",
+        "key_limitation": "Mixed total and partial replacement data not always separated"
+      }
+    },
+    {
+      "id": "fda_postmarket_surveillance",
+      "type": "CONTEXTUAL_KNOWLEDGE",
+      "label": "FDA post-market surveillance order (2011)",
+      "aliases": ["FDA TMJ surveillance", "FDA order manufacturers"],
+      "properties": {
+        "event": "2011: FDA ordered 3 manufacturers (TMJ Solutions, TMJ Medical, Biomet Microfixation) to conduct post-market surveillance studies",
+        "trigger": "FDA analysis showed substantial number of patients with implants replaced within 3 years of implantation because of extreme pain",
+        "significance": "3-year replacement rate considerably shorter than expected minimum 5-year device lifespan based on premarket mechanical testing",
+        "tacit": "The FDA order is a significant regulatory signal that performance in clinical practice diverges from bench testing predictions. Short-term replacement due to pain (not mechanical failure) suggests central pain sensitisation in some patients - the implant works mechanically but the patient still has pain. This is the same phenomenon the Birmingham adviser noted about opioid-dependent patients."
+      }
+    },
+    {
+      "id": "prosthesis_evolution",
+      "type": "CONTEXTUAL_KNOWLEDGE",
+      "label": "Prosthesis evolution and material diversity",
+      "aliases": ["prosthesis types evolution", "implant variety"],
+      "properties": {
+        "committee_6_1": "Technique and materials have been developing for a long time and may continue to evolve; range of prostheses available that may differ in long-term safety and efficacy",
+        "materials_arc": ["Silastic (discontinued)", "Proplast-Teflon (discontinued)", "metal-on-acrylic PMMA", "metal-on-metal cobalt-chromium", "metal-on-UHMWPE", "all-titanium"],
+        "obsolete_risks": "Proplast-Teflon: debris + foreign body giant cell reaction; Silastic: mechanical failure",
+        "current_longevity": "Biomet: up to 15-year data; TMJ Concepts: 20-year data shows no UHMWPE debris failures",
+        "tacit": "The history of TMJ implant failures (Proplast-Teflon, Silastic) should inform surgeon humility about current systems. A prosthesis that performs well at 5 years may have unforeseen problems at 15-20 years. Registry submission (NICE 1.4) is the mechanism for detecting late failures before they become a widespread problem."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e001",
+      "source": "tmj_disorder",
+      "target": "tmj_pain",
+      "type": "MANIFESTS_AS",
+      "label": "TMJ disorder manifests as chronic pain"
+    },
+    {
+      "id": "e002",
+      "source": "tmj_disorder",
+      "target": "limited_mouth_opening",
+      "type": "MANIFESTS_AS",
+      "label": "TMJ disorder manifests as limited mouth opening (MIO)"
+    },
+    {
+      "id": "e003",
+      "source": "tmj_disorder",
+      "target": "dietary_restriction",
+      "type": "MANIFESTS_AS",
+      "label": "TMJ disorder manifests as dietary restriction from pain on chewing"
+    },
+    {
+      "id": "e004",
+      "source": "tmj_ankylosis",
+      "target": "tmj_disorder",
+      "type": "IS_SUBTYPE_OF",
+      "label": "TMJ ankylosis is a subtype of TMJ disorder requiring TJR"
+    },
+    {
+      "id": "e005",
+      "source": "condylar_resorption",
+      "target": "tmj_disorder",
+      "type": "IS_SUBTYPE_OF",
+      "label": "Condylar resorption is a cause of TMJ disorder requiring TJR"
+    },
+    {
+      "id": "e006",
+      "source": "tmj_disorder",
+      "target": "rest_nsaids_physiotherapy",
+      "type": "INDICATES",
+      "label": "TMJ disorder is first managed conservatively",
+      "properties": {
+        "tier": 1,
+        "nice_section": "2.2"
+      }
+    },
+    {
+      "id": "e007",
+      "source": "rest_nsaids_physiotherapy",
+      "target": "tmj_arthroscopy",
+      "type": "PROGRESSES_TO",
+      "label": "Failed conservative management escalates to arthroscopic surgery",
+      "properties": {
+        "trigger": "Persistent pain or limited opening despite adequate conservative trial"
+      }
+    },
+    {
+      "id": "e008",
+      "source": "tmj_arthroscopy",
+      "target": "partial_tmj_replacement",
+      "type": "PROGRESSES_TO",
+      "label": "Failed arthroscopic management escalates to partial joint replacement options"
+    },
+    {
+      "id": "e009",
+      "source": "partial_tmj_replacement",
+      "target": "tmj_total_replacement",
+      "type": "PROGRESSES_TO",
+      "label": "Failed partial replacement or exhausted all options leads to total joint replacement",
+      "properties": {
+        "nice_section": "3.1",
+        "condition": "Alternative treatments must have failed before TJR is considered"
+      }
+    },
+    {
+      "id": "e010",
+      "source": "interpositional_arthroplasty",
+      "target": "tmj_total_replacement",
+      "type": "PROGRESSES_TO",
+      "label": "Failed interpositional arthroplasty is a common pathway to TJR",
+      "properties": {
+        "tacit_note": "Loveless 2010: TJR patients had mean 3.7 prior operations vs IA 1.1; TJR is for the more severely-operated group"
+      }
+    },
+    {
+      "id": "e011",
+      "source": "tmj_total_replacement",
+      "target": "tmj_pain",
+      "type": "TREATS",
+      "label": "TJR treats TMJ pain with dramatic and sustained improvement",
+      "properties": {
+        "effect_size": "Pain near-completely resolved: 7.2→0.8 at 1yr (Sidebottom); 8.0→2.6 at 3yr (Giannakopoulos)",
+        "sustainability": "Maintained through 10-year follow-up (Lobo Leandro)"
+      }
+    },
+    {
+      "id": "e012",
+      "source": "tmj_total_replacement",
+      "target": "limited_mouth_opening",
+      "type": "TREATS",
+      "label": "TJR treats limited mouth opening",
+      "properties": {
+        "mio_gain": "11.3→38.9mm at 1yr (Lobo Leandro); significant gains until year 3-4, then plateau",
+        "plateau_timing": "MIO improvement becomes non-significant after year 4"
+      }
+    },
+    {
+      "id": "e013",
+      "source": "tmj_total_replacement",
+      "target": "dietary_restriction",
+      "type": "TREATS",
+      "label": "TJR resolves dietary restriction: 80% on general diet without limitations at 6 months"
+    },
+    {
+      "id": "e014",
+      "source": "tmj_total_replacement",
+      "target": "facial_nerve_temporal_weakness",
+      "type": "RISKS",
+      "label": "TJR risks temporal branch facial nerve weakness in 31% of patients",
+      "properties": {
+        "incidence": "31% (23/74)",
+        "usually_temporary": true,
+        "permanent_consequence": "1/74 required brow lift"
+      }
+    },
+    {
+      "id": "e015",
+      "source": "tmj_total_replacement",
+      "target": "marginal_mandibular_palsy",
+      "type": "RISKS",
+      "label": "TJR risks marginal mandibular palsy in 11% of patients",
+      "properties": {
+        "incidence": "11% (8/74)",
+        "usually_temporary": true
+      }
+    },
+    {
+      "id": "e016",
+      "source": "tmj_total_replacement",
+      "target": "auriculotemporal_sensory_loss",
+      "type": "RISKS",
+      "label": "TJR risks permanent auriculotemporal nerve sensory loss in 14% of patients",
+      "properties": {
+        "incidence": "14% (10/74)",
+        "permanence": "Long-term/permanent",
+        "tacit_note": "Most commonly under-emphasised consent item due to non-dramatic nature"
+      }
+    },
+    {
+      "id": "e017",
+      "source": "tmj_total_replacement",
+      "target": "peri_implant_infection_tmj",
+      "type": "RISKS",
+      "label": "TJR risks peri-implant infection in 1.5-3% of patients",
+      "properties": {
+        "incidence_range": "1.5-3%",
+        "onset_range": "2 weeks to 12 years post-implantation"
+      }
+    },
+    {
+      "id": "e018",
+      "source": "tmj_total_replacement",
+      "target": "prosthesis_dislocation",
+      "type": "RISKS",
+      "label": "TJR risks prosthesis dislocation",
+      "properties": {
+        "incidence": "1-6.8% across studies"
+      }
+    },
+    {
+      "id": "e019",
+      "source": "tmj_total_replacement",
+      "target": "intraoperative_haemorrhage",
+      "type": "RISKS",
+      "label": "TJR risks major intraoperative haemorrhage requiring transfusion",
+      "properties": {
+        "incidence": "3% (2/74) blood transfusion; 1 required carotid ligation"
+      }
+    },
+    {
+      "id": "e020",
+      "source": "tmj_total_replacement",
+      "target": "heterotopic_bone_formation",
+      "type": "RISKS",
+      "label": "TJR risks heterotopic bone formation",
+      "properties": {
+        "incidence": "<1% (11/2106)"
+      }
+    },
+    {
+      "id": "e021",
+      "source": "tmj_total_replacement",
+      "target": "malocclusion_malposition",
+      "type": "RISKS",
+      "label": "TJR risks malocclusion or prosthesis malposition",
+      "properties": {
+        "incidence": "1% (19/2106)"
+      }
+    },
+    {
+      "id": "e022",
+      "source": "tmj_total_replacement",
+      "target": "frey_syndrome",
+      "type": "RISKS_ANECDOTAL",
+      "label": "TJR carries anecdotal risk of Frey's syndrome",
+      "properties": {
+        "source": "Specialist advisers"
+      }
+    },
+    {
+      "id": "e023",
+      "source": "tmj_total_replacement",
+      "target": "hearing_changes",
+      "type": "RISKS_ANECDOTAL",
+      "label": "TJR carries anecdotal risk of hearing changes",
+      "properties": {
+        "source": "Specialist advisers; mostly short-term"
+      }
+    },
+    {
+      "id": "e024",
+      "source": "peri_implant_infection_tmj",
+      "target": "biomet_lorenz_system",
+      "type": "MAY_REQUIRE_REMOVAL_OF",
+      "label": "Infection may require prosthesis removal and revision",
+      "properties": {
+        "revision_outcome": "Both Sidebottom cases revised successfully with new prosthesis",
+        "tacit_note": "Revision after infection is feasible and successful; infection is not irreversible"
+      }
+    },
+    {
+      "id": "e025",
+      "source": "prosthesis_dislocation",
+      "target": "tmj_total_replacement",
+      "type": "MANAGED_BY",
+      "label": "Prosthesis dislocation managed with 1-week elastic intermaxillary fixation",
+      "properties": {
+        "protocol": "Light elastic IMF for 1 week",
+        "outcome": "All 5 Sidebottom cases resolved without recurrence"
+      }
+    },
+    {
+      "id": "e026",
+      "source": "metal_allergy_criterion",
+      "target": "all_titanium_prosthesis",
+      "type": "DETERMINES_CHOICE_OF",
+      "label": "Metal allergy determines use of all-titanium prosthesis",
+      "properties": {
+        "testing": "Patch testing recommended before implant selection"
+      }
+    },
+    {
+      "id": "e027",
+      "source": "metal_allergy_criterion",
+      "target": "tmj_total_replacement",
+      "type": "MODULATES",
+      "label": "Metal allergy screening modulates prosthesis selection but does not preclude TJR"
+    },
+    {
+      "id": "e028",
+      "source": "prior_operations_predictor",
+      "target": "tmj_pain",
+      "type": "WORSENS_PROGNOSIS_FOR",
+      "label": "Each prior operation worsens post-operative pain prognosis by 0.63 VAS units",
+      "properties": {
+        "source": "Mercuri 2007",
+        "implication": "Heavily operated patients should be counselled for more modest pain expectations"
+      }
+    },
+    {
+      "id": "e029",
+      "source": "wilkes_classification",
+      "target": "tmj_total_replacement",
+      "type": "INFORMS_INDICATION_FOR",
+      "label": "Wilkes class IV-V is the de facto indication threshold for TJR",
+      "properties": {
+        "evidence": "94% of Giannakopoulos patients were Wilkes IV or V",
+        "tacit_note": "Not stated explicitly in guidance but derivable from patient populations"
+      }
+    },
+    {
+      "id": "e030",
+      "source": "specialist_unit_criterion",
+      "target": "tmj_total_replacement",
+      "type": "GOVERNS",
+      "label": "Specialist unit requirement governs who may offer TJR",
+      "properties": {
+        "nice_section": "1.2"
+      }
+    },
+    {
+      "id": "e031",
+      "source": "specific_training_requirement",
+      "target": "tmj_total_replacement",
+      "type": "GOVERNS",
+      "label": "Specific training and experience requirement governs who may perform TJR",
+      "properties": {
+        "nice_section": "1.3"
+      }
+    },
+    {
+      "id": "e032",
+      "source": "baoms_national_registry",
+      "target": "tmj_total_replacement",
+      "type": "MANDATED_FOR",
+      "label": "Registry submission is mandated for all TJR patients",
+      "properties": {
+        "nice_section": "1.4"
+      }
+    },
+    {
+      "id": "e033",
+      "source": "patient_selection_baoms_guidelines",
+      "target": "tmj_total_replacement",
+      "type": "DEFINES_ELIGIBILITY_FOR",
+      "label": "BAOMS patient selection guidelines define eligibility for TJR",
+      "properties": {
+        "nice_section": "1.2"
+      }
+    },
+    {
+      "id": "e034",
+      "source": "costochondral_graft",
+      "target": "tmj_total_replacement",
+      "type": "ALTERNATIVE_TO",
+      "label": "Costochondral graft is the only biological alternative to alloplastic TJR",
+      "properties": {
+        "success_rate": "~33% long-term",
+        "reserved_for": "Children (growth capacity)",
+        "tacit_note": "33% long-term success of the only biological alternative is the implicit benchmark that makes alloplastic TJR compelling"
+      }
+    },
+    {
+      "id": "e035",
+      "source": "tmj_total_replacement",
+      "target": "coronoidectomy",
+      "type": "MAY_INCLUDE",
+      "label": "TJR may include concurrent coronoidectomy to improve mouth opening",
+      "properties": {
+        "incidence": "7/74 patients in Sidebottom 2013",
+        "decision": "Intraoperative based on achieved MIO with prosthesis in situ"
+      }
+    },
+    {
+      "id": "e036",
+      "source": "lobo_leandro_2013",
+      "target": "tmj_total_replacement",
+      "type": "PROVIDES_EVIDENCE_FOR",
+      "label": "Lobo Leandro 2013 provides strongest efficacy evidence (n=300, 10-year data)"
+    },
+    {
+      "id": "e037",
+      "source": "giannakopoulos_2012",
+      "target": "peri_implant_infection_tmj",
+      "type": "DOCUMENTS",
+      "label": "Giannakopoulos 2012 documents improving infection rates over time with better technique"
+    },
+    {
+      "id": "e038",
+      "source": "sidebottom_2013",
+      "target": "facial_nerve_temporal_weakness",
+      "type": "DOCUMENTS",
+      "label": "Sidebottom 2013 documents most detailed nerve complication data"
+    },
+    {
+      "id": "e039",
+      "source": "speculand_2009",
+      "target": "malocclusion_malposition",
+      "type": "DOCUMENTS",
+      "label": "Speculand 2009 documents adverse events across 2620-patient UK database"
+    },
+    {
+      "id": "e040",
+      "source": "mercuri_2011",
+      "target": "peri_implant_infection_tmj",
+      "type": "ESTABLISHES_GUIDELINES_FOR",
+      "label": "Mercuri 2011 establishes preliminary antibiotic prophylaxis guidelines for TMJ TJR"
+    },
+    {
+      "id": "e041",
+      "source": "mercuri_2007",
+      "target": "prior_operations_predictor",
+      "type": "QUANTIFIES",
+      "label": "Mercuri 2007 quantifies impact of prior operations on outcome (0.63 pain units per operation)"
+    },
+    {
+      "id": "e042",
+      "source": "fda_postmarket_surveillance",
+      "target": "prosthesis_evolution",
+      "type": "HIGHLIGHTS_RISK_IN",
+      "label": "FDA surveillance order highlights gap between bench testing and clinical performance",
+      "properties": {
+        "tacit_note": "Short-term replacement due to pain rather than mechanical failure suggests patient selection issue, not purely device failure"
+      }
+    },
+    {
+      "id": "e043",
+      "source": "prosthesis_evolution",
+      "target": "baoms_national_registry",
+      "type": "JUSTIFIES",
+      "label": "Prosthesis diversity and evolution justifies mandatory registry submission for long-term comparison"
+    },
+    {
+      "id": "e044",
+      "source": "tmj_joint",
+      "target": "mandibular_condyle",
+      "type": "CONTAINS",
+      "label": "TMJ contains the mandibular condyle component"
+    },
+    {
+      "id": "e045",
+      "source": "tmj_joint",
+      "target": "articular_fossa",
+      "type": "CONTAINS",
+      "label": "TMJ contains the articular fossa (skull base) component"
+    },
+    {
+      "id": "e046",
+      "source": "tmj_total_replacement",
+      "target": "mandibular_condyle",
+      "type": "REPLACES",
+      "label": "TJR replaces the mandibular condyle with prosthesis"
+    },
+    {
+      "id": "e047",
+      "source": "tmj_total_replacement",
+      "target": "articular_fossa",
+      "type": "REPLACES",
+      "label": "TJR replaces the articular fossa with prosthesis"
+    },
+    {
+      "id": "e048",
+      "source": "facial_nerve_temporal_branch",
+      "target": "facial_nerve_temporal_weakness",
+      "type": "INJURED_TO_CAUSE",
+      "label": "Pre-auricular dissection injures temporal branch causing weakness"
+    },
+    {
+      "id": "e049",
+      "source": "auriculotemporal_nerve",
+      "target": "auriculotemporal_sensory_loss",
+      "type": "INJURED_TO_CAUSE",
+      "label": "TMJ surgery injures auriculotemporal nerve causing permanent sensory loss"
+    },
+    {
+      "id": "e050",
+      "source": "external_carotid_artery",
+      "target": "intraoperative_haemorrhage",
+      "type": "SOURCE_OF",
+      "label": "External carotid terminal branches are source of major intraoperative haemorrhage"
+    },
+    {
+      "id": "e051",
+      "source": "proplast_teflon_implant",
+      "target": "tmj_disorder",
+      "type": "CAUSES_LATE_FAILURE",
+      "label": "Proplast-Teflon implant failure creates new/worse TMJ disorder requiring revision TJR"
+    },
+    {
+      "id": "e052",
+      "source": "tmj_total_replacement",
+      "target": "tmj_concepts_custom",
+      "type": "MAY_USE",
+      "label": "TJR may use custom TMJ Concepts prosthesis"
+    },
+    {
+      "id": "e053",
+      "source": "tmj_total_replacement",
+      "target": "biomet_lorenz_system",
+      "type": "MAY_USE",
+      "label": "TJR may use stock Biomet/Lorenz prosthesis"
+    },
+    {
+      "id": "e054",
+      "source": "tmj_total_replacement",
+      "target": "christensen_system",
+      "type": "MAY_USE",
+      "label": "TJR may use Christensen/TMJ Implants system"
+    },
+    {
+      "id": "e055",
+      "source": "tmj_total_replacement",
+      "target": "all_titanium_prosthesis",
+      "type": "MAY_USE",
+      "label": "TJR may use all-titanium prosthesis when metal allergy identified"
+    },
+    {
+      "id": "e056",
+      "source": "limited_mouth_opening",
+      "target": "limited_mouth_opening",
+      "type": "PLATEAUS",
+      "label": "MIO improvement plateaus at 3-4 years with no significant further gains",
+      "properties": {
+        "evidence": "Lobo Leandro: statistically significant improvement only up to year 3; NS thereafter to 10 years",
+        "tacit_note": "This plateau is clinical knowledge that should be used to set post-operative expectations"
+      }
+    }
+  ],
+  "tacit_knowledge_summary": {
+    "key_clinical_reasoning_chains": [
+      {
+        "id": "tkr001",
+        "name": "Temporal branch nerve weakness as expected, not exceptional",
+        "description": "31% temporal branch weakness rate is almost universal in TMJ TJR and should be presented to patients as an expected temporary effect, not as a complication. 96% resolve in 6 months. The permanent rate (1.4%) is the figure requiring emphatic consent discussion. Framing matters: 'nearly everyone gets temporary brow weakness' vs 'there is a nerve injury risk' convey very different information.",
+        "nodes": ["facial_nerve_temporal_branch", "facial_nerve_temporal_weakness", "tmj_total_replacement"]
+      },
+      {
+        "id": "tkr002",
+        "name": "Auriculotemporal sensory loss - the under-disclosed permanent complication",
+        "description": "14% permanent auriculotemporal sensory loss is consistently under-emphasised in consent discussions because numbness is less dramatic than weakness. However, it affects daily activities (touching the face, hairbrushing) and is permanent. Proactive, specific consent documentation for this permanent deficit is essential.",
+        "nodes": ["auriculotemporal_nerve", "auriculotemporal_sensory_loss", "tmj_total_replacement"]
+      },
+      {
+        "id": "tkr003",
+        "name": "Prior operations as the dominant outcome predictor",
+        "description": "Each prior TMJ operation independently increases post-operative pain by 0.63 VAS units (Mercuri 2007). A patient with 5 prior operations should expect 3+ units less pain relief than a patient with no prior surgery. This calibration of outcome expectations based on surgical history is not in the guidance text but is the most important patient-specific prognostic factor.",
+        "nodes": ["prior_operations_predictor", "tmj_pain", "mercuri_2007", "tmj_total_replacement"]
+      },
+      {
+        "id": "tkr004",
+        "name": "Infection: chronic risk requiring lifelong vigilance",
+        "description": "Infection onset up to 12 years post-implantation (Mercuri 2011) means patients carry a permanent low-level infection risk analogous to hip/knee arthroplasty. Dental procedures create haematogenous seeding risk. Despite no formal NICE antibiotic prophylaxis recommendation, the clinical parallel to orthopaedic implant protocols is strong and should inform clinical practice.",
+        "nodes": ["peri_implant_infection_tmj", "mercuri_2011", "tmj_total_replacement"]
+      },
+      {
+        "id": "tkr005",
+        "name": "Volume-outcome relationship and the 5 cases/year threshold",
+        "description": "The NICE requirement for specialist unit and regular practice is reinforced by adviser warnings about 'overuse by inadequately trained surgeons' and controversial early introduction to any willing surgeon. The suggested minimum of 5 cases/year, only 16 UK submitters, and only 5 doing >10/year paint a picture of a highly concentrated procedure. Surgeons below this threshold should refer rather than operate.",
+        "nodes": ["specialist_unit_criterion", "specific_training_requirement", "baoms_national_registry"]
+      },
+      {
+        "id": "tkr006",
+        "name": "Opioid dependency as a relative contraindication",
+        "description": "Patients on long-term opiates for TMJ pain may not relinquish opiate use after successful TJR (Birmingham experience). Central sensitisation from years of chronic pain means the analgesic benefit may not translate to opiate discontinuation. This should be assessed pre-operatively and forms part of the BAOMS patient selection process.",
+        "nodes": ["tmj_pain", "patient_selection_baoms_guidelines", "fda_postmarket_surveillance"]
+      },
+      {
+        "id": "tkr007",
+        "name": "MIO plateau as outcome calibration",
+        "description": "MIO improvement is significant up to year 3-4 then plateaus permanently (Lobo Leandro 10-year data). Patients who attend follow-up at year 4+ expecting continued improvement should be counselled that their current opening represents the long-term result. Continued physiotherapy to maintain (not improve) opening is the goal after year 3.",
+        "nodes": ["limited_mouth_opening", "lobo_leandro_2013", "tmj_total_replacement"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1732 @@
+{
+  "metadata": {
+    "source": "NICE HTG20",
+    "title": "Cyanoacrylate instillation for occlusion of parotid sinuses",
+    "published": "2004-02-25",
+    "updated": "2026-01-01",
+    "supersedes": "IPG42",
+    "specialty": "Otorhinolaryngology",
+    "specialty_society": "British Association of Otorhinolaryngologists",
+    "nice_recommendation_tier": "special_arrangements",
+    "evidence_tier": "inadequate",
+    "graph_version": "1.0",
+    "graph_created": "2026-05-28",
+    "description": "Tacit knowledge graph encoding clinical reasoning, procedural expertise, decision logic, complication management, and governance requirements for cyanoacrylate instillation for parotid sinus occlusion."
+  },
+  "nodes": [
+    {
+      "id": "parotid_gland",
+      "type": "ANATOMICAL_STRUCTURE",
+      "label": "Parotid gland",
+      "aliases": ["glandula parotidea"],
+      "properties": {
+        "location": "Anterior to and below the ears, overlying the masseter muscle",
+        "type_of": "major salivary gland",
+        "lobe_structure": ["superficial lobe", "deep lobe"],
+        "secretion": "serous saliva",
+        "nerve_supply": "parasympathetic via glossopharyngeal nerve (CN IX) via Jacobson's nerve and auriculotemporal nerve",
+        "key_relation": "Facial nerve (CN VII) divides within the parotid, separating superficial and deep lobes"
+      }
+    },
+    {
+      "id": "parotid_gland_remnant",
+      "type": "ANATOMICAL_STRUCTURE",
+      "label": "Parotid gland remnant",
+      "aliases": ["residual parotid tissue", "remnant parotid"],
+      "properties": {
+        "context": "Residual secretory tissue remaining after superficial parotidectomy",
+        "relevance": "Continues producing saliva that drives sinus symptoms; source of pressure and flow through the sinus tract",
+        "tacit": "Even small remnants maintain secretory activity; complete removal (deep lobe excision) risks facial nerve damage"
+      }
+    },
+    {
+      "id": "deep_lobe_parotid",
+      "type": "ANATOMICAL_STRUCTURE",
+      "label": "Deep lobe of parotid gland",
+      "aliases": ["deep parotid lobe", "deep portion of parotid"],
+      "properties": {
+        "location": "Deep to facial nerve plane, medial to the retromandibular vein",
+        "surgical_access": "Requires dissection around facial nerve branches",
+        "excision_risk": "High risk of facial nerve branch damage during excision",
+        "volume": "Approximately 20% of total parotid volume"
+      }
+    },
+    {
+      "id": "superficial_lobe_parotid",
+      "type": "ANATOMICAL_STRUCTURE",
+      "label": "Superficial lobe of parotid gland",
+      "aliases": ["superficial parotid", "lateral parotid lobe"],
+      "properties": {
+        "location": "Lateral to facial nerve plane",
+        "surgical_access": "Standard parotidectomy approach; facial nerve identified and preserved",
+        "removal": "Target of superficial parotidectomy"
+      }
+    },
+    {
+      "id": "facial_nerve",
+      "type": "ANATOMICAL_STRUCTURE",
+      "label": "Facial nerve",
+      "aliases": ["CN VII", "seventh cranial nerve", "nervus facialis"],
+      "properties": {
+        "function": "Motor control of muscles of facial expression; taste anterior 2/3 tongue; parasympathetic to lacrimal, submandibular, sublingual glands",
+        "parotid_course": "Exits stylomastoid foramen, enters posterior parotid, divides into superior and inferior divisions within gland",
+        "surgical_relevance": "Anatomical landmark for parotidectomy; must be identified and preserved",
+        "injury_consequence": "Facial palsy - partial or complete, temporary or permanent depending on extent of damage"
+      }
+    },
+    {
+      "id": "facial_nerve_branches",
+      "type": "ANATOMICAL_STRUCTURE",
+      "label": "Branches of the facial nerve",
+      "aliases": ["facial nerve divisions", "peripheral facial nerve"],
+      "properties": {
+        "branches": ["temporal", "zygomatic", "buccal", "marginal mandibular", "cervical"],
+        "distribution_within_parotid": "Fan-shaped branching pattern within parotid substance",
+        "at_risk_during": ["deep lobe excision", "parotid surgery", "neck dissection"],
+        "mnemonic": "Two Zebras Bit My Cat (temporal, zygomatic, buccal, marginal mandibular, cervical)"
+      }
+    },
+    {
+      "id": "sinus_tract",
+      "type": "ANATOMICAL_STRUCTURE",
+      "label": "Parotid sinus tract",
+      "aliases": ["abnormal tract", "fistulous tract", "parotid-cutaneous tract"],
+      "properties": {
+        "description": "Abnormal epithelialised channel between parotid gland remnant and outer cheek skin",
+        "content": "Saliva under pressure from ongoing gland secretion",
+        "direction": "Internal (parotid remnant) to external (cheek skin surface)",
+        "mechanism_of_formation": "Failed healing of post-parotidectomy dead space / salivary leakage creating epithelialised track",
+        "target_of_procedure": "Cyanoacrylate solution injected via this tract to seal it"
+      }
+    },
+    {
+      "id": "fistula_orifice",
+      "type": "ANATOMICAL_STRUCTURE",
+      "label": "Fistula orifice",
+      "aliases": ["sinus opening", "cutaneous fistula opening", "mouth of fistula"],
+      "properties": {
+        "location": "Outer cheek skin surface",
+        "appearance": "Visible opening, may discharge saliva or pus",
+        "clinical_significance": "Access point for injection; indicator of sinus activity",
+        "post_treatment_appearance": "Becomes 'only just visible' after successful treatment (case report)"
+      }
+    },
+    {
+      "id": "parotid_sinus",
+      "type": "CONDITION",
+      "label": "Parotid sinus",
+      "aliases": ["post-parotidectomy fistula", "parotid cutaneous fistula", "parotid fistula", "cyanoacrylate occlusion of parotid fistula"],
+      "properties": {
+        "definition": "Abnormal tract between parotid gland remnants and outer cheek surface, developing after superficial parotid gland surgery",
+        "incidence": "10-15% of superficial parotid gland surgery patients",
+        "etiology": "Post-operative complication of superficial parotidectomy",
+        "chronicity": "Chronic if untreated",
+        "natural_history": "May persist indefinitely without intervention; some resolve with conservative measures",
+        "classification": "Post-procedural complication",
+        "icd_context": "Salivary gland fistula / post-procedural complication"
+      }
+    },
+    {
+      "id": "parotitis",
+      "type": "CONDITION",
+      "label": "Parotitis",
+      "aliases": ["parotid gland infection", "parotid inflammation"],
+      "properties": {
+        "definition": "Inflammation or infection of the parotid gland",
+        "in_context": "Complication observed following cyanoacrylate injection in the single published case",
+        "clinical_signs": ["pus leaking from mouth of fistula", "parotid pain", "parotid swelling", "fever"],
+        "severity": "Moderate; resolved with antibiotic treatment in the reported case",
+        "preventable": true,
+        "prevention_method": "Prophylactic antibiotic treatment for 3 weeks after injection"
+      }
+    },
+    {
+      "id": "chronic_sialadenitis",
+      "type": "CONDITION",
+      "label": "Chronic sialadenitis",
+      "aliases": ["chronic parotid inflammation", "recurrent parotitis"],
+      "properties": {
+        "definition": "Chronic inflammatory condition of salivary gland with recurrent episodes",
+        "relevance": "One indication for subtotal parotidectomy, establishing the surgical context that may result in parotid sinus",
+        "source": "Schultz PW 1983 (reference in NICE evidence overview)"
+      }
+    },
+    {
+      "id": "saliva_leakage",
+      "type": "SYMPTOM",
+      "label": "Chronic saliva leakage",
+      "aliases": ["salivary fistula discharge", "sinus discharge", "saliva seepage"],
+      "properties": {
+        "character": "Watery, clear salivary secretion",
+        "route": "Through sinus tract to cheek skin surface",
+        "triggers": ["eating", "smelling food", "thought of food", "any salivary stimulation"],
+        "chronicity": "Persistent if untreated",
+        "functional_impact": "Significant - constant wetness, excoriation, social embarrassment",
+        "volume_in_case": "After first injection: 50% reduction at 7 days; near-complete cessation at 4 months"
+      }
+    },
+    {
+      "id": "cheek_excoriation",
+      "type": "SYMPTOM",
+      "label": "Cheek excoriation",
+      "aliases": ["perilesional excoriation", "skin excoriation around sinus"],
+      "properties": {
+        "cause": "Repeated exposure of perilesional skin to salivary enzymes and moisture",
+        "severity": "Can be significant with chronic high-volume leakage",
+        "location": "Around fistula orifice on cheek",
+        "treatment_response": "Resolved in case report after successful procedure"
+      }
+    },
+    {
+      "id": "cosmetic_disfigurement",
+      "type": "SYMPTOM",
+      "label": "Cosmetic disfigurement",
+      "aliases": ["unwanted cosmetic effects", "visible fistula", "facial disfigurement"],
+      "properties": {
+        "nature": "Visible opening and associated skin changes on cheek",
+        "patient_impact": "Significant distress; may affect social function and quality of life",
+        "reversibility": "Improves with successful sinus occlusion",
+        "post_treatment": "Fistula orifice 'only just visible' after successful treatment in case report"
+      }
+    },
+    {
+      "id": "pus_discharge",
+      "type": "SYMPTOM",
+      "label": "Pus discharge from fistula",
+      "aliases": ["purulent fistula discharge", "parotid abscess discharge"],
+      "properties": {
+        "significance": "Indicates active infection (parotitis) - requires urgent antibiotic treatment",
+        "clinical_action": "Distinguish from normal salivary discharge; culture if possible",
+        "in_case_report": "Observed after second injection before prophylaxis was initiated"
+      }
+    },
+    {
+      "id": "watchful_waiting",
+      "type": "INTERVENTION",
+      "label": "Watchful waiting",
+      "aliases": ["conservative observation", "expectant management"],
+      "properties": {
+        "treatment_tier": 1,
+        "invasiveness": "none",
+        "rationale": "Some sinuses resolve spontaneously; avoids risk of intervention",
+        "indication": "Recent post-operative period, mild or improving symptoms",
+        "limitation": "Fails in a proportion of patients who develop chronic symptomatic sinus",
+        "duration": "Variable; reassess at regular intervals"
+      }
+    },
+    {
+      "id": "bandaging",
+      "type": "INTERVENTION",
+      "label": "Bandaging",
+      "aliases": ["compression dressing", "pressure bandage"],
+      "properties": {
+        "treatment_tier": 2,
+        "invasiveness": "minimal",
+        "mechanism": "External compression reduces salivary flow through sinus tract; promotes adhesion of tract walls",
+        "duration": "Prolonged; may require weeks",
+        "limitation": "Compliance issues; limited efficacy for established tracts"
+      }
+    },
+    {
+      "id": "radiotherapy_parotid",
+      "type": "INTERVENTION",
+      "label": "Radiotherapy to parotid",
+      "aliases": ["parotid irradiation", "radiation treatment for parotid sinus"],
+      "properties": {
+        "treatment_tier": 3,
+        "invasiveness": "non-surgical but significant",
+        "mechanism": "Reduces salivary gland secretory function by damaging acinar cells",
+        "risks": ["xerostomia", "radiation dermatitis", "radiation-induced tumour risk (long-term)", "osteoradionecrosis of mandible"],
+        "tacit": "Rarely used in modern practice for this indication due to disproportionate risk profile",
+        "note": "Listed as option in NICE guidance; clinical context suggests it would be a later-line option"
+      }
+    },
+    {
+      "id": "local_denervation",
+      "type": "INTERVENTION",
+      "label": "Local denervation of parotid gland",
+      "aliases": ["tympanic neurectomy", "Jacobson's nerve section", "chorda tympani section", "parasympathetic denervation"],
+      "properties": {
+        "treatment_tier": 4,
+        "invasiveness": "surgical",
+        "mechanism": "Interrupts parasympathetic nerve supply to parotid (via Jacobson's nerve / lesser petrosal nerve), reducing secretion",
+        "approach": "Middle ear surgical approach (tympanic neurectomy) or via auriculotemporal nerve",
+        "tacit": "Secretory function may recover over time as nerves regenerate; effect may not be permanent"
+      }
+    },
+    {
+      "id": "deep_lobe_excision",
+      "type": "INTERVENTION",
+      "label": "Excision of deep lobe of parotid gland",
+      "aliases": ["total parotidectomy", "deep lobe parotidectomy", "completion parotidectomy"],
+      "properties": {
+        "treatment_tier": 5,
+        "invasiveness": "major surgery",
+        "mechanism": "Removes residual secretory tissue, eliminating source of saliva driving the sinus",
+        "key_risk": "Facial nerve branch damage",
+        "facial_nerve_risk_detail": "Facial nerve passes through parotid gland; branches must be dissected free of deep lobe tissue, risking traction injury, transection, or thermal damage",
+        "expected_outcomes": "High efficacy but significant morbidity risk",
+        "tacit": "This procedure's facial nerve risk is the primary clinical reason why cyanoacrylate instillation, despite its minimal evidence base, may be preferred"
+      }
+    },
+    {
+      "id": "cyanoacrylate_instillation",
+      "type": "INTERVENTION",
+      "label": "Cyanoacrylate instillation for parotid sinus occlusion",
+      "aliases": [
+        "cyanoacrylate injection",
+        "cyanoacrylate occlusion of parotid sinus",
+        "lipiodol-cyanoacrylate injection",
+        "IPG42",
+        "HTG20 procedure"
+      ],
+      "properties": {
+        "treatment_tier": "parallel/alternative to tiers 3-5",
+        "invasiveness": "minimally invasive",
+        "approach": "transcutaneous injection via sinus orifice",
+        "route": "sinus tract into parotid gland remnant",
+        "mechanism": "Cyanoacrylate polymerises on contact with tissue fluid, creating adhesive occlusion of the sinus tract and gland remnant",
+        "agent": "Solution of lipiodol and cyanoacrylate",
+        "repeatability": true,
+        "repeat_indication": "If procedure unsuccessful and symptoms recur",
+        "number_of_injections_in_evidence": 2,
+        "evidence_level": "single uncontrolled case report (n=1)",
+        "nice_recommendation": "special_arrangements_required",
+        "nice_recommendation_basis": "evidence does not appear adequate for routine use without special arrangements",
+        "developer": "Mr AJ Marcus, Edgware Hospital, Middlesex, UK",
+        "year_developed": 1995,
+        "known_practitioners_at_guidance": 1,
+        "tacit": "Minimally invasive alternative that may avoid the facial nerve risk of deep lobe excision; clinical preference may favour this despite weak evidence precisely because the surgical alternative carries high-stakes irreversible morbidity"
+      }
+    },
+    {
+      "id": "superficial_parotidectomy",
+      "type": "INTERVENTION",
+      "label": "Superficial parotid gland surgery",
+      "aliases": ["superficial parotidectomy", "parotidectomy", "parotid surgery"],
+      "properties": {
+        "purpose": "Removal of superficial lobe of parotid gland",
+        "indications": ["parotid tumour (pleomorphic adenoma, Warthin tumour)", "chronic sialadenitis", "lymph node disease in parotid region"],
+        "sinus_complication_rate": "10-15%",
+        "technique": "Facial nerve identification and preservation, dissection of superficial lobe",
+        "relevance_to_graph": "Causal antecedent of parotid sinus; this is the procedure that creates the condition requiring treatment"
+      }
+    },
+    {
+      "id": "antibiotic_treatment",
+      "type": "INTERVENTION",
+      "label": "Antibiotic treatment",
+      "aliases": ["systemic antibiotics", "antibiotic therapy"],
+      "properties": {
+        "indication": "Established parotitis or infection following cyanoacrylate injection",
+        "route": "systemic (oral or IV depending on severity)",
+        "outcome_in_case": "Infection successfully treated",
+        "organisms_likely": "Mixed oral flora; Staphylococcus aureus; anaerobes",
+        "tacit": "Antibiotic type and duration not specified in case report; empirical broad-spectrum choice reasonable"
+      }
+    },
+    {
+      "id": "prophylactic_antibiotics",
+      "type": "INTERVENTION",
+      "label": "Prophylactic antibiotic treatment",
+      "aliases": ["antibiotic prophylaxis", "preventive antibiotics"],
+      "properties": {
+        "indication": "Administration after cyanoacrylate injection to prevent parotitis",
+        "duration": "3 weeks (from case report)",
+        "timing": "After second injection (empirically adopted after parotitis following first injection without prophylaxis)",
+        "outcome_in_case": "Prevented further infection",
+        "evidence_base": "Single case report only",
+        "tacit": "The 3-week duration is entirely empirical from one practitioner's experience; it is not evidence-based but represents the only available clinical guidance on prevention. This knowledge exists only through contact with the originating practitioner."
+      }
+    },
+    {
+      "id": "cyanoacrylate",
+      "type": "MATERIAL",
+      "label": "Cyanoacrylate",
+      "aliases": ["medical superglue", "tissue adhesive", "n-butyl cyanoacrylate", "2-octyl cyanoacrylate"],
+      "properties": {
+        "type": "tissue adhesive",
+        "mechanism": "Polymerises rapidly on contact with nucleophiles (tissue fluid, blood); forms strong covalent bonds with tissue",
+        "medical_uses_other_than_parotid": [
+          "sealing of arteriovenous fistulae",
+          "occlusion of persistent ductus arteriosus",
+          "cardiac septal defects",
+          "endoscopic variceal glue injection",
+          "wound closure",
+          "dental pulp capping"
+        ],
+        "tacit": "The analogical reasoning from cyanoacrylate's established use in sealing vascular abnormal tracts (AVF, PDA) is the theoretical basis for its use in parotid sinus, even though the tissue context differs significantly"
+      }
+    },
+    {
+      "id": "lipiodol",
+      "type": "MATERIAL",
+      "label": "Lipiodol",
+      "aliases": ["lipiodiol", "iodised oil", "ethiodol", "iodinated poppy seed oil"],
+      "properties": {
+        "type": "iodised ethyl ester of fatty acids (contrast agent and carrier)",
+        "properties": ["radiopaque", "viscous", "oily"],
+        "role_in_mixture": "Carrier vehicle for cyanoacrylate; slows polymerisation to allow injection",
+        "independent_use": "Used in interventional radiology for chemoembolisation, lymphangiography",
+        "tacit": "The lipiodol-cyanoacrylate ratio is not specified in the guidance; this is a critical technical detail held only by the originating practitioner"
+      }
+    },
+    {
+      "id": "cyanoacrylate_lipiodol_solution",
+      "type": "MATERIAL",
+      "label": "Lipiodol-cyanoacrylate solution",
+      "aliases": ["injection solution", "glue-lipiodol mixture", "cyanoacrylate-lipiodol mixture"],
+      "properties": {
+        "composition": "Lipiodol mixed with cyanoacrylate",
+        "consistency": "Viscous solution",
+        "delivery": "Injection via sinus tract",
+        "ratio": "Not specified in published literature",
+        "setting_time": "Rapid polymerisation on contact with tissue fluid",
+        "tacit": "The precise mixing ratio, volume injected, and injection technique are unspecified procedural details that constitute core tacit knowledge accessible only from the originating practitioner"
+      }
+    },
+    {
+      "id": "parotitis_complication",
+      "type": "COMPLICATION",
+      "label": "Post-injection parotitis",
+      "aliases": ["parotid infection after injection", "iatrogenic parotitis"],
+      "properties": {
+        "incidence_in_evidence": "1/1 patient in case report (occurred after first injection, before prophylaxis initiated)",
+        "onset": "Post-injection (timing not precisely specified)",
+        "presentation": "Pus leaking from mouth of fistula",
+        "severity": "Moderate - resolved with antibiotics",
+        "management": "Systemic antibiotic treatment",
+        "preventability": "Prevented by 3-week prophylactic antibiotics post-injection",
+        "recurrence_in_case": "Did not recur after prophylactic antibiotics were used for second injection",
+        "note": "Frequency in wider population unknown due to n=1 evidence"
+      }
+    },
+    {
+      "id": "facial_nerve_damage",
+      "type": "COMPLICATION",
+      "label": "Facial nerve branch damage",
+      "aliases": ["facial nerve injury", "facial palsy", "facial nerve palsy"],
+      "properties": {
+        "context": "Risk of deep lobe excision surgery, NOT of cyanoacrylate instillation",
+        "mechanism": "Traction, transection, or thermal injury during surgical dissection of deep parotid lobe",
+        "severity": "Potentially permanent",
+        "clinical_consequences": [
+          "ipsilateral facial palsy",
+          "inability to close eye (ophthalmic branch)",
+          "drooping of corner of mouth",
+          "loss of forehead wrinkling",
+          "asymmetric smile"
+        ],
+        "permanence": "May be temporary (neuropraxia) or permanent (axonotmesis/neurotmesis)",
+        "tacit": "This is the primary risk that creates clinical equipoise between doing nothing and doing surgery; it is the key decision-weight that makes cyanoacrylate's uncertain benefit potentially worthwhile"
+      }
+    },
+    {
+      "id": "unknown_complications",
+      "type": "COMPLICATION",
+      "label": "Unknown/uncharacterised complications",
+      "aliases": ["undefined complications", "unquantified risks"],
+      "properties": {
+        "reason": "Insufficient evidence (n=1 case report) to characterise complication profile",
+        "regulatory_implication": "Primary reason for NICE 'special arrangements' requirement",
+        "examples_possible": [
+          "cyanoacrylate migration",
+          "foreign body reaction",
+          "granuloma formation",
+          "incomplete occlusion",
+          "damage to adjacent structures",
+          "systemic reaction to lipiodol"
+        ],
+        "tacit": "The absence of known complications is not the same as absence of complications; the unknowns here are the dominant clinical risk, not the known parotitis"
+      }
+    },
+    {
+      "id": "infection_recurrence_risk",
+      "type": "COMPLICATION",
+      "label": "Recurrent infection risk",
+      "aliases": ["risk of repeat infection", "repeated parotitis"],
+      "properties": {
+        "context": "Risk of repeat parotitis with subsequent injections if prophylaxis not used",
+        "preventable": true,
+        "prevention": "Prophylactic antibiotics for 3 weeks after each injection",
+        "evidence_basis": "Single case - first injection without prophylaxis caused parotitis; second injection with 3-week prophylaxis prevented recurrence"
+      }
+    },
+    {
+      "id": "marcus_1995_case_report",
+      "type": "EVIDENCE_ITEM",
+      "label": "Marcus AJ 1995/1998 case report",
+      "aliases": ["Marcus case report", "the single case report", "Edgware Hospital case"],
+      "properties": {
+        "authors": ["Marcus AJ", "Nasser NA"],
+        "title": "The treatment of a chronic parotid cutaneous fistula by the injection of a solution of lipiodiol with cyanoacrylate",
+        "journal": "Clinical Radiology",
+        "year_published": 1998,
+        "year_performed": 1995,
+        "volume": 53,
+        "pages": "616-618",
+        "location": "Edgware, Middlesex, UK",
+        "n_patients": 1,
+        "n_injections": 2,
+        "study_type": "case_report",
+        "controlled": false,
+        "blinded": false,
+        "evidence_grade": "very_low",
+        "validity": "Demonstrates feasibility only; lacks power for any statistical inference",
+        "generalisability": "None - single patient, single practitioner, single institution"
+      }
+    },
+    {
+      "id": "wax_tarshis_1991",
+      "type": "EVIDENCE_ITEM",
+      "label": "Wax and Tarshis 1991",
+      "aliases": ["post-parotidectomy fistula epidemiology reference"],
+      "properties": {
+        "authors": ["Wax M", "Tarshis L"],
+        "title": "Post-parotidectomy fistula",
+        "journal": "Journal of Otolaryngology",
+        "year": 1991,
+        "volume": 20,
+        "pages": "10-13",
+        "relevance": "Epidemiological reference establishing 10-15% incidence of parotid sinus after superficial parotidectomy"
+      }
+    },
+    {
+      "id": "schultz_1983",
+      "type": "EVIDENCE_ITEM",
+      "label": "Schultz 1983",
+      "aliases": ["subtotal parotidectomy sialadenitis reference"],
+      "properties": {
+        "authors": ["Schultz PW"],
+        "title": "Subtotal parotidectomy in the treatment of chronic sialadenitis",
+        "journal": "Annals of Plastic Surgery",
+        "year": 1983,
+        "volume": "II",
+        "pages": "459-461",
+        "relevance": "Context reference for surgical management of parotid conditions that may result in post-operative sinus"
+      }
+    },
+    {
+      "id": "ipac_overview_2002",
+      "type": "EVIDENCE_ITEM",
+      "label": "IPAC Interventional Procedure Overview 2002",
+      "aliases": ["Bazian overview", "NICE IP overview HTG20"],
+      "properties": {
+        "author": "Bazian Ltd",
+        "commissioned_by": "NICE Interventional Procedures Advisory Committee (IPAC)",
+        "date": "October 2002",
+        "type": "rapid literature review and specialist advisory review",
+        "conclusion": "No controlled studies or case series found; one case report only; feasibility demonstrated but insufficient evidence for routine use",
+        "specialist_advisor_finding": "Advisor unaware of the technique"
+      }
+    },
+    {
+      "id": "nice_htg20",
+      "type": "EVIDENCE_ITEM",
+      "label": "NICE HTG20 guidance",
+      "aliases": ["IPG42", "NICE guidance HTG20", "HTG20"],
+      "properties": {
+        "document_type": "NICE HealthTech guidance (formerly Interventional Procedures Guidance)",
+        "reference": "HTG20 (formerly IPG42)",
+        "published": "2004-02-25",
+        "migrated": "January 2026 (IPG42 → HTG20)",
+        "status": "Current - no review date set (pending new evidence)",
+        "endorsing_body": "Healthcare Improvement Scotland",
+        "applies_to": "England, Wales, Scotland"
+      }
+    },
+    {
+      "id": "outcome_secretion_reduction",
+      "type": "CLINICAL_OUTCOME",
+      "label": "50% secretion reduction at 7 days",
+      "aliases": ["partial response at 7 days"],
+      "properties": {
+        "timepoint": "7 days after second injection",
+        "metric": "50% reduction in saliva secretion through sinus",
+        "source": "Marcus 1995 case report",
+        "interpretation": "Partial response at early timepoint; warrants continued observation rather than re-injection or escalation"
+      }
+    },
+    {
+      "id": "outcome_secretion_cessation",
+      "type": "CLINICAL_OUTCOME",
+      "label": "Near-complete secretion cessation at 4 months",
+      "aliases": ["near-complete response", "functional success"],
+      "properties": {
+        "timepoint": "4 months after second injection",
+        "metric": "Secretion stopped almost completely",
+        "source": "Marcus 1995 case report",
+        "interpretation": "Treatment success; expected progressive improvement over months rather than days"
+      }
+    },
+    {
+      "id": "outcome_excoriation_resolved",
+      "type": "CLINICAL_OUTCOME",
+      "label": "Excoriation resolved",
+      "aliases": ["skin healing around fistula"],
+      "properties": {
+        "timepoint": "4 months",
+        "metric": "Excoriation around mouth of sinus resolved",
+        "source": "Marcus 1995 case report",
+        "interpretation": "Secondary benefit from reduction in salivary irritation of perilesional skin"
+      }
+    },
+    {
+      "id": "outcome_fistula_invisible",
+      "type": "CLINICAL_OUTCOME",
+      "label": "Fistula orifice barely visible",
+      "aliases": ["cosmetic improvement", "near-invisible fistula"],
+      "properties": {
+        "timepoint": "4 months",
+        "metric": "Fistula orifice 'only just visible'",
+        "source": "Marcus 1995 case report",
+        "interpretation": "Significant cosmetic improvement; may be primary goal for some patients"
+      }
+    },
+    {
+      "id": "outcome_patient_satisfied",
+      "type": "CLINICAL_OUTCOME",
+      "label": "Patient satisfaction",
+      "aliases": ["patient reported satisfaction"],
+      "properties": {
+        "metric": "Patient reported as 'satisfied' with treatment",
+        "measurement": "Subjective patient report - no validated PRO instrument",
+        "source": "Marcus 1995 case report",
+        "limitation": "Single patient, no comparator, no validated scale"
+      }
+    },
+    {
+      "id": "evidence_inadequacy",
+      "type": "DECISION_CRITERION",
+      "label": "Evidence inadequacy for routine use",
+      "aliases": ["insufficient evidence", "inadequate evidence base"],
+      "properties": {
+        "nice_finding": "Current evidence on safety and efficacy does NOT appear adequate for procedure to be used without special arrangements",
+        "basis": "Single uncontrolled case report (n=1); no specialist advisor aware of technique",
+        "consequence": "Special arrangements for consent and audit required before proceeding",
+        "modifiable": true,
+        "trigger_for_upgrade": "Publication of further safety and efficacy outcomes",
+        "tacit": "This is not a permanent bar to the procedure; it is an epistemic state that can change with evidence. The clinician must understand that 'special arrangements' is a governance status, not a prohibition."
+      }
+    },
+    {
+      "id": "facial_nerve_risk_criterion",
+      "type": "DECISION_CRITERION",
+      "label": "Facial nerve risk of surgical alternative",
+      "aliases": ["nerve damage avoidance", "surgical risk avoidance criterion"],
+      "properties": {
+        "description": "The risk of facial nerve branch damage from deep lobe excision creates clinical rationale for attempting minimally invasive occlusion despite weak evidence",
+        "weight": "High - permanent facial palsy is an irreversible, high-impact outcome",
+        "tacit": "This is the core tacit decision logic that makes cyanoacrylate instillation clinically rational even with n=1 evidence: the downside of the alternative is catastrophic and irreversible, while cyanoacrylate's downside appears manageable and reversible based on the single case."
+      }
+    },
+    {
+      "id": "repeatability_criterion",
+      "type": "DECISION_CRITERION",
+      "label": "Procedure repeatability decision point",
+      "aliases": ["repeat injection decision", "re-treatment indication"],
+      "properties": {
+        "description": "If the procedure is unsuccessful and symptoms recur, the procedure can be repeated",
+        "decision_logic": "Partial or no response at first injection → repeat rather than escalate to surgery",
+        "number_of_repeats_in_evidence": "1 repeat (2 total injections) in case report",
+        "tacit": "The response timeline is weeks to months (not days). Early partial response at 7 days is a positive prognostic sign; escalation should not occur before adequate time has been allowed. This sequential assessment is invisible in the guidance text."
+      }
+    },
+    {
+      "id": "symptom_persistence_criterion",
+      "type": "DECISION_CRITERION",
+      "label": "Symptom persistence as escalation trigger",
+      "aliases": ["failed conservative treatment", "treatment failure criterion"],
+      "properties": {
+        "description": "Symptom persistence or recurrence after a treatment tier is the trigger for escalating to the next tier",
+        "applies_to": "All treatment tiers in the management ladder",
+        "tacit": "The duration of watchful waiting before escalation is unspecified; clinical judgement about patient distress, cosmetic impact, and functional limitation governs timing"
+      }
+    },
+    {
+      "id": "governance_notification",
+      "type": "GOVERNANCE_REQUIREMENT",
+      "label": "Clinical governance lead notification",
+      "aliases": ["trust governance notification", "clinical governance informing"],
+      "properties": {
+        "action": "Inform clinical governance leads in the Trust",
+        "mandatory": true,
+        "timing": "Before undertaking the procedure",
+        "purpose": "Ensure appropriate institutional oversight for a procedure with inadequate evidence",
+        "applicable_to": "England and Wales (NHS Trust structure)"
+      }
+    },
+    {
+      "id": "special_informed_consent",
+      "type": "GOVERNANCE_REQUIREMENT",
+      "label": "Special informed consent",
+      "aliases": ["enhanced consent", "uncertainty-specific consent", "written information requirement"],
+      "properties": {
+        "requirement": "Patient must understand uncertainty about procedure safety and efficacy",
+        "format": "Clear written information must be provided",
+        "resource": "NICE information for the public (HTG20)",
+        "mandatory": true,
+        "standard": "Higher than standard consent - specific acknowledgement of uncertainty required",
+        "tacit": "Standard surgical consent covers known risks; this special consent is specifically about epistemic uncertainty - the patient must understand that NO ONE knows the full risk profile because of the n=1 evidence base"
+      }
+    },
+    {
+      "id": "clinical_audit_requirement",
+      "type": "GOVERNANCE_REQUIREMENT",
+      "label": "Clinical audit and outcome review",
+      "aliases": ["mandatory audit", "outcome tracking", "clinical audit requirement"],
+      "properties": {
+        "requirement": "Audit and review clinical outcomes of all patients",
+        "mandatory": true,
+        "purpose": "Accumulate evidence to reduce uncertainty",
+        "reporting": "Publication of safety and efficacy outcomes recommended",
+        "note": "All cases should be captured - no minimum threshold"
+      }
+    },
+    {
+      "id": "outcome_publication_recommendation",
+      "type": "GOVERNANCE_REQUIREMENT",
+      "label": "Outcome publication recommendation",
+      "aliases": ["publish outcomes", "reporting of outcomes"],
+      "properties": {
+        "requirement_level": "Recommended (not mandatory)",
+        "purpose": "Reduce current uncertainty about safety and efficacy",
+        "may_trigger": "NICE review of guidance",
+        "tacit": "Publication of even small case series would represent a meaningful evidence upgrade from n=1 single case"
+      }
+    },
+    {
+      "id": "nice_review_trigger",
+      "type": "GOVERNANCE_REQUIREMENT",
+      "label": "NICE evidence-triggered review",
+      "aliases": ["guidance review trigger", "conditional NICE review"],
+      "properties": {
+        "condition": "NICE may review the procedure upon publication of further evidence",
+        "not_time_bound": "No scheduled review date; contingent on new evidence only",
+        "implication": "Guidance status is indefinitely 'special arrangements' unless new evidence published",
+        "tacit": "In practice, this procedure may remain at 'special arrangements' tier indefinitely if no evidence accumulates"
+      }
+    },
+    {
+      "id": "mr_aj_marcus",
+      "type": "CLINICAL_RESOURCE",
+      "label": "Mr AJ Marcus, Edgware Hospital",
+      "aliases": ["the originating clinician", "sole practitioner"],
+      "properties": {
+        "name": "Mr AJ Marcus",
+        "institution": "Edgware Hospital, London (also cited as Middlesex, UK)",
+        "role": "Sole practitioner of this technique at time of guidance",
+        "knowledge_status": "Holds all tacit procedural knowledge for this technique",
+        "nice_recommendation": "Anyone considering use of this procedure may wish to contact this clinician",
+        "tacit": "The totality of procedural expertise for this intervention resides with one person. Training pathway = direct contact. This is an extreme case of tacit knowledge concentration."
+      }
+    },
+    {
+      "id": "procedure_rarity",
+      "type": "CONTEXTUAL_KNOWLEDGE",
+      "label": "Extreme rarity of procedure",
+      "aliases": ["single-practitioner technique", "ultra-rare procedure"],
+      "properties": {
+        "fact": "Procedure performed once, on 1 patient, by 1 clinician, in 1 country at time of guidance",
+        "implication_for_training": "No established training pathway; no simulation models; no multi-centre experience",
+        "implication_for_evidence": "Randomised trial would require impractical numbers given rarity of indication",
+        "implication_for_governance": "Special arrangements are not bureaucratic formality - they reflect genuine epistemic limitation",
+        "tacit": "The request to SERNIP (Safety and Efficacy Register for New Interventional Procedures) originated with the same clinician who performed the only case - the procedure was self-nominated for review"
+      }
+    },
+    {
+      "id": "cyanoacrylate_analogical_context",
+      "type": "CONTEXTUAL_KNOWLEDGE",
+      "label": "Cyanoacrylate in other sealing contexts",
+      "aliases": ["analogical use of cyanoacrylate", "established cyanoacrylate applications"],
+      "properties": {
+        "principle": "Cyanoacrylate is well-established for sealing abnormal tracts in other contexts",
+        "established_uses": [
+          "Arteriovenous fistulae (endovascular embolisation)",
+          "Persistent ductus arteriosus occlusion",
+          "Cardiac septal defects",
+          "Endoscopic gastric variceal glue injection",
+          "Wound closure"
+        ],
+        "tacit": "The theoretical rationale for parotid sinus occlusion is borrowed from vascular applications; however, the tissue environment, injection volumes, setting times, and complication profiles differ substantially. The analogy provides a rational basis but not a proven extrapolation."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e001",
+      "source": "superficial_parotidectomy",
+      "target": "parotid_sinus",
+      "type": "COMPLICATES",
+      "label": "Superficial parotidectomy may result in parotid sinus",
+      "properties": {
+        "incidence": "10-15% of procedures",
+        "mechanism": "Failed wound healing creates epithelialised tract between gland remnant and skin",
+        "evidence_source": "Wax & Tarshis 1991 (cited in HTG20)",
+        "nice_section": "2.1.1"
+      }
+    },
+    {
+      "id": "e002",
+      "source": "superficial_parotidectomy",
+      "target": "parotid_gland_remnant",
+      "type": "CREATES",
+      "label": "Superficial parotidectomy leaves parotid gland remnant",
+      "properties": {
+        "reason": "Deep lobe not removed in superficial procedure",
+        "significance": "Remnant continues secreting saliva, driving sinus flow"
+      }
+    },
+    {
+      "id": "e003",
+      "source": "parotid_gland_remnant",
+      "target": "sinus_tract",
+      "type": "CONNECTS_TO",
+      "label": "Gland remnant communicates with cheek via sinus tract",
+      "properties": {
+        "direction": "internal to external",
+        "content": "saliva under secretory pressure"
+      }
+    },
+    {
+      "id": "e004",
+      "source": "sinus_tract",
+      "target": "fistula_orifice",
+      "type": "TERMINATES_AT",
+      "label": "Sinus tract opens at fistula orifice on cheek",
+      "properties": {
+        "location": "outer cheek skin surface"
+      }
+    },
+    {
+      "id": "e005",
+      "source": "parotid_sinus",
+      "target": "saliva_leakage",
+      "type": "MANIFESTS_AS",
+      "label": "Parotid sinus causes chronic saliva leakage",
+      "properties": {
+        "mechanism": "Saliva travels through sinus tract to skin surface",
+        "nice_section": "2.1.1"
+      }
+    },
+    {
+      "id": "e006",
+      "source": "parotid_sinus",
+      "target": "cheek_excoriation",
+      "type": "MANIFESTS_AS",
+      "label": "Parotid sinus causes cheek excoriation",
+      "properties": {
+        "mechanism": "Chronic salivary contact with perilesional skin causes enzymatic and moisture damage",
+        "nice_section": "2.1.1"
+      }
+    },
+    {
+      "id": "e007",
+      "source": "parotid_sinus",
+      "target": "cosmetic_disfigurement",
+      "type": "MANIFESTS_AS",
+      "label": "Parotid sinus causes cosmetic disfigurement",
+      "properties": {
+        "mechanism": "Visible fistula orifice and associated skin changes on cheek",
+        "patient_impact": "significant distress",
+        "nice_section": "2.1.1"
+      }
+    },
+    {
+      "id": "e008",
+      "source": "parotid_sinus",
+      "target": "watchful_waiting",
+      "type": "INDICATES",
+      "label": "Parotid sinus may be managed initially with watchful waiting",
+      "properties": {
+        "tier": 1,
+        "conditions": "mild or early symptoms; post-operative period where spontaneous resolution possible",
+        "nice_section": "2.1.2"
+      }
+    },
+    {
+      "id": "e009",
+      "source": "parotid_sinus",
+      "target": "bandaging",
+      "type": "INDICATES",
+      "label": "Parotid sinus may be managed with bandaging",
+      "properties": {
+        "tier": 2,
+        "conditions": "failed watchful waiting or concurrent with watchful waiting",
+        "nice_section": "2.1.2"
+      }
+    },
+    {
+      "id": "e010",
+      "source": "parotid_sinus",
+      "target": "radiotherapy_parotid",
+      "type": "INDICATES",
+      "label": "Parotid sinus may be managed with radiotherapy",
+      "properties": {
+        "tier": 3,
+        "conditions": "failed conservative measures; significant symptoms",
+        "caveat": "Rarely used in modern practice due to disproportionate risk profile",
+        "nice_section": "2.1.2"
+      }
+    },
+    {
+      "id": "e011",
+      "source": "parotid_sinus",
+      "target": "local_denervation",
+      "type": "INDICATES",
+      "label": "Parotid sinus may be managed with local denervation",
+      "properties": {
+        "tier": 4,
+        "conditions": "failed conservative measures; preference for avoiding deep surgery",
+        "nice_section": "2.1.2"
+      }
+    },
+    {
+      "id": "e012",
+      "source": "parotid_sinus",
+      "target": "deep_lobe_excision",
+      "type": "INDICATES",
+      "label": "Parotid sinus may be managed with deep lobe excision",
+      "properties": {
+        "tier": 5,
+        "conditions": "failed all other measures; significant disability",
+        "key_risk": "facial nerve branch damage",
+        "nice_section": "2.1.2"
+      }
+    },
+    {
+      "id": "e013",
+      "source": "parotid_sinus",
+      "target": "cyanoacrylate_instillation",
+      "type": "INDICATES",
+      "label": "Parotid sinus is the indication for cyanoacrylate instillation",
+      "properties": {
+        "evidence_basis": "single case report n=1",
+        "nice_recommendation": "special arrangements required",
+        "nice_section": "1.1, 2.1"
+      }
+    },
+    {
+      "id": "e014",
+      "source": "watchful_waiting",
+      "target": "bandaging",
+      "type": "PROGRESSES_TO",
+      "label": "Failed watchful waiting may escalate to bandaging",
+      "properties": {
+        "trigger": "Persistent or worsening symptoms",
+        "tacit_note": "Duration of observation before escalation is unspecified; clinician judgement on symptom burden governs timing"
+      }
+    },
+    {
+      "id": "e015",
+      "source": "bandaging",
+      "target": "radiotherapy_parotid",
+      "type": "PROGRESSES_TO",
+      "label": "Failed bandaging may escalate to radiotherapy",
+      "properties": {
+        "trigger": "Persistent symptoms despite compression",
+        "tacit_note": "In practice, denervation or cyanoacrylate may be preferred over radiotherapy due to risk profile"
+      }
+    },
+    {
+      "id": "e016",
+      "source": "bandaging",
+      "target": "local_denervation",
+      "type": "PROGRESSES_TO",
+      "label": "Failed bandaging may escalate to local denervation",
+      "properties": {
+        "trigger": "Persistent symptoms; preference for surgical over radiation"
+      }
+    },
+    {
+      "id": "e017",
+      "source": "bandaging",
+      "target": "cyanoacrylate_instillation",
+      "type": "PROGRESSES_TO",
+      "label": "Failed bandaging may lead to consideration of cyanoacrylate instillation",
+      "properties": {
+        "trigger": "Persistent symptoms; desire to avoid surgery",
+        "tacit_note": "Under special arrangements; requires governance notification and special consent before proceeding"
+      }
+    },
+    {
+      "id": "e018",
+      "source": "local_denervation",
+      "target": "deep_lobe_excision",
+      "type": "PROGRESSES_TO",
+      "label": "Failed denervation may escalate to deep lobe excision",
+      "properties": {
+        "trigger": "Persistent symptoms; secretion not adequately reduced by denervation"
+      }
+    },
+    {
+      "id": "e019",
+      "source": "cyanoacrylate_instillation",
+      "target": "cyanoacrylate_instillation",
+      "type": "REPEATS_IF",
+      "label": "Cyanoacrylate instillation can be repeated if unsuccessful",
+      "properties": {
+        "trigger": "Procedure unsuccessful; symptoms recur",
+        "nice_section": "2.2.1",
+        "number_in_evidence": "1 repeat (2 total injections) in case report",
+        "tacit_note": "Partial response at 7 days is normal progression; full assessment should allow weeks to months before declaring failure"
+      }
+    },
+    {
+      "id": "e020",
+      "source": "cyanoacrylate_instillation",
+      "target": "deep_lobe_excision",
+      "type": "ALTERNATIVE_TO",
+      "label": "Cyanoacrylate instillation is an alternative to deep lobe excision",
+      "properties": {
+        "advantage": "Avoids facial nerve risk of surgery",
+        "disadvantage": "n=1 evidence; uncertain outcomes",
+        "decision_weight": "Facial nerve risk creates strong clinical rationale for attempting less invasive option first",
+        "nice_section": "evidence overview",
+        "tacit_note": "This is the central clinical equipoise: the minimally invasive option has minimal evidence but avoids a catastrophic-risk surgical option. The uncertainty of cyanoacrylate must be weighed against the known high-stakes risk of the alternative."
+      }
+    },
+    {
+      "id": "e021",
+      "source": "cyanoacrylate_instillation",
+      "target": "facial_nerve_damage",
+      "type": "AVOIDS_RISK_OF",
+      "label": "Cyanoacrylate instillation avoids the facial nerve risk of deep lobe excision",
+      "properties": {
+        "mechanism": "Minimally invasive injection route does not require facial nerve dissection",
+        "clinical_significance": "Primary driver of clinical interest in procedure despite weak evidence base",
+        "tacit_note": "An experienced clinician weighs unquantified cyanoacrylate risks against well-known facial palsy risk of surgery"
+      }
+    },
+    {
+      "id": "e022",
+      "source": "deep_lobe_excision",
+      "target": "facial_nerve_damage",
+      "type": "RISKS",
+      "label": "Deep lobe excision risks facial nerve branch damage",
+      "properties": {
+        "mechanism": "Facial nerve passes through parotid gland; branches must be dissected free of deep lobe",
+        "severity": "Potentially permanent facial palsy",
+        "tacit_note": "Risk level depends heavily on surgeon experience and residual anatomy from prior surgery; not quantified in guidance"
+      }
+    },
+    {
+      "id": "e023",
+      "source": "cyanoacrylate_instillation",
+      "target": "cyanoacrylate_lipiodol_solution",
+      "type": "USES",
+      "label": "Cyanoacrylate instillation uses lipiodol-cyanoacrylate solution",
+      "properties": {
+        "nice_section": "2.2.1"
+      }
+    },
+    {
+      "id": "e024",
+      "source": "cyanoacrylate_lipiodol_solution",
+      "target": "cyanoacrylate",
+      "type": "CONTAINS",
+      "label": "Solution contains cyanoacrylate",
+      "properties": {
+        "role": "active sealing agent"
+      }
+    },
+    {
+      "id": "e025",
+      "source": "cyanoacrylate_lipiodol_solution",
+      "target": "lipiodol",
+      "type": "CONTAINS",
+      "label": "Solution contains lipiodol",
+      "properties": {
+        "role": "carrier vehicle; slows cyanoacrylate polymerisation to allow injection"
+      }
+    },
+    {
+      "id": "e026",
+      "source": "cyanoacrylate_instillation",
+      "target": "sinus_tract",
+      "type": "ADMINISTERED_VIA",
+      "label": "Cyanoacrylate solution injected via sinus tract",
+      "properties": {
+        "route": "injection through fistula orifice into sinus tract",
+        "nice_section": "2.2.1"
+      }
+    },
+    {
+      "id": "e027",
+      "source": "cyanoacrylate_instillation",
+      "target": "parotid_gland_remnant",
+      "type": "TARGETS",
+      "label": "Cyanoacrylate instillation targets parotid gland remnant",
+      "properties": {
+        "mechanism": "Solution injected into remnant tissue, sealing internal sinus origin",
+        "nice_section": "2.2.1"
+      }
+    },
+    {
+      "id": "e028",
+      "source": "cyanoacrylate_instillation",
+      "target": "parotitis_complication",
+      "type": "RISKS",
+      "label": "Cyanoacrylate instillation risks parotitis",
+      "properties": {
+        "incidence": "1/1 in case report (100% without prophylaxis; 0/1 with prophylaxis)",
+        "note": "Population incidence entirely unknown due to n=1 evidence",
+        "nice_section": "evidence overview"
+      }
+    },
+    {
+      "id": "e029",
+      "source": "cyanoacrylate_instillation",
+      "target": "unknown_complications",
+      "type": "RISKS",
+      "label": "Cyanoacrylate instillation has uncharacterised risk of unknown complications",
+      "properties": {
+        "reason": "n=1 evidence base; no controlled studies; no case series",
+        "regulatory_consequence": "Special arrangements required precisely because complication profile is unknown",
+        "nice_section": "1.1"
+      }
+    },
+    {
+      "id": "e030",
+      "source": "parotitis_complication",
+      "target": "antibiotic_treatment",
+      "type": "MANAGED_BY",
+      "label": "Parotitis managed with antibiotic treatment",
+      "properties": {
+        "outcome_in_case": "Successfully treated",
+        "nice_section": "evidence overview"
+      }
+    },
+    {
+      "id": "e031",
+      "source": "prophylactic_antibiotics",
+      "target": "parotitis_complication",
+      "type": "PREVENTS",
+      "label": "Prophylactic antibiotics prevent recurrent parotitis",
+      "properties": {
+        "duration": "3 weeks post-injection",
+        "evidence": "Single case - parotitis after injection without prophylaxis; no parotitis after injection with 3-week prophylaxis",
+        "tacit_note": "This 3-week protocol is the only available procedural knowledge on prevention. It is empirical, from a single practitioner, but represents the only available clinical guidance."
+      }
+    },
+    {
+      "id": "e032",
+      "source": "cyanoacrylate_instillation",
+      "target": "prophylactic_antibiotics",
+      "type": "ACCOMPANIED_BY",
+      "label": "Cyanoacrylate injection should be accompanied by prophylactic antibiotics",
+      "properties": {
+        "timing": "After injection",
+        "duration": "3 weeks",
+        "basis": "Empirical from case report - prevents parotitis",
+        "tacit_note": "Not stated explicitly in NICE guidance but derivable from the case report data; would be standard practice for any clinician following the originating practitioner's protocol"
+      }
+    },
+    {
+      "id": "e033",
+      "source": "parotitis_complication",
+      "target": "pus_discharge",
+      "type": "MANIFESTS_AS",
+      "label": "Parotitis manifests as pus discharge from fistula",
+      "properties": {
+        "sign": "Pus leaking from mouth of fistula",
+        "action_required": "Immediate antibiotic treatment"
+      }
+    },
+    {
+      "id": "e034",
+      "source": "marcus_1995_case_report",
+      "target": "cyanoacrylate_instillation",
+      "type": "DEMONSTRATES_FEASIBILITY_OF",
+      "label": "Marcus 1995 case report demonstrates feasibility of the procedure",
+      "properties": {
+        "evidence_strength": "feasibility only - uncontrolled, n=1",
+        "limitation": "Cannot support inferences about efficacy or safety in general population",
+        "nice_section": "2.3.1"
+      }
+    },
+    {
+      "id": "e035",
+      "source": "marcus_1995_case_report",
+      "target": "outcome_secretion_reduction",
+      "type": "DOCUMENTS",
+      "label": "Case report documents 50% secretion reduction at 7 days",
+      "properties": {
+        "timepoint": "7 days after second injection",
+        "nice_section": "evidence overview"
+      }
+    },
+    {
+      "id": "e036",
+      "source": "marcus_1995_case_report",
+      "target": "outcome_secretion_cessation",
+      "type": "DOCUMENTS",
+      "label": "Case report documents near-complete secretion cessation at 4 months",
+      "properties": {
+        "timepoint": "4 months after second injection"
+      }
+    },
+    {
+      "id": "e037",
+      "source": "marcus_1995_case_report",
+      "target": "outcome_excoriation_resolved",
+      "type": "DOCUMENTS",
+      "label": "Case report documents excoriation resolution",
+      "properties": {
+        "timepoint": "4 months"
+      }
+    },
+    {
+      "id": "e038",
+      "source": "marcus_1995_case_report",
+      "target": "outcome_fistula_invisible",
+      "type": "DOCUMENTS",
+      "label": "Case report documents near-invisible fistula at 4 months",
+      "properties": {
+        "timepoint": "4 months"
+      }
+    },
+    {
+      "id": "e039",
+      "source": "marcus_1995_case_report",
+      "target": "outcome_patient_satisfied",
+      "type": "DOCUMENTS",
+      "label": "Case report documents patient satisfaction",
+      "properties": {}
+    },
+    {
+      "id": "e040",
+      "source": "marcus_1995_case_report",
+      "target": "parotitis_complication",
+      "type": "DOCUMENTS",
+      "label": "Case report documents parotitis after first injection",
+      "properties": {
+        "context": "Occurred after first injection (without prophylaxis)"
+      }
+    },
+    {
+      "id": "e041",
+      "source": "wax_tarshis_1991",
+      "target": "parotid_sinus",
+      "type": "ESTABLISHES_INCIDENCE_OF",
+      "label": "Wax & Tarshis 1991 establishes 10-15% incidence of parotid sinus",
+      "properties": {
+        "incidence": "10-15% of superficial parotid surgery patients",
+        "nice_section": "2.1.1"
+      }
+    },
+    {
+      "id": "e042",
+      "source": "ipac_overview_2002",
+      "target": "marcus_1995_case_report",
+      "type": "IDENTIFIED",
+      "label": "IPAC overview identified single case report as sole evidence",
+      "properties": {
+        "finding": "No controlled studies or case series found",
+        "nice_section": "evidence overview"
+      }
+    },
+    {
+      "id": "e043",
+      "source": "evidence_inadequacy",
+      "target": "governance_notification",
+      "type": "REQUIRES",
+      "label": "Evidence inadequacy requires governance notification before proceeding",
+      "properties": {
+        "nice_section": "1.2"
+      }
+    },
+    {
+      "id": "e044",
+      "source": "evidence_inadequacy",
+      "target": "special_informed_consent",
+      "type": "REQUIRES",
+      "label": "Evidence inadequacy requires special informed consent",
+      "properties": {
+        "nice_section": "1.2"
+      }
+    },
+    {
+      "id": "e045",
+      "source": "evidence_inadequacy",
+      "target": "clinical_audit_requirement",
+      "type": "REQUIRES",
+      "label": "Evidence inadequacy requires clinical audit of all patients",
+      "properties": {
+        "nice_section": "1.2"
+      }
+    },
+    {
+      "id": "e046",
+      "source": "clinical_audit_requirement",
+      "target": "outcome_publication_recommendation",
+      "type": "ENABLES",
+      "label": "Clinical audit enables outcome publication",
+      "properties": {
+        "purpose": "Reduce uncertainty through published evidence accumulation"
+      }
+    },
+    {
+      "id": "e047",
+      "source": "outcome_publication_recommendation",
+      "target": "nice_review_trigger",
+      "type": "TRIGGERS",
+      "label": "Publication of outcomes may trigger NICE guidance review",
+      "properties": {
+        "nice_statement": "NICE may review the procedure upon publication of further evidence",
+        "nice_section": "1.2"
+      }
+    },
+    {
+      "id": "e048",
+      "source": "nice_htg20",
+      "target": "governance_notification",
+      "type": "MANDATES",
+      "label": "NICE HTG20 mandates clinical governance notification",
+      "properties": {
+        "nice_section": "1.2"
+      }
+    },
+    {
+      "id": "e049",
+      "source": "nice_htg20",
+      "target": "special_informed_consent",
+      "type": "MANDATES",
+      "label": "NICE HTG20 mandates special informed consent",
+      "properties": {
+        "nice_section": "1.2"
+      }
+    },
+    {
+      "id": "e050",
+      "source": "nice_htg20",
+      "target": "clinical_audit_requirement",
+      "type": "MANDATES",
+      "label": "NICE HTG20 mandates clinical audit",
+      "properties": {
+        "nice_section": "1.2"
+      }
+    },
+    {
+      "id": "e051",
+      "source": "mr_aj_marcus",
+      "target": "marcus_1995_case_report",
+      "type": "AUTHORED",
+      "label": "Mr AJ Marcus authored the sole case report"
+    },
+    {
+      "id": "e052",
+      "source": "mr_aj_marcus",
+      "target": "cyanoacrylate_instillation",
+      "type": "SOLE_PRACTITIONER_OF",
+      "label": "Mr AJ Marcus is the sole known practitioner of this technique",
+      "properties": {
+        "at_time_of_guidance": "2004",
+        "nice_recommendation": "Anyone considering use may wish to contact this clinician",
+        "tacit_note": "Procedural expertise is held entirely by this practitioner; there is no other training source"
+      }
+    },
+    {
+      "id": "e053",
+      "source": "procedure_rarity",
+      "target": "evidence_inadequacy",
+      "type": "EXPLAINS",
+      "label": "Extreme procedure rarity explains evidence inadequacy",
+      "properties": {
+        "logic": "1 patient globally → no studies possible → NICE must apply special arrangements"
+      }
+    },
+    {
+      "id": "e054",
+      "source": "procedure_rarity",
+      "target": "mr_aj_marcus",
+      "type": "CONCENTRATES_KNOWLEDGE_IN",
+      "label": "Extreme rarity concentrates all procedural knowledge in one practitioner",
+      "properties": {
+        "tacit_note": "Maximum concentration of tacit knowledge; no distributed expertise; training requires direct apprenticeship"
+      }
+    },
+    {
+      "id": "e055",
+      "source": "cyanoacrylate",
+      "target": "cyanoacrylate_analogical_context",
+      "type": "USED_IN",
+      "label": "Cyanoacrylate has established use in sealing other abnormal tracts",
+      "properties": {
+        "contexts": ["arteriovenous fistulae", "persistent ductus arteriosus", "cardiac septal defects"],
+        "relevance": "Theoretical basis for parotid sinus application",
+        "tacit_note": "Analogical reasoning from vascular sealing provides scientific plausibility but different tissue environments mean direct extrapolation is uncertain"
+      }
+    },
+    {
+      "id": "e056",
+      "source": "cyanoacrylate_analogical_context",
+      "target": "cyanoacrylate_instillation",
+      "type": "PROVIDES_RATIONALE_FOR",
+      "label": "Cyanoacrylate's established sealing uses provide theoretical rationale for parotid application",
+      "properties": {
+        "strength": "Moderate - principle sound, tissue context different",
+        "nice_section": "evidence overview (IPAC)"
+      }
+    },
+    {
+      "id": "e057",
+      "source": "cyanoacrylate_instillation",
+      "target": "saliva_leakage",
+      "type": "TREATS",
+      "label": "Cyanoacrylate instillation treats saliva leakage",
+      "properties": {
+        "mechanism": "Sinus occlusion eliminates path for saliva to reach skin surface",
+        "outcome_in_case": "Near-complete cessation at 4 months"
+      }
+    },
+    {
+      "id": "e058",
+      "source": "cyanoacrylate_instillation",
+      "target": "cheek_excoriation",
+      "type": "TREATS",
+      "label": "Cyanoacrylate instillation treats cheek excoriation",
+      "properties": {
+        "mechanism": "Elimination of salivary contact with skin resolves excoriation",
+        "outcome_in_case": "Resolved at 4 months"
+      }
+    },
+    {
+      "id": "e059",
+      "source": "cyanoacrylate_instillation",
+      "target": "cosmetic_disfigurement",
+      "type": "TREATS",
+      "label": "Cyanoacrylate instillation treats cosmetic disfigurement",
+      "properties": {
+        "outcome_in_case": "Fistula orifice 'only just visible' at 4 months"
+      }
+    },
+    {
+      "id": "e060",
+      "source": "outcome_secretion_reduction",
+      "target": "repeatability_criterion",
+      "type": "INFORMS",
+      "label": "Partial response at 7 days informs repeat injection decision",
+      "properties": {
+        "tacit_note": "50% reduction at day 7 is encouraging; full assessment requires months. Clinician must resist premature escalation. The case report patient received a second injection and reached near-complete cessation."
+      }
+    },
+    {
+      "id": "e061",
+      "source": "facial_nerve_risk_criterion",
+      "target": "deep_lobe_excision",
+      "type": "DISCOURAGES",
+      "label": "Facial nerve risk criterion discourages deep lobe excision",
+      "properties": {
+        "logic": "Risk of irreversible facial palsy shifts risk-benefit calculation towards less invasive options",
+        "tacit_note": "Degree of discouragement depends on severity of symptoms; mild symptoms + high surgical risk = strong preference for non-surgical approach"
+      }
+    },
+    {
+      "id": "e062",
+      "source": "facial_nerve_risk_criterion",
+      "target": "cyanoacrylate_instillation",
+      "type": "SUPPORTS_CONSIDERATION_OF",
+      "label": "Facial nerve risk criterion supports considering cyanoacrylate despite weak evidence",
+      "properties": {
+        "tacit_note": "The risk-benefit calculus is not just about cyanoacrylate's evidence; it's about the comparative risk of alternatives. Weak evidence for a low-risk procedure may be preferred over strong evidence for a high-risk procedure when alternative downside is severe."
+      }
+    },
+    {
+      "id": "e063",
+      "source": "symptom_persistence_criterion",
+      "target": "watchful_waiting",
+      "type": "TRIGGERS_ESCALATION_FROM",
+      "label": "Symptom persistence triggers escalation from watchful waiting"
+    },
+    {
+      "id": "e064",
+      "source": "symptom_persistence_criterion",
+      "target": "bandaging",
+      "type": "TRIGGERS_ESCALATION_FROM",
+      "label": "Symptom persistence triggers escalation from bandaging"
+    },
+    {
+      "id": "e065",
+      "source": "cyanoacrylate_instillation",
+      "target": "parotid_sinus",
+      "type": "TREATS",
+      "label": "Cyanoacrylate instillation is a treatment for parotid sinus",
+      "properties": {
+        "status": "special arrangements required",
+        "evidence_level": "feasibility only"
+      }
+    },
+    {
+      "id": "e066",
+      "source": "deep_lobe_excision",
+      "target": "facial_nerve_branches",
+      "type": "DISSECTS_AROUND",
+      "label": "Deep lobe excision requires dissection around facial nerve branches",
+      "properties": {
+        "risk": "Traction, thermal, or direct injury to branches during dissection",
+        "tacit_note": "Risk is elevated in revision surgery due to scarring from prior superficial parotidectomy"
+      }
+    },
+    {
+      "id": "e067",
+      "source": "facial_nerve",
+      "target": "facial_nerve_branches",
+      "type": "DIVIDES_INTO",
+      "label": "Facial nerve divides into peripheral branches within parotid gland",
+      "properties": {
+        "division_point": "Within parotid substance after exiting stylomastoid foramen"
+      }
+    },
+    {
+      "id": "e068",
+      "source": "facial_nerve_branches",
+      "target": "deep_lobe_parotid",
+      "type": "PASSES_THROUGH",
+      "label": "Facial nerve branches pass through deep parotid lobe territory",
+      "properties": {
+        "clinical_significance": "Branches must be identified and preserved during deep lobe surgery"
+      }
+    },
+    {
+      "id": "e069",
+      "source": "superficial_parotidectomy",
+      "target": "chronic_sialadenitis",
+      "type": "TREATS",
+      "label": "Superficial parotidectomy used to treat chronic sialadenitis",
+      "properties": {
+        "source": "Schultz 1983 (context reference)"
+      }
+    },
+    {
+      "id": "e070",
+      "source": "schultz_1983",
+      "target": "superficial_parotidectomy",
+      "type": "DOCUMENTS_INDICATION_FOR",
+      "label": "Schultz 1983 documents subtotal parotidectomy for sialadenitis",
+      "properties": {
+        "context": "Background reference establishing surgical context leading to parotid sinus"
+      }
+    },
+    {
+      "id": "e071",
+      "source": "ipac_overview_2002",
+      "target": "procedure_rarity",
+      "type": "CONFIRMS",
+      "label": "IPAC overview confirms extreme rarity of procedure",
+      "properties": {
+        "finding": "Author of case report unaware of any other practitioners performing procedure; has not performed on any other patients"
+      }
+    },
+    {
+      "id": "e072",
+      "source": "ipac_overview_2002",
+      "target": "evidence_inadequacy",
+      "type": "SUPPORTS",
+      "label": "IPAC overview supports NICE finding of evidence inadequacy",
+      "properties": {
+        "finding": "No controlled studies or case series identified; single uncontrolled case report only"
+      }
+    },
+    {
+      "id": "e073",
+      "source": "cyanoacrylate_instillation",
+      "target": "infection_recurrence_risk",
+      "type": "RISKS",
+      "label": "Repeat cyanoacrylate injections carry recurrent infection risk if prophylaxis omitted",
+      "properties": {
+        "tacit_note": "Each injection episode creates an infection window; prophylaxis must be repeated with each injection episode"
+      }
+    },
+    {
+      "id": "e074",
+      "source": "infection_recurrence_risk",
+      "target": "prophylactic_antibiotics",
+      "type": "MANAGED_BY",
+      "label": "Recurrent infection risk managed by prophylactic antibiotics with each injection"
+    },
+    {
+      "id": "e075",
+      "source": "parotid_gland",
+      "target": "superficial_lobe_parotid",
+      "type": "CONTAINS",
+      "label": "Parotid gland contains superficial lobe"
+    },
+    {
+      "id": "e076",
+      "source": "parotid_gland",
+      "target": "deep_lobe_parotid",
+      "type": "CONTAINS",
+      "label": "Parotid gland contains deep lobe"
+    },
+    {
+      "id": "e077",
+      "source": "superficial_parotidectomy",
+      "target": "superficial_lobe_parotid",
+      "type": "REMOVES",
+      "label": "Superficial parotidectomy removes superficial lobe"
+    },
+    {
+      "id": "e078",
+      "source": "deep_lobe_excision",
+      "target": "deep_lobe_parotid",
+      "type": "REMOVES",
+      "label": "Deep lobe excision removes deep lobe"
+    },
+    {
+      "id": "e079",
+      "source": "local_denervation",
+      "target": "parotid_gland",
+      "type": "REDUCES_SECRETION_OF",
+      "label": "Local denervation reduces parotid secretion",
+      "properties": {
+        "mechanism": "Interrupts parasympathetic supply via Jacobson's nerve / lesser petrosal nerve",
+        "durability": "May not be permanent due to nerve regeneration"
+      }
+    },
+    {
+      "id": "e080",
+      "source": "radiotherapy_parotid",
+      "target": "parotid_gland",
+      "type": "REDUCES_SECRETION_OF",
+      "label": "Radiotherapy reduces parotid secretion",
+      "properties": {
+        "mechanism": "Radiation damage to acinar cells reduces secretory capacity",
+        "side_effects": ["xerostomia", "radiation dermatitis", "osteoradionecrosis risk"]
+      }
+    },
+    {
+      "id": "e081",
+      "source": "bandaging",
+      "target": "sinus_tract",
+      "type": "COMPRESSES",
+      "label": "Bandaging applies compression to reduce flow through sinus tract",
+      "properties": {
+        "mechanism": "External pressure collapses or reduces calibre of superficial tract"
+      }
+    },
+    {
+      "id": "e082",
+      "source": "cyanoacrylate_instillation",
+      "target": "sinus_tract",
+      "type": "OCCLUDES",
+      "label": "Cyanoacrylate instillation occludes the sinus tract",
+      "properties": {
+        "mechanism": "Polymerised cyanoacrylate physically seals the tract lumen",
+        "nice_section": "2.2.1"
+      }
+    },
+    {
+      "id": "e083",
+      "source": "nice_htg20",
+      "target": "outcome_publication_recommendation",
+      "type": "RECOMMENDS",
+      "label": "NICE HTG20 recommends publication of outcomes",
+      "properties": {
+        "nice_section": "1.2"
+      }
+    },
+    {
+      "id": "e084",
+      "source": "nice_htg20",
+      "target": "mr_aj_marcus",
+      "type": "DIRECTS_CONTACT_WITH",
+      "label": "NICE HTG20 directs interested clinicians to contact Mr AJ Marcus",
+      "properties": {
+        "nice_section": "2.5.1",
+        "reason": "Sole repository of procedural knowledge"
+      }
+    },
+    {
+      "id": "e085",
+      "source": "evidence_inadequacy",
+      "target": "cyanoacrylate_instillation",
+      "type": "RESTRICTS",
+      "label": "Evidence inadequacy restricts cyanoacrylate instillation to special arrangements context",
+      "properties": {
+        "restriction": "Cannot be used as routine procedure without special arrangements",
+        "nice_section": "1.1",
+        "not_a_prohibition": true,
+        "tacit_note": "Special arrangements is a governance status, not a prohibition. Procedure can be offered to patients where clinically appropriate, provided all NICE requirements are met."
+      }
+    },
+    {
+      "id": "e086",
+      "source": "outcome_secretion_cessation",
+      "target": "saliva_leakage",
+      "type": "RESOLVES",
+      "label": "Secretion cessation outcome resolves saliva leakage symptom"
+    },
+    {
+      "id": "e087",
+      "source": "outcome_excoriation_resolved",
+      "target": "cheek_excoriation",
+      "type": "RESOLVES",
+      "label": "Excoriation resolution outcome resolves cheek excoriation symptom"
+    },
+    {
+      "id": "e088",
+      "source": "outcome_fistula_invisible",
+      "target": "cosmetic_disfigurement",
+      "type": "PARTIALLY_RESOLVES",
+      "label": "Near-invisible fistula partially resolves cosmetic disfigurement",
+      "properties": {
+        "note": "Fistula 'only just visible' - cosmetically improved but not entirely invisible"
+      }
+    },
+    {
+      "id": "e089",
+      "source": "repeatability_criterion",
+      "target": "symptom_persistence_criterion",
+      "type": "MODULATES",
+      "label": "Repeatability of procedure modulates when symptom persistence triggers escalation",
+      "properties": {
+        "tacit_note": "Symptom persistence does not necessarily trigger escalation to surgery; first step is to consider repeat injection. Escalation to surgery should occur only after repeat injection failure."
+      }
+    },
+    {
+      "id": "e090",
+      "source": "cyanoacrylate_instillation",
+      "target": "outcome_patient_satisfied",
+      "type": "PRODUCES",
+      "label": "Cyanoacrylate instillation produced patient satisfaction in the single case",
+      "properties": {
+        "caveat": "n=1; not generalisable"
+      }
+    }
+  ],
+  "tacit_knowledge_summary": {
+    "key_clinical_reasoning_chains": [
+      {
+        "id": "tkr001",
+        "name": "Risk-benefit inversion",
+        "description": "The primary reason cyanoacrylate instillation is considered despite n=1 evidence is that the surgical alternative (deep lobe excision) carries an irreversible, high-stakes risk (facial palsy) that may outweigh the quantified benefits of surgery. Weak evidence for a low-risk procedure may be clinically preferred over strong evidence for a high-risk one.",
+        "nodes": ["cyanoacrylate_instillation", "deep_lobe_excision", "facial_nerve_damage", "evidence_inadequacy", "facial_nerve_risk_criterion"]
+      },
+      {
+        "id": "tkr002",
+        "name": "Prophylaxis protocol derivation",
+        "description": "The 3-week post-injection antibiotic prophylaxis protocol is empirical knowledge held exclusively by the originating practitioner. It is not stated in NICE guidance but is derivable from the case report. It must be adopted because parotitis occurred without it and did not recur with it.",
+        "nodes": ["cyanoacrylate_instillation", "parotitis_complication", "prophylactic_antibiotics", "antibiotic_treatment", "mr_aj_marcus"]
+      },
+      {
+        "id": "tkr003",
+        "name": "Temporal assessment of response",
+        "description": "Partial response (50% reduction) at 7 days is expected and not a failure indication. Full assessment requires months. Early escalation to surgery based on 7-day partial response would be inappropriate. The clinician must allow adequate time before declaring failure.",
+        "nodes": ["outcome_secretion_reduction", "outcome_secretion_cessation", "repeatability_criterion", "cyanoacrylate_instillation"]
+      },
+      {
+        "id": "tkr004",
+        "name": "Knowledge concentration and transfer",
+        "description": "All procedural tacit knowledge for this technique is concentrated in one practitioner. Critical unknowns include: lipiodol:cyanoacrylate ratio, injection volume, needle gauge, patient positioning, and technique for confirming sinus anatomy before injection. Training can only occur through direct contact with Mr AJ Marcus.",
+        "nodes": ["mr_aj_marcus", "cyanoacrylate_lipiodol_solution", "procedure_rarity", "cyanoacrylate_instillation"]
+      },
+      {
+        "id": "tkr005",
+        "name": "Epistemic vs procedural governance",
+        "description": "Special arrangements are not imposed because the procedure is known to be dangerous, but because its safety profile is unknown. The governance requirements (consent, notification, audit) are epistemic responses to uncertainty, not risk responses to known harm. Clinicians must understand this distinction when explaining special arrangements to patients.",
+        "nodes": ["evidence_inadequacy", "governance_notification", "special_informed_consent", "clinical_audit_requirement", "unknown_complications"]
+      }
+    ]
+  }
+}

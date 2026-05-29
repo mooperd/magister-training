@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clinical Tacit Knowledge Graph</title>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0d1117;--bg2:#161b22;--bg3:#21262d;--border:#30363d;
+  --text:#e6edf3;--muted:#8b949e;--accent:#388bfd;--tacit:#f0883e;
+}
+html,body{height:100%;overflow:hidden}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;display:flex;flex-direction:column}
+
+/* HEADER */
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:10px 16px;display:flex;align-items:center;gap:16px;flex-shrink:0;flex-wrap:wrap}
+.logo{font-size:13px;font-weight:700;white-space:nowrap;letter-spacing:-.01em}
+.logo em{color:var(--accent);font-style:normal}
+.pills{display:flex;gap:5px;flex-wrap:wrap}
+.pill{padding:3px 11px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:11px;cursor:pointer;transition:.15s all;white-space:nowrap}
+.pill:hover{border-color:var(--accent);color:var(--text)}
+.pill.active{background:var(--accent);border-color:var(--accent);color:#fff}
+#stats{margin-left:auto;font-size:11px;color:var(--muted);white-space:nowrap}
+
+/* LAYOUT */
+.main{display:flex;flex:1;overflow:hidden;min-height:0}
+
+/* SIDEBAR */
+.sidebar{width:210px;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden;flex-shrink:0}
+.sb-block{padding:10px 12px;border-bottom:1px solid var(--border)}
+.sb-label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:6px}
+.vignette-text{font-size:11px;line-height:1.5;color:var(--muted)}
+.vignette-title{font-size:11px;font-weight:600;color:var(--accent);margin-bottom:5px}
+.legend-scroll{overflow-y:auto;flex:1;padding:8px 12px}
+.leg-item{display:flex;align-items:center;gap:7px;padding:3px 0;font-size:10px;color:var(--muted)}
+.leg-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+
+/* GRAPH */
+.graph-wrap{flex:1;position:relative;background:var(--bg);overflow:hidden;min-width:0}
+#graph-svg{width:100%;height:100%;display:block}
+.graph-hint{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);font-size:10px;color:var(--muted);background:rgba(13,17,23,.85);padding:3px 10px;border-radius:4px;pointer-events:none;white-space:nowrap}
+#loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--bg);font-size:12px;color:var(--muted);z-index:9}
+
+/* DETAIL PANEL */
+.detail{width:290px;background:var(--bg2);border-left:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden;flex-shrink:0}
+.detail-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:var(--muted);font-size:12px;gap:6px;text-align:center;padding:20px}
+.detail-empty svg{opacity:.25}
+.detail-scroll{overflow-y:auto;flex:1;padding:14px}
+.d-type{display:inline-block;padding:2px 7px;border-radius:4px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px}
+.d-label{font-size:14px;font-weight:600;line-height:1.3;margin-bottom:3px}
+.d-aliases{font-size:10px;color:var(--muted);margin-bottom:10px}
+.d-section{margin-top:12px}
+.d-section-title{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:6px;padding-bottom:4px;border-bottom:1px solid var(--border)}
+.d-prop{margin-bottom:5px}
+.d-prop-key{font-size:10px;color:var(--muted);margin-bottom:1px;text-transform:capitalize}
+.d-prop-val{font-size:11px;color:var(--text);line-height:1.4;word-break:break-word}
+.tacit-box{background:rgba(240,136,62,.1);border:1px solid rgba(240,136,62,.25);border-radius:5px;padding:9px 11px;margin-top:12px}
+.tacit-head{display:flex;align-items:center;gap:5px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--tacit);margin-bottom:5px}
+.tacit-text{font-size:11px;color:#e0a975;line-height:1.5}
+.edge-item{display:flex;align-items:flex-start;gap:5px;padding:5px 0;border-bottom:1px solid var(--bg3);cursor:pointer;font-size:10px}
+.edge-item:hover .edge-name{color:var(--accent)}
+.edge-dir{color:var(--muted);flex-shrink:0;margin-top:1px;font-size:9px}
+.edge-tag{background:var(--bg3);padding:1px 5px;border-radius:3px;color:var(--muted);white-space:nowrap;flex-shrink:0;font-size:9px}
+.edge-name{color:var(--text);line-height:1.3;padding-left:4px;border-left-width:2px;border-left-style:solid}
+
+/* SVG elements */
+.links path{fill:none;stroke-opacity:.45;transition:stroke-opacity .15s}
+.links path.lit{stroke-opacity:1;stroke-width:2}
+.links path.dim{stroke-opacity:.07}
+.nodes circle{cursor:pointer;transition:opacity .15s}
+.nodes circle.dim{opacity:.18}
+.nodes circle.sel{stroke:#fff!important;stroke-width:3}
+.nodes text{pointer-events:none;fill:var(--muted);text-anchor:middle;dominant-baseline:hanging}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Clinical <em>Tacit Knowledge Graph</em></div>
+  <div class="pills">
+    <button class="pill" data-g="htg20">HTG20 · Parotid Sinus</button>
+    <button class="pill" data-g="htg307">HTG307 · Ti Implants (Covered)</button>
+    <button class="pill" data-g="htg313">HTG313 · Ti Implants (Exposed)</button>
+    <button class="pill" data-g="htg352">HTG352 · TMJ Replacement</button>
+  </div>
+  <div id="stats"></div>
+</header>
+
+<div class="main">
+  <div class="sidebar">
+    <div class="sb-block">
+      <div class="sb-label">Patient Vignette</div>
+      <div class="vignette-title" id="v-title"></div>
+      <div class="vignette-text" id="v-text"></div>
+    </div>
+    <div class="sb-label" style="padding:10px 12px 4px">Node Types</div>
+    <div class="legend-scroll" id="legend"></div>
+  </div>
+
+  <div class="graph-wrap" id="graph-wrap">
+    <svg id="graph-svg"></svg>
+    <div id="loading">Loading graph…</div>
+    <div class="graph-hint">Scroll to zoom · Drag to pan · Click node to inspect</div>
+  </div>
+
+  <div class="detail" id="detail-panel">
+    <div class="detail-empty" id="d-empty">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      Click any node<br>to inspect it
+    </div>
+    <div class="detail-scroll" id="d-content" style="display:none"></div>
+  </div>
+</div>
+
+<script>
+const COLORS = {
+  ANATOMICAL_STRUCTURE:'#58a6ff', CONDITION:'#ff7b72', SYMPTOM:'#ffa657',
+  INTERVENTION:'#3fb950', COMPLICATION:'#f85149', EVIDENCE_ITEM:'#bc8cff',
+  DECISION_CRITERION:'#39d353', GOVERNANCE_REQUIREMENT:'#e3b341',
+  MATERIAL:'#39c5cf', CLINICAL_SCALE:'#d2a8ff', CONTEXTUAL_KNOWLEDGE:'#ffd700',
+  CLINICAL_OUTCOME:'#7ee787', CLINICAL_RESOURCE:'#ffa8a8',
+  _default:'#8b949e'
+};
+
+const SCENARIOS = {
+  htg20:{
+    title:'Cyanoacrylate Instillation for Parotid Sinus Occlusion — NICE HTG20',
+    vignette:'52-year-old, 3 weeks post-superficial parotidectomy. Wet patch on cheek, skin excoriation, visible fistula orifice. Saliva leaks when eating. No fever.',
+    start:'parotid_sinus'
+  },
+  htg307:{
+    title:'Customised Titanium Implants with Soft Tissue Cover — NICE HTG307',
+    vignette:'28-year-old male, 6 weeks post-RTA. CT: right orbital floor fracture, 3mm enophthalmos, upgaze diplopia, malar depression. No prior surgery. Adequate local soft tissue.',
+    start:'orbital_floor_fracture'
+  },
+  htg313:{
+    title:'Exposed Titanium Implants without Soft Tissue Cover — NICE HTG313',
+    vignette:'58-year-old, post-total maxillectomy for T3 SCC. Multi-surface defect, bony and cartilaginous structures involved. Radiotherapy planned. Plastic surgery MDT confirms free flap not feasible.',
+    start:'complex_orofacial_defect'
+  },
+  htg352:{
+    title:'Total Prosthetic Replacement of the TMJ — NICE HTG352',
+    vignette:'44-year-old female. 11 years bilateral TMJ disorder. Three prior right-side open procedures. Long-term opiates. MIO 14mm. Bilateral Wilkes class V on CT. All conservative options exhausted.',
+    start:'tmj_disorder'
+  }
+};
+
+let G = null, sim = null, svg = null, gMain = null;
+let activeKey = '', selId = null;
+
+function col(type){ return COLORS[type] || COLORS._default; }
+
+function deg(id, edges){
+  return edges.filter(e => e.source===id || e.target===id).length;
+}
+function r(id, edges){
+  return Math.max(7, Math.min(20, 5 + deg(id, edges)*1.3));
+}
+
+async function load(key){
+  activeKey = key;
+  selId = null;
+  document.querySelectorAll('.pill').forEach(p => p.classList.toggle('active', p.dataset.g===key));
+  document.getElementById('loading').style.display = 'flex';
+  document.getElementById('d-empty').style.display = 'flex';
+  document.getElementById('d-content').style.display = 'none';
+
+  const sc = SCENARIOS[key];
+  document.getElementById('v-title').textContent = sc.title;
+  document.getElementById('v-text').textContent = sc.vignette;
+
+  try {
+    G = await fetch(`${key}.json`).then(r => r.json());
+    document.getElementById('stats').textContent = `${G.nodes.length} nodes · ${G.edges.length} edges`;
+    render(G);
+    setTimeout(() => pick(sc.start), 2200);
+  } catch(e){
+    document.getElementById('loading').textContent = 'Error loading ' + key + '.json';
+  }
+}
+
+function render(data){
+  const wrap = document.getElementById('graph-wrap');
+  const W = wrap.clientWidth, H = wrap.clientHeight;
+
+  if(sim) sim.stop();
+  d3.select('#graph-svg').selectAll('*').remove();
+
+  svg = d3.select('#graph-svg');
+  const zoom = d3.zoom().scaleExtent([.15,5]).on('zoom', ev => gMain.attr('transform', ev.transform));
+  svg.call(zoom).on('click', () => { selId=null; clear(); showEmpty(); });
+
+  const defs = svg.append('defs');
+  ['arrow','arrow-h'].forEach((id,i) => {
+    defs.append('marker').attr('id',id)
+      .attr('viewBox','0 -4 8 8').attr('refX',8).attr('refY',0)
+      .attr('markerWidth',6).attr('markerHeight',6).attr('orient','auto')
+      .append('path').attr('d','M0,-4L8,0L0,4')
+      .attr('fill', i===0 ? '#444c56' : '#58a6ff');
+  });
+
+  gMain = svg.append('g');
+
+  // nodes get _r for radius
+  const nodes = data.nodes.map(n => ({...n, _r: r(n.id, data.edges)}));
+  // edges: ensure string ids
+  const edges = data.edges.map(e => ({...e,
+    source: typeof e.source==='object' ? e.source.id : e.source,
+    target: typeof e.target==='object' ? e.target.id : e.target
+  }));
+
+  sim = d3.forceSimulation(nodes)
+    .force('link', d3.forceLink(edges).id(d=>d.id).distance(90).strength(.4))
+    .force('charge', d3.forceManyBody().strength(-220))
+    .force('center', d3.forceCenter(W/2, H/2))
+    .force('collide', d3.forceCollide().radius(d=>d._r+14));
+
+  const linkSel = gMain.append('g').attr('class','links')
+    .selectAll('path').data(edges).join('path')
+    .attr('stroke','#444c56').attr('stroke-width',1)
+    .attr('marker-end','url(#arrow)');
+
+  const nodeSel = gMain.append('g').attr('class','nodes')
+    .selectAll('g').data(nodes).join('g')
+    .attr('id', d=>'n-'+d.id)
+    .call(d3.drag()
+      .on('start',(ev,d)=>{ if(!ev.active) sim.alphaTarget(.3).restart(); d.fx=d.x; d.fy=d.y; })
+      .on('drag',(ev,d)=>{ d.fx=ev.x; d.fy=ev.y; })
+      .on('end',(ev,d)=>{ if(!ev.active) sim.alphaTarget(0); d.fx=null; d.fy=null; }))
+    .on('click',(ev,d)=>{ ev.stopPropagation(); pick(d.id); });
+
+  nodeSel.append('circle')
+    .attr('r', d=>d._r)
+    .attr('fill', d=>col(d.type))
+    .attr('fill-opacity',.82)
+    .attr('stroke', d=>col(d.type))
+    .attr('stroke-width',2);
+
+  nodeSel.append('text')
+    .attr('y', d=>d._r+9)
+    .attr('font-size',9)
+    .text(d => d.label.length>24 ? d.label.slice(0,23)+'…' : d.label);
+
+  // Tooltip title element
+  nodeSel.append('title').text(d=>d.label);
+
+  sim.on('tick', ()=>{
+    linkSel.attr('d', d=>{
+      const sx=d.source.x, sy=d.source.y, tx=d.target.x, ty=d.target.y;
+      if(!sx && sx!==0) return '';
+      const dx=tx-sx, dy=ty-sy, len=Math.sqrt(dx*dx+dy*dy)||1;
+      const sr=d.source._r||8, tr=(d.target._r||8)+8;
+      const x1=sx+(dx/len)*sr, y1=sy+(dy/len)*sr;
+      const x2=tx-(dx/len)*tr, y2=ty-(dy/len)*tr;
+      const mx=(x1+x2)/2-(dy/len)*18, my=(y1+y2)/2+(dx/len)*18;
+      return `M${x1},${y1}Q${mx},${my} ${x2},${y2}`;
+    });
+    nodeSel.attr('transform', d=>`translate(${d.x||0},${d.y||0})`);
+  });
+
+  sim.on('end', ()=> { document.getElementById('loading').style.display='none'; });
+  setTimeout(()=> document.getElementById('loading').style.display='none', 3000);
+
+  // store selections for highlight
+  svg._links = linkSel;
+  svg._nodes = nodeSel;
+}
+
+function pick(id){
+  if(!G) return;
+  selId = id;
+  const node = G.nodes.find(n=>n.id===id);
+  if(!node) return;
+
+  const linkSel = svg._links, nodeSel = svg._nodes;
+
+  const adjEdges = G.edges.filter(e=>{
+    const s = typeof e.source==='object'?e.source.id:e.source;
+    const t = typeof e.target==='object'?e.target.id:e.target;
+    return s===id||t===id;
+  });
+  const adj = new Set(adjEdges.flatMap(e=>{
+    const s=typeof e.source==='object'?e.source.id:e.source;
+    const t=typeof e.target==='object'?e.target.id:e.target;
+    return [s,t];
+  }));
+
+  nodeSel.selectAll('circle')
+    .classed('dim', d=>d.id!==id && !adj.has(d.id))
+    .classed('sel', d=>d.id===id);
+
+  linkSel
+    .classed('lit', d=>{ const s=typeof d.source==='object'?d.source.id:d.source; const t=typeof d.target==='object'?d.target.id:d.target; return s===id||t===id; })
+    .classed('dim', d=>{ const s=typeof d.source==='object'?d.source.id:d.source; const t=typeof d.target==='object'?d.target.id:d.target; return s!==id&&t!==id; })
+    .attr('stroke', d=>{ const s=typeof d.source==='object'?d.source.id:d.source; const t=typeof d.target==='object'?d.target.id:d.target; return (s===id||t===id)?'#58a6ff':'#444c56'; })
+    .attr('marker-end', d=>{ const s=typeof d.source==='object'?d.source.id:d.source; const t=typeof d.target==='object'?d.target.id:d.target; return (s===id||t===id)?'url(#arrow-h)':'url(#arrow)'; });
+
+  showDetail(node);
+}
+
+function clear(){
+  if(!svg._links) return;
+  svg._nodes.selectAll('circle').classed('dim',false).classed('sel',false);
+  svg._links.classed('lit',false).classed('dim',false).attr('stroke','#444c56').attr('marker-end','url(#arrow)');
+}
+
+function showEmpty(){
+  document.getElementById('d-empty').style.display='flex';
+  document.getElementById('d-content').style.display='none';
+}
+
+function showDetail(node){
+  document.getElementById('d-empty').style.display='none';
+  const el = document.getElementById('d-content');
+  el.style.display='block';
+  const c = col(node.type);
+  const p = node.properties || {};
+
+  const outE = G.edges.filter(e=>{ const s=typeof e.source==='object'?e.source.id:e.source; return s===node.id; });
+  const inE  = G.edges.filter(e=>{ const t=typeof e.target==='object'?e.target.id:e.target; return t===node.id; });
+
+  const prop = (k,v)=>{
+    if(v===null||v===undefined) return '';
+    const disp = Array.isArray(v)?v.join(', '):typeof v==='object'?JSON.stringify(v):String(v);
+    if(disp.length>300) return '';
+    return `<div class="d-prop"><div class="d-prop-key">${k.replace(/_/g,' ')}</div><div class="d-prop-val">${esc(disp)}</div></div>`;
+  };
+
+  const edgeRow = (e, dir)=>{
+    const otherId = dir==='out'
+      ? (typeof e.target==='object'?e.target.id:e.target)
+      : (typeof e.source==='object'?e.source.id:e.source);
+    const other = G.nodes.find(n=>n.id===otherId);
+    const oc = col(other?.type||'_default');
+    return `<div class="edge-item" onclick="pick('${otherId}')">
+      <span class="edge-dir">${dir==='out'?'→':'←'}</span>
+      <span class="edge-tag">${e.type.replace(/_/g,' ')}</span>
+      <span class="edge-name" style="border-color:${oc}">${esc(other?.label||otherId)}</span>
+    </div>`;
+  };
+
+  const tacitEdges = [...outE,...inE].filter(e=>e.properties?.tacit_note);
+
+  el.innerHTML = `
+    <div style="margin-bottom:12px">
+      <div class="d-type" style="background:${c}1a;color:${c}">${node.type.replace(/_/g,' ')}</div>
+      <div class="d-label">${esc(node.label)}</div>
+      ${node.aliases?.length ? `<div class="d-aliases">Also known as: ${esc(node.aliases.slice(0,3).join(', '))}${node.aliases.length>3?'…':''}</div>` : ''}
+    </div>
+
+    ${Object.entries(p).filter(([k])=>k!=='tacit').length ? `
+    <div class="d-section">
+      <div class="d-section-title">Properties</div>
+      ${Object.entries(p).filter(([k])=>k!=='tacit').slice(0,8).map(([k,v])=>prop(k,v)).join('')}
+    </div>` : ''}
+
+    ${p.tacit ? `
+    <div class="tacit-box">
+      <div class="tacit-head">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        Tacit Knowledge
+      </div>
+      <div class="tacit-text">${esc(p.tacit)}</div>
+    </div>` : ''}
+
+    ${outE.length+inE.length ? `
+    <div class="d-section">
+      <div class="d-section-title">Connections (${outE.length+inE.length})</div>
+      ${outE.slice(0,8).map(e=>edgeRow(e,'out')).join('')}
+      ${inE.slice(0,6).map(e=>edgeRow(e,'in')).join('')}
+    </div>` : ''}
+
+    ${tacitEdges.length ? `
+    <div class="d-section">
+      <div class="d-section-title">Edge Tacit Notes</div>
+      ${tacitEdges.slice(0,3).map(e=>`
+        <div class="tacit-box" style="margin-bottom:7px">
+          <div class="tacit-head" style="font-size:8px">${e.type.replace(/_/g,' ')}</div>
+          <div class="tacit-text">${esc(e.properties.tacit_note)}</div>
+        </div>`).join('')}
+    </div>` : ''}
+  `;
+}
+
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+// Legend
+function buildLegend(){
+  const types = [
+    ['INTERVENTION','Intervention'],['CONDITION','Condition'],['SYMPTOM','Symptom'],
+    ['COMPLICATION','Complication'],['ANATOMICAL_STRUCTURE','Anatomy'],
+    ['EVIDENCE_ITEM','Evidence'],['DECISION_CRITERION','Decision'],
+    ['GOVERNANCE_REQUIREMENT','Governance'],['MATERIAL','Material'],
+    ['CLINICAL_SCALE','Scale'],['CONTEXTUAL_KNOWLEDGE','Context'],['CLINICAL_OUTCOME','Outcome']
+  ];
+  document.getElementById('legend').innerHTML = types.map(([t,l])=>
+    `<div class="leg-item"><div class="leg-dot" style="background:${col(t)}"></div><span>${l}</span></div>`
+  ).join('');
+}
+
+// Wire pills
+document.querySelectorAll('.pill').forEach(p=>p.addEventListener('click',()=>load(p.dataset.g)));
+
+buildLegend();
+load('htg352');
+</script>
+</body>
+</html>

@@ -1,0 +1,1454 @@
+{
+  "metadata": {
+    "source": "NICE HTG307",
+    "title": "Insertion of customised titanium implants, with soft tissue cover, for orofacial reconstruction",
+    "published": "2013-03-27",
+    "updated": "2013-07-01",
+    "supersedes": "IPG449",
+    "specialty": ["Oral and Maxillofacial Surgery", "Craniofacial Surgery"],
+    "specialty_societies": ["British Association of Oral and Maxillofacial Surgeons", "Craniofacial Society of Great Britain and Ireland"],
+    "nice_recommendation_tier": "normal_arrangements",
+    "evidence_tier": "adequate",
+    "scope_boundary": "Implants WITH soft tissue cover or expected to become covered. Does NOT cover complex reconstruction with multiple bony/cartilaginous structures with little/no soft tissue cover (see HTG313).",
+    "graph_version": "1.0",
+    "graph_created": "2026-05-28",
+    "total_patients_in_evidence": 252,
+    "evidence_studies": "3 non-randomised comparative studies, 5 case series",
+    "related_guidance": "HTG313 (exposed implants without soft tissue cover)"
+  },
+  "nodes": [
+    {
+      "id": "customised_titanium_implant_procedure",
+      "type": "INTERVENTION",
+      "label": "Customised titanium implant insertion with soft tissue cover for orofacial reconstruction",
+      "aliases": [
+        "HTG307 procedure",
+        "IPG449",
+        "CAD-CAM titanium implant",
+        "prefabricated titanium mesh insertion",
+        "customised titanium mesh reconstruction"
+      ],
+      "properties": {
+        "nice_recommendation": "adequate_evidence_normal_arrangements",
+        "indication_categories": ["orofacial trauma", "post-ablative tumour reconstruction", "congenital facial abnormalities"],
+        "key_distinction": "Implant must be covered or expected to become substantially covered with soft tissue",
+        "what_is_customised": "Implant shape pre-designed from patient CT data using CAD-CAM, rather than bent intraoperatively",
+        "anaesthesia": "general anaesthesia",
+        "fixation": "titanium screws to adjacent bone",
+        "coverage": "existing local soft tissue or transplanted flap from donor site",
+        "exception_to_coverage": "Implants abutting paranasal sinuses may be partially exposed - epithelialisation expected via fibrosis",
+        "computer_navigation_option": "Intraoperative computer-assisted navigation used in some cases to verify implant positioning",
+        "tacit": "The critical clinical decision is whether adequate soft tissue coverage can be achieved or expected. If coverage is uncertain or impossible, this procedure is out of scope; the clinical and governance pathway changes to HTG313."
+      }
+    },
+    {
+      "id": "traditional_titanium_implant",
+      "type": "INTERVENTION",
+      "label": "Traditional (intraoperative) titanium implant shaping",
+      "aliases": ["classical titanium mesh", "intraoperative mesh bending", "conventional titanium implant"],
+      "properties": {
+        "method": "Titanium mesh bent and cut during operation to fit defect",
+        "limitation": "Multiple insertion attempts may be needed to achieve correct shape",
+        "consequence_of_multiple_attempts": "Increased soft tissue manipulation, longer operating time, greater trauma",
+        "tacit": "The key disadvantage is iterative intraoperative adjustment; each re-attempt increases operating time, soft tissue trauma, and risk of contamination or structural damage"
+      }
+    },
+    {
+      "id": "autologous_graft",
+      "type": "INTERVENTION",
+      "label": "Autologous bone graft",
+      "aliases": ["iliac crest graft", "rib graft", "calvarium graft", "autogenous bone"],
+      "properties": {
+        "type": "Patient's own bone harvested from donor site",
+        "donor_sites": ["iliac crest", "rib", "calvarium", "fibula"],
+        "traditional_use": "Historical standard for large orbital and facial fracture repair",
+        "limitations": [
+          "Increased operating time (second surgical site)",
+          "Prolonged hospital stay",
+          "Increased postoperative discomfort",
+          "Donor site morbidity (pain, scar, weakness)",
+          "Variable resorption rate - clinical outcomes may be unpredictable",
+          "Limited graft availability"
+        ],
+        "tacit": "Variable resorption is the key limitation - a graft that looks good at 6 months may partially resorb by 2-3 years, creating unpredictable late deterioration"
+      }
+    },
+    {
+      "id": "ct_cadcam_modelling",
+      "type": "INTERVENTION",
+      "label": "CT scanning and CAD-CAM skull modelling",
+      "aliases": ["3D skull model", "rapid prototyping", "stereolithographic model", "CT-guided design", "cone-beam CT CAD-CAM"],
+      "properties": {
+        "step": "First step of the procedure - precedes implant manufacturing",
+        "imaging_options": ["computed tomography (CT)", "cone-beam computed tomography (CBCT)"],
+        "output": "Precise anatomical model of patient's skull or 3D simulated computer image",
+        "mirror_technique": "For unilateral defects, unaffected side is mirrored to create reconstruction template",
+        "implant_fabrication": "Implant shaped against contours of the model",
+        "computer_assisted_navigation": "Can be used intraoperatively to assess accuracy of positioning",
+        "tacit": "The quality of the CT data and the accuracy of the skull model are fundamental to the outcome. Inadequate resolution or motion artefact propagates error into implant design. The clinician must critically evaluate image quality before proceeding to manufacture."
+      }
+    },
+    {
+      "id": "soft_tissue_flap",
+      "type": "INTERVENTION",
+      "label": "Soft tissue flap for implant coverage",
+      "aliases": ["tissue flap", "free flap", "pedicled flap", "donor site flap"],
+      "properties": {
+        "purpose": "Provides vascularised soft tissue cover over titanium implant",
+        "options": [
+          "Existing local soft tissue (primary closure)",
+          "Fibula osteomyocutaneous flap (for maxillary reconstruction)",
+          "Radial forearm free flap",
+          "Other free flaps"
+        ],
+        "relevance": "Critical determinant of outcome - adequate coverage prevents exposure, infection, and implant failure",
+        "failure_risk": "Flap necrosis (4.2% in radiotherapy patients in Sun J 2011)",
+        "tacit": "Soft tissue coverage is the key variable that separates HTG307 from HTG313. Coverage quality must be assessed preoperatively and intraoperatively. Radiotherapy significantly increases the risk of flap failure and coverage breakdown."
+      }
+    },
+    {
+      "id": "fibula_osteomyocutaneous_flap",
+      "type": "INTERVENTION",
+      "label": "Fibula osteomyocutaneous flap",
+      "aliases": ["fibula free flap", "osteomyocutaneous fibula flap"],
+      "properties": {
+        "type": "Free flap combining bone, muscle, and skin from fibula",
+        "use": "Maxillary reconstruction - palatal soft tissue restoration with bone",
+        "combination_with_titanium": "Used with titanium mesh or zygomatic implant for structural support",
+        "necrosis_risk": "4.2% flap loss in Sun J case series - associated with prior radiotherapy",
+        "osteoradionecrosis_risk": "5% partial fibular osteoradionecrosis in Sun J series"
+      }
+    },
+    {
+      "id": "orofacial_trauma",
+      "type": "CONDITION",
+      "label": "Orofacial trauma",
+      "aliases": ["severe orofacial trauma", "facial fractures", "craniofacial trauma"],
+      "properties": {
+        "relevance": "Most common indication for orofacial reconstruction",
+        "mechanisms": ["road traffic accident", "sports injury", "assault", "fall"],
+        "structures_affected": ["orbital walls", "zygomatic arch", "maxilla", "mandible"],
+        "reconstruction_timing": "Immediate (acute) or delayed (secondary) reconstruction",
+        "tacit": "Timing of reconstruction significantly affects outcomes. Tang W 2010 showed better diplopia resolution for fresh fractures (67%) vs old fractures (30%). Early reconstruction before significant scarring and fibrosis develops improves functional outcomes."
+      }
+    },
+    {
+      "id": "orofacial_tumour_ablation",
+      "type": "CONDITION",
+      "label": "Post-ablative orofacial tumour defect",
+      "aliases": ["post-tumour resection defect", "maxillary tumour defect", "post-oncological reconstruction need"],
+      "properties": {
+        "relevance": "Major indication for orofacial reconstruction with titanium implants",
+        "contexts": ["maxillectomy", "orbital exenteration", "mandibulectomy", "extended resection"],
+        "radiotherapy_factor": "Many patients have received or will receive radiotherapy, which significantly increases complication risk",
+        "sun_j_2011": "45% immediate reconstruction, 55% secondary in case series of high maxillectomy defects",
+        "tacit": "The radiotherapy status is a critical pre-operative assessment. Sun J 2011 showed ALL complications (flap loss, osteoradionecrosis, mesh exposure, fistulae) occurred in radiotherapy patients. Non-irradiated fields have a fundamentally different risk profile."
+      }
+    },
+    {
+      "id": "congenital_facial_abnormality",
+      "type": "CONDITION",
+      "label": "Congenital facial abnormality",
+      "aliases": ["congenital craniofacial anomaly", "developmental facial deformity"],
+      "properties": {
+        "relevance": "Less common but recognised indication for customised titanium implant",
+        "examples": ["craniosynostosis sequelae", "hemifacial microsomia", "treacher collins deformity"],
+        "note": "Less represented in evidence base than trauma and tumour reconstruction"
+      }
+    },
+    {
+      "id": "orbital_floor_fracture",
+      "type": "CONDITION",
+      "label": "Orbital floor fracture",
+      "aliases": ["blow-out fracture", "orbital wall fracture", "orbitozygomatic fracture"],
+      "properties": {
+        "mechanism": "Direct or indirect force causing wall fracture with or without displacement",
+        "types": ["blow-out fracture (floor)", "orbitozygomatic complex fracture", "medial wall fracture"],
+        "consequences": ["enophthalmos", "diplopia", "restricted ocular motility", "facial asymmetry"],
+        "reconstruction_indication": "Enophthalmos ≥2mm on Hertel exophthalmometry",
+        "timing_significance": "Old fractures (>2 weeks) have worse diplopia outcomes due to established scarring and fibrosis"
+      }
+    },
+    {
+      "id": "high_maxillary_defect",
+      "type": "CONDITION",
+      "label": "High maxillectomy defect",
+      "aliases": ["Brown class 3 maxillectomy defect", "maxillary reconstruction defect"],
+      "properties": {
+        "definition": "Brown class 3 defect - resection includes orbital floor with orbital contents preserved",
+        "reconstruction_requirement": "Requires structural support and soft tissue restoration",
+        "components": "Titanium mesh for structure + osteomyocutaneous flap for soft tissue/bone",
+        "functional_consequences": ["speech impairment", "masticatory dysfunction", "facial asymmetry"]
+      }
+    },
+    {
+      "id": "enophthalmos",
+      "type": "SYMPTOM",
+      "label": "Enophthalmos",
+      "aliases": ["posterior globe displacement", "sunken eye", "globe recession"],
+      "properties": {
+        "definition": "Posterior displacement of the eye globe within the orbit",
+        "measurement": "Hertel exophthalmometry; ≥2mm difference between eyes = clinically significant",
+        "mechanism": "Increased orbital volume without corresponding increase in orbital contents volume",
+        "cause_in_context": "Typically from orbital wall fracture expanding orbital cavity",
+        "associated_conditions": ["hypoglobus", "diplopia", "restricted ocular motility"],
+        "resolution_rate": {
+          "lieger_2010_n29": "resolved 69%, improved 31%",
+          "mustafa_2011_n22": "resolved 81.8%, improved 18.2%",
+          "bell_2009_n15": "resolved 75%"
+        },
+        "overcorrection_risk": "10.3% (3/29) in Lieger 2010 - classified as 'resolved' but technically still abnormal",
+        "tacit": "Overcorrection is distinct from correction failure. A 10% overcorrection rate means the surgeon must plan for slight undercorrection to account for post-operative swelling resolution and soft tissue settling. Aim for 1-2mm overcorrection acutely."
+      }
+    },
+    {
+      "id": "diplopia",
+      "type": "SYMPTOM",
+      "label": "Diplopia",
+      "aliases": ["double vision", "binocular diplopia"],
+      "properties": {
+        "definition": "Double vision at one or more positions of gaze",
+        "mechanism": "Extraocular muscle entrapment, orbital soft tissue disruption, or nerve injury",
+        "gaze_positions": ["upgaze most common", "primary position", "downgaze"],
+        "measurement": "Binocular single vision screen (% of visual field with double images); prism dioptres",
+        "partial_resolution_common": true,
+        "resolution_rates": {
+          "lieger_2010": "resolved 21%, improved 38%, unchanged 42%",
+          "mustafa_2011": "resolved 64.7%, improved 29.4%, unresolved 5.9%",
+          "bell_2009": "resolved 67%",
+          "tang_fresh_fractures": "resolved 67%",
+          "tang_old_fractures": "resolved 30%"
+        },
+        "tacit": "Diplopia is the most stubborn symptom to resolve. Complete resolution is less likely than for enophthalmos. Old fractures with established scarring have significantly worse diplopia outcomes. Intraconal scarring may cause persistent diplopia that does not respond to implant position correction alone."
+      }
+    },
+    {
+      "id": "restricted_ocular_motility",
+      "type": "SYMPTOM",
+      "label": "Restricted ocular motility",
+      "aliases": ["limited eye movement", "ocular dysmotility", "extraocular muscle entrapment"],
+      "properties": {
+        "definition": "Reduced range of eye movement, typically from muscle entrapment or fibrosis",
+        "measurement": "Millimetres of movement; prism dioptres",
+        "cause_in_context": "Orbital fracture with muscle entrapment or intraconal scarring",
+        "resolution_rates": {
+          "lieger_2010": "resolved 15%, improved 35%, unchanged 50%",
+          "bell_2009": "resolved 71%"
+        },
+        "tacit": "Ocular motility is the least likely to fully resolve. 50% of affected patients in Lieger 2010 had no change. Severe intraconal scarring (posterior to equator of globe) is particularly refractory - the globe cannot project without inferior rotation and revisional surgery has limited benefit."
+      }
+    },
+    {
+      "id": "facial_asymmetry",
+      "type": "SYMPTOM",
+      "label": "Facial asymmetry",
+      "aliases": ["malar depression", "malar prominence", "facial disfigurement", "facial contour deformity"],
+      "properties": {
+        "types": ["malar depression", "excessive malar prominence", "zygoma malalignment"],
+        "measurement": "Clinical assessment; CT-based zygoma reduction accuracy",
+        "resolution_rate": {
+          "bell_2009_malar_depression": "100% (6/6)",
+          "bell_2009_malar_prominence": "100% (2/2)",
+          "he_2012_perfect_zygoma_reduction": "customised 85.7%, traditional 74.4%, with navigation 100%"
+        },
+        "tacit": "Facial asymmetry is the most consistently resolved outcome with customised implants. The benefit of customisation over traditional methods is most pronounced for facial symmetry outcomes."
+      }
+    },
+    {
+      "id": "speech_impairment",
+      "type": "SYMPTOM",
+      "label": "Speech impairment",
+      "aliases": ["speech intelligibility loss", "dysarthria", "hypernasality"],
+      "properties": {
+        "cause_in_context": "High maxillectomy defects disrupt palate and oral cavity geometry",
+        "resolution_rate": "Intelligible speech in 95% (19/20) of high maxillectomy patients at 6 months (Sun J 2011)"
+      }
+    },
+    {
+      "id": "masticatory_dysfunction",
+      "type": "SYMPTOM",
+      "label": "Masticatory dysfunction",
+      "aliases": ["impaired chewing", "reduced bite force", "dietary restriction"],
+      "properties": {
+        "cause_in_context": "Maxillary defect disrupts dental arch and occlusal contacts",
+        "resolution": "All patients tolerated regular or soft diet after reconstruction",
+        "occlusal_force": "Mean postoperative occlusal force 61.4±10.3% of preoperative (Sun J 2011)",
+        "dental_rehabilitation": "50% had delayed dental rehabilitation due to economic reasons or patient refusal"
+      }
+    },
+    {
+      "id": "titanium_mesh",
+      "type": "MATERIAL",
+      "label": "Titanium mesh",
+      "aliases": ["Ti mesh", "titanium plate", "titanium implant"],
+      "properties": {
+        "thickness_used": ["0.25mm", "0.4mm", "0.5mm (sheet titanium)", "various"],
+        "properties": ["biocompatible", "radiopaque", "strong", "lightweight", "malleable", "corrosion-resistant"],
+        "fixation": "Titanium screws to adjacent bone",
+        "surface_interaction": "When covered with soft tissue, fibrous ingrowth and epithelialisation occurs over time",
+        "exposure_risk": "If soft tissue breaks down, mesh may become exposed - particularly in irradiated fields",
+        "tacit": "Mesh thickness selection is an expert decision balancing structural support vs. profile/palpability. Thinner mesh (0.25mm) is less palpable but provides less rigidity. In areas with thin overlying tissue (orbital floor), palpability complaints are more common."
+      }
+    },
+    {
+      "id": "titanium_screws",
+      "type": "MATERIAL",
+      "label": "Titanium screws",
+      "aliases": ["fixation screws", "bone screws"],
+      "properties": {
+        "purpose": "Fixation of implant to adjacent bone",
+        "complication": "Palpable screw heads can cause discomfort, particularly at orbital margin",
+        "management": "Screw removal or plate trimming if symptomatic (1/22 patients, Mustafa 2011)"
+      }
+    },
+    {
+      "id": "medpor",
+      "type": "MATERIAL",
+      "label": "Medpor (porous polyethylene)",
+      "aliases": ["porous high-density polyethylene", "HDPE implant", "alloplastic polyethylene"],
+      "properties": {
+        "type": "Porous polyethylene alloplastic material",
+        "use": "Facial reconstruction - alternative to or combination with titanium mesh",
+        "composite_use": "Titanium mesh embedded in porous polyethylene",
+        "advantage": "Allows fibrovascular ingrowth; lower profile than titanium alone",
+        "used_in": "He D 2012 study (18.8% Medpor only, 15.6% titanium + Medpor)"
+      }
+    },
+    {
+      "id": "hydroxyapatite_implant",
+      "type": "MATERIAL",
+      "label": "Hydroxyapatite implant",
+      "aliases": ["HA implant", "calcium phosphate implant"],
+      "properties": {
+        "type": "Calcium phosphate ceramic - mimics bone mineral",
+        "use": "Orbital and facial reconstruction alternative",
+        "used_in": "He D 2012 study (7.8% hydroxyapatite only, 3.1% titanium + hydroxyapatite)"
+      }
+    },
+    {
+      "id": "implant_exposure",
+      "type": "COMPLICATION",
+      "label": "Titanium implant exposure",
+      "aliases": ["mesh exposure", "implant extrusion", "wound breakdown over implant"],
+      "properties": {
+        "definition": "Titanium mesh becomes unintentionally exposed through overlying soft tissue",
+        "incidence": "5.3% (1/19) oral cavity at 36 months; 5.3% (1/19) infraorbital skin at 4 months (Sun J 2011)",
+        "all_in_radiotherapy_patients": true,
+        "management": "Further surgery to remove exposed mesh and cover with flap",
+        "detection": "Can occur months to years post-operatively - requires long-term surveillance",
+        "tacit": "Implant exposure in irradiated tissue is a late complication that requires active surveillance. Early signs include persistent wound erythema, breakdown of overlying tissue, or palpable change. Delay in recognition leads to increased extent of required revision."
+      }
+    },
+    {
+      "id": "peri_implant_infection",
+      "type": "COMPLICATION",
+      "label": "Peri-implant infection",
+      "aliases": ["implant infection", "maxillary sinusitis post-implant", "wound infection"],
+      "properties": {
+        "incidence": "1.6% (1/64) maxillary sinusitis; ~3.4% (1/29) implant region infection",
+        "management": {
+          "sinusitis": "Debridement and drainage",
+          "implant_region": "Antibiotics"
+        },
+        "outcome": "Both resolved without implant removal in reported cases",
+        "theoretical_risk": "Life-threatening sepsis noted by specialist advisers as theoretical risk",
+        "tacit": "Infection risk is amplified by: prior radiotherapy, proximity to oral cavity, inadequate flap vascularity, immunosuppression. The distinction between superficial wound infection (antibiotics) and deep peri-implant sepsis (may require implant removal) is a critical clinical decision."
+      }
+    },
+    {
+      "id": "visual_deterioration",
+      "type": "COMPLICATION",
+      "label": "Visual deterioration",
+      "aliases": ["visual acuity loss", "optic nerve injury", "post-operative visual loss"],
+      "properties": {
+        "incidence_serious": "4.5% (1/22) sudden onset complete visual loss - resolved spontaneously after 1 week; 7% (1/15) transient visual acuity loss from optic nerve encroachment",
+        "mechanism": {
+          "sudden_onset": "Unknown mechanism; plate removed 24 hours post-procedure; spontaneous recovery over 1 week",
+          "optic_nerve_encroachment": "Mesh plate encroached on optic nerve; reoperation led to complete recovery"
+        },
+        "urgency": "URGENT - optic nerve encroachment requires immediate reoperation",
+        "tacit": "This is the highest-stakes immediate complication. Post-operative visual monitoring is essential. Any sudden visual change post-surgery = optic nerve compromise until proven otherwise. CT/imaging and ophthalmological assessment must be immediate."
+      }
+    },
+    {
+      "id": "oculomotor_nerve_palsy",
+      "type": "COMPLICATION",
+      "label": "Oculomotor nerve palsy",
+      "aliases": ["CN III palsy", "third nerve palsy", "strabismus from nerve injury"],
+      "properties": {
+        "incidence": "1.6% (1/64) in He D 2012 (1 month follow-up)",
+        "management": "Strabismus surgery",
+        "mechanism": "Surgical injury or pressure to oculomotor nerve during orbital reconstruction"
+      }
+    },
+    {
+      "id": "intraconal_scarring",
+      "type": "COMPLICATION",
+      "label": "Intraconal soft tissue scarring",
+      "aliases": ["posterior orbital scarring", "extraocular muscle entrapment"],
+      "properties": {
+        "incidence": "7% (1/15) in Bell RB 2009",
+        "definition": "Scarring of soft tissues posterior to the equator of the eye globe, within the cone of extraocular muscles",
+        "consequence": "Globe cannot project without significant inferior rotation; persistent diplopia and limited motility",
+        "management": "Revisional surgery for extraocular muscle entrapment (diplopia improved)",
+        "tacit": "Intraconal scarring is distinct from orbital wall failure. The implant may be perfectly positioned, but pre-existing intraconal scar tissue from prior injury prevents normal globe projection. This is why Bell 2009 noted that 'suboptimal enophthalmos correction' was not considered a complication when due to scarring."
+      }
+    },
+    {
+      "id": "eyelid_complications",
+      "type": "COMPLICATION",
+      "label": "Eyelid complications",
+      "aliases": ["ectropion", "scleral show", "lower lid retraction", "epiphora"],
+      "properties": {
+        "types": [
+          "Scleral show (9% in Mustafa 2011 n=22)",
+          "Temporary ectropion (4.5% in Mustafa 2011)",
+          "Lower lid ectropion (4.7% in He D 2012 n=64)",
+          "Lower lid retraction (7% in Bell 2009 n=15)"
+        ],
+        "management": {
+          "ectropion": "Often resolves spontaneously; massage; occasional further surgery",
+          "scleral_show": "Often settles; 1 patient not reported"
+        },
+        "mechanism": "Disruption of lower eyelid support structures during orbital reconstruction",
+        "associated_problems": ["epiphora", "lagophthalmos", "ocular irritation", "conjunctival keratinisation"]
+      }
+    },
+    {
+      "id": "oronasal_fistula",
+      "type": "COMPLICATION",
+      "label": "Oronasal fistula",
+      "aliases": ["palatal fistula", "oroantral communication"],
+      "properties": {
+        "incidence": "10.5% (2/19) in Sun J 2011 maxillary reconstruction series",
+        "location": "Edge of palatal skin paddles",
+        "timing": "1 year after surgery",
+        "all_in_radiotherapy_patients": true,
+        "management": "Sealed with removable partial dentures",
+        "mechanism": "Failure of palatal soft tissue paddle at margins, particularly in irradiated tissue"
+      }
+    },
+    {
+      "id": "flap_necrosis",
+      "type": "COMPLICATION",
+      "label": "Flap loss / necrosis",
+      "aliases": ["flap failure", "fibula necrosis", "osteoradionecrosis"],
+      "properties": {
+        "types": [
+          "Complete flap loss (4.2%, 1/24 flaps in Sun J 2011 - vascular compromise)",
+          "Partial fibular osteoradionecrosis (5%, 1/20 in Sun J 2011)"
+        ],
+        "all_in_radiotherapy_patients": true,
+        "management": {
+          "complete_loss": "Necrotic portion removed; titanium mesh preserved; further procedure",
+          "partial_osteoradionecrosis": "Debridement 2 years after reconstruction"
+        },
+        "tacit": "Radiotherapy causes endothelial damage and impairs vascular ingrowth, fundamentally compromising flap survival. Pre-operative assessment of radiation dose, field, and timing since treatment is essential risk stratification."
+      }
+    },
+    {
+      "id": "haematoma",
+      "type": "COMPLICATION",
+      "label": "Postoperative haematoma",
+      "aliases": ["post-operative haematoma", "wound haematoma"],
+      "properties": {
+        "incidence": "1/32 in Andrades 2009",
+        "management": "Immediate evacuation",
+        "outcome": "Uneventful recovery",
+        "note": "Treatment group (customised vs traditional) not recorded"
+      }
+    },
+    {
+      "id": "palpable_plate_rim",
+      "type": "COMPLICATION",
+      "label": "Palpable plate rim and screw discomfort",
+      "aliases": ["plate prominence", "palpable implant", "hardware discomfort"],
+      "properties": {
+        "incidence": "4.5% (1/22) in Mustafa 2011",
+        "location": "Inferior orbital margin",
+        "symptoms": "Pain and irritation at inferior orbital margin; patient can palpate plate flange and screw head",
+        "management": "Trimming of plate flange and screw removal in further operation"
+      }
+    },
+    {
+      "id": "overcorrection_enophthalmos",
+      "type": "COMPLICATION",
+      "label": "Overcorrection of enophthalmos",
+      "aliases": ["exophthalmos post-reconstruction", "globe over-projection"],
+      "properties": {
+        "incidence": "10.3% (3/29) in Lieger 2010",
+        "classification": "Classified as 'resolved' in that study despite slight overcorrection",
+        "definition": "Globe projects further anteriorly than normal side",
+        "tacit": "Overcorrection is an under-recognised complication because it may be classified as 'success'. The clinician must aim for slight undercorrection to account for post-operative oedema resolution, which will make the correction appear less severe over time. Planned undercorrection by 1-2mm is standard expert practice."
+      }
+    },
+    {
+      "id": "temporal_region_atrophy",
+      "type": "COMPLICATION",
+      "label": "Temporal region atrophy",
+      "aliases": ["temporalis muscle atrophy", "temporal hollowing"],
+      "properties": {
+        "incidence": "6.3% (4/64) in He D 2012",
+        "note": "3 of 4 patients had mild pre-operative atrophy that worsened",
+        "management": "Abdominal fat grafted for augmentation",
+        "cause": "Disruption of temporalis muscle or blood supply during surgical approach"
+      }
+    },
+    {
+      "id": "bone_resorption",
+      "type": "COMPLICATION",
+      "label": "Bone resorption around implant",
+      "aliases": ["peri-implant bone loss", "stress shielding resorption"],
+      "properties": {
+        "status": "Theoretical adverse event (specialist advisers)",
+        "mechanism": ["infection-driven peri-implantitis", "stress shielding from rigid implant", "radiation-induced bone loss"],
+        "consequence": "Implant loosening, loss of fixation",
+        "evidence": "Not quantified in study data"
+      }
+    },
+    {
+      "id": "implant_loosening",
+      "type": "COMPLICATION",
+      "label": "Implant loosening",
+      "aliases": ["screw loosening", "loss of fixation", "implant migration"],
+      "properties": {
+        "status": "Theoretical adverse event (specialist advisers)",
+        "mechanism": "Bone resorption, infection, inadequate initial fixation",
+        "consequence": "Loss of reconstruction, symptomatic implant, re-operation required",
+        "long_term_surveillance_required": true
+      }
+    },
+    {
+      "id": "he_2012",
+      "type": "EVIDENCE_ITEM",
+      "label": "He D 2012",
+      "aliases": ["He orbitozygomatic study"],
+      "properties": {
+        "authors": "He D, Li Z, Shi W et al.",
+        "title": "Orbitozygomatic fractures with enophthalmos: analysis of 64 cases treated late",
+        "journal": "Journal of Oral and Maxillofacial Surgery",
+        "year": 2012,
+        "volume": "70(3)",
+        "pages": "562-77",
+        "study_type": "Non-randomised comparative study",
+        "country": "China",
+        "n": 64,
+        "groups": "39 traditional, 14 customised, 11 customised with navigation",
+        "population": "Delayed orbitozygomatic fractures with enophthalmos",
+        "follow_up": "1 month"
+      }
+    },
+    {
+      "id": "kozakiewicz_2011",
+      "type": "EVIDENCE_ITEM",
+      "label": "Kozakiewicz M 2011",
+      "aliases": ["Kozakiewicz orbital implants study"],
+      "properties": {
+        "authors": "Kozakiewicz M, Elgalal M, Piotr L et al.",
+        "title": "Treatment with individual orbital wall implants in humans – 1-year ophthalmologic evaluation",
+        "journal": "Journal of Cranio-Maxillo-Facial Surgery",
+        "year": 2011,
+        "volume": "39(1)",
+        "pages": "30-6",
+        "study_type": "Non-randomised comparative study",
+        "country": "Poland",
+        "n": 24,
+        "groups": "12 classical, 12 customised",
+        "population": "Orbital fractures without CNS or globe injury",
+        "follow_up": "2 weeks and 12 months",
+        "key_finding": "Customised significantly better binocular vision (p=0.015), upgaze (p=0.003), globe position (p=0.012)"
+      }
+    },
+    {
+      "id": "andrades_2009",
+      "type": "EVIDENCE_ITEM",
+      "label": "Andrades P 2009",
+      "aliases": ["Andrades orbital mesh study"],
+      "properties": {
+        "authors": "Andrades P, Hernandez D, Falguera MI et al.",
+        "title": "Degrees of tolerance in post-traumatic orbital volume correction: the role of prefabricated mesh",
+        "journal": "Journal of Oral and Maxillofacial Surgery",
+        "year": 2009,
+        "volume": "67(11)",
+        "pages": "2404-11",
+        "study_type": "Non-randomised comparative study",
+        "country": "Spain",
+        "n": 32,
+        "groups": "20 mesh shaped intraoperatively, 12 prefabricated",
+        "follow_up": "Mean 12.3 months",
+        "key_finding": "Prefabricated mesh significantly better orbital volume (p=0.011), apex-globe distance (p=0.007), orbital rim area (p=0.023)"
+      }
+    },
+    {
+      "id": "lieger_2010",
+      "type": "EVIDENCE_ITEM",
+      "label": "Lieger O 2010",
+      "aliases": ["Lieger orbital reconstruction study"],
+      "properties": {
+        "authors": "Lieger O, Richards R, Liu M et al.",
+        "title": "Computer-assisted design and manufacture of implants in the late reconstruction of extensive orbital fractures",
+        "journal": "Archives of Facial Plastic Surgery",
+        "year": 2010,
+        "volume": "12(3)",
+        "pages": "186-91",
+        "study_type": "Case series",
+        "country": "UK",
+        "n": 29,
+        "population": "Post-traumatic enophthalmos ≥2mm with or without diplopia",
+        "follow_up": "Mean 14 months",
+        "antibiotic_prophylaxis": true
+      }
+    },
+    {
+      "id": "tang_2010",
+      "type": "EVIDENCE_ITEM",
+      "label": "Tang W 2010",
+      "aliases": ["Tang orbital floor fracture study"],
+      "properties": {
+        "authors": "Tang W, Guo L, Long J et al.",
+        "title": "Individual design and rapid prototyping in reconstruction of orbital wall defects",
+        "journal": "Journal of Oral and Maxillofacial Surgery",
+        "year": 2010,
+        "volume": "68(3)",
+        "pages": "562-70",
+        "study_type": "Case series",
+        "country": "China",
+        "n": 46,
+        "population": "Unilateral orbital floor fractures",
+        "follow_up": "Mean 8.6 months",
+        "key_finding": "Fresh fractures have better diplopia resolution (67%) than old fractures (30%)"
+      }
+    },
+    {
+      "id": "mustafa_2011",
+      "type": "EVIDENCE_ITEM",
+      "label": "Mustafa SF 2011",
+      "aliases": ["Mustafa orbital wall reconstruction study"],
+      "properties": {
+        "authors": "Mustafa SF, Evans PL, Bocca A et al.",
+        "title": "Customized titanium reconstruction of post-traumatic orbital wall defects: a review of 22 cases",
+        "journal": "International Journal of Oral and Maxillofacial Surgery",
+        "year": 2011,
+        "volume": "40(12)",
+        "pages": "1357-62",
+        "study_type": "Case series",
+        "country": "UK",
+        "n": 22,
+        "follow_up": "Mean 9.5 months"
+      }
+    },
+    {
+      "id": "sun_2011",
+      "type": "EVIDENCE_ITEM",
+      "label": "Sun J 2011",
+      "aliases": ["Sun maxillary reconstruction study"],
+      "properties": {
+        "authors": "Sun J, Shen Y, Li J et al.",
+        "title": "Reconstruction of high maxillectomy defects with the fibula osteomyocutaneous flap in combination with titanium mesh or a zygomatic implant",
+        "journal": "Plastic and Reconstructive Surgery",
+        "year": 2011,
+        "volume": "127(1)",
+        "pages": "150-60",
+        "study_type": "Case series",
+        "country": "China",
+        "n": 20,
+        "population": "High maxillectomy defects (Brown class 3)",
+        "follow_up": "Mean 34.7 months",
+        "radiotherapy_patients": "75% (15/20)",
+        "key_finding": "All complications occurred in radiotherapy patients"
+      }
+    },
+    {
+      "id": "bell_2009",
+      "type": "EVIDENCE_ITEM",
+      "label": "Bell RB 2009",
+      "aliases": ["Bell computer-assisted orbital reconstruction study"],
+      "properties": {
+        "authors": "Bell RB, Markiewicz MR",
+        "title": "Computer-assisted planning, stereolithographic modeling, and intraoperative navigation for complex orbital reconstruction",
+        "journal": "Journal of Oral and Maxillofacial Surgery",
+        "year": 2009,
+        "volume": "67(12)",
+        "pages": "2559-70",
+        "study_type": "Case series",
+        "country": "USA",
+        "n": 15,
+        "population": "Complex primary or secondary post-traumatic and post-ablative orbital deformities",
+        "technique": "Titanium mesh with computer-assisted intraoperative navigation",
+        "follow_up": "Not reported beyond initial postoperative period"
+      }
+    },
+    {
+      "id": "nice_htg307",
+      "type": "EVIDENCE_ITEM",
+      "label": "NICE HTG307 guidance",
+      "aliases": ["IPG449", "NICE HTG307"],
+      "properties": {
+        "document_type": "NICE HealthTech guidance (formerly Interventional Procedures Guidance)",
+        "reference": "HTG307 (formerly IPG449)",
+        "published": "2013-03-27",
+        "updated": "2013-07-01",
+        "migrated": "January 2026 (IPG449 → HTG307)",
+        "recommendation_tier": "normal_arrangements",
+        "specialist_societies": ["British Association of Oral and Maxillofacial Surgeons", "Craniofacial Society of Great Britain and Ireland"]
+      }
+    },
+    {
+      "id": "customised_vs_traditional_advantage",
+      "type": "DECISION_CRITERION",
+      "label": "Customised implant superiority over traditional method",
+      "aliases": ["CAD-CAM advantage", "prefabrication advantage"],
+      "properties": {
+        "advantages": [
+          "Less soft tissue manipulation needed",
+          "Reduced operating time",
+          "Fewer operations",
+          "Improved safety in limited visibility areas (e.g. around optic nerve)",
+          "Better functional and cosmetic outcomes (statistically demonstrated)"
+        ],
+        "statistical_evidence": {
+          "binocular_vision": "p=0.015 in favour of customised (Kozakiewicz 2011)",
+          "upgaze": "p=0.003 (Kozakiewicz 2011)",
+          "globe_position": "p=0.012 (Kozakiewicz 2011)",
+          "orbital_volume": "p=0.011 (Andrades 2009)",
+          "apex_globe_distance": "p=0.007 (Andrades 2009)"
+        },
+        "tacit": "The benefit is largest for functional visual outcomes. The customised approach's advantage around the optic nerve (where re-positioning attempts are especially hazardous) is the key safety argument for customisation in orbital surgery."
+      }
+    },
+    {
+      "id": "navigation_augmentation",
+      "type": "DECISION_CRITERION",
+      "label": "Computer-assisted intraoperative navigation",
+      "aliases": ["intraoperative navigation", "image-guided surgery", "navigation-guided implant placement"],
+      "properties": {
+        "effect_on_outcomes": "He 2012: 100% perfect zygoma reduction with navigation vs 85.7% without; 90.9% good globe projection vs 64.3%",
+        "mechanism": "Real-time verification of implant position against pre-operative plan",
+        "use_case": "Complex anatomy, limited visibility, revision surgery, orbital reconstruction near optic nerve",
+        "tacit": "Navigation provides objective, real-time feedback that compensates for the limits of haptic and visual assessment alone. In areas where even 1-2mm mispositioning has significant consequences (orbital floor near optic nerve), navigation moves the procedure from 'expert estimation' to 'verified positioning'."
+      }
+    },
+    {
+      "id": "radiotherapy_risk_criterion",
+      "type": "DECISION_CRITERION",
+      "label": "Radiotherapy as major risk amplifier",
+      "aliases": ["prior radiotherapy", "radiation field history", "XRT risk factor"],
+      "properties": {
+        "significance": "All complications in Sun J 2011 occurred in radiotherapy patients",
+        "mechanism": "Radiation causes endothelial damage, impairs vascularisation and wound healing, increases infection risk, causes osteoradionecrosis",
+        "relevant_complications": ["flap necrosis", "fibular osteoradionecrosis", "titanium mesh exposure", "oronasal fistulae"],
+        "pre_operative_assessment": "Must assess radiation dose, field, and time since treatment",
+        "tacit": "Radiotherapy history is a fundamental risk stratification factor that changes the expected complication profile. A non-irradiated patient and a 60Gy-irradiated patient having identical procedures have fundamentally different risk profiles. Clinicians must actively seek radiation history."
+      }
+    },
+    {
+      "id": "fracture_timing_criterion",
+      "type": "DECISION_CRITERION",
+      "label": "Fracture timing criterion (fresh vs old)",
+      "aliases": ["fracture age", "acute vs delayed reconstruction"],
+      "properties": {
+        "definition": "Fresh = within 2 weeks; old = more than 2 weeks",
+        "effect_on_diplopia": "Fresh fractures: 67% diplopia resolution; old fractures: 30% (Tang W 2010)",
+        "mechanism": "Old fractures develop fibrosis, muscle atrophy, and intraconal scarring that impairs globe mobility",
+        "tacit": "The 2-week threshold is not absolute. The key message is that intraconal scarring and muscle fibrosis progressively limit the achievable functional outcome. Earlier intervention generally gives better diplopia outcomes. However, significant oedema in the immediate post-injury period can make early reconstruction technically difficult."
+      }
+    },
+    {
+      "id": "soft_tissue_coverage_criterion",
+      "type": "DECISION_CRITERION",
+      "label": "Soft tissue coverage adequacy criterion",
+      "aliases": ["coverage adequacy", "coverage determinant", "HTG307 vs HTG313 decision"],
+      "properties": {
+        "description": "Whether adequate soft tissue coverage can be achieved or is expected to form",
+        "determines_guidance_pathway": "Coverage achievable → HTG307 (normal arrangements); Coverage not achievable → HTG313 (special arrangements)",
+        "exceptions": "Paranasal sinus area - partial exposure acceptable as epithelialisation expected",
+        "tacit": "This is the single most important clinical decision in orofacial titanium reconstruction. The clinician must assess coverage preoperatively based on local tissue availability, flap options, and tissue quality (especially in irradiated fields). The boundary between HTG307 and HTG313 is not always clinically obvious - a technically covered implant with poor-quality tissue may fail to maintain coverage."
+      }
+    },
+    {
+      "id": "normal_governance",
+      "type": "GOVERNANCE_REQUIREMENT",
+      "label": "Normal clinical governance arrangements",
+      "aliases": ["standard governance", "routine clinical governance"],
+      "properties": {
+        "requirement_level": "Normal (not special arrangements)",
+        "components": ["standard consent process", "standard clinical governance", "standard audit"],
+        "contrast_with": "HTG20 and HTG313 which require special arrangements",
+        "tacit": "Normal arrangements means the procedure can be offered without special institutional notification, but clinician training requirements, specialist unit designation, and audit commitments still apply as standard NHS governance"
+      }
+    },
+    {
+      "id": "specialist_unit_requirement",
+      "type": "GOVERNANCE_REQUIREMENT",
+      "label": "Specialist unit and training requirement",
+      "aliases": ["specialist centre", "training requirement"],
+      "properties": {
+        "requirement": "CAD-CAM techniques taught in large specialist centres",
+        "adviser_comment": "Adoption into mainstream practice considered 'extremely unlikely' by specialist advisers",
+        "clinical_implication": "This is effectively a de facto specialist centre restriction, even though NICE guidance says 'normal arrangements'",
+        "tacit": "The NICE recommendation says 'normal arrangements', but the specialist advisers flag that CAD-CAM manufacturing technology requires skilled computer and manufacturing expertise, and costly equipment. The practical effect is that only specialist centres will have the infrastructure to offer this procedure."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e001",
+      "source": "orofacial_trauma",
+      "target": "customised_titanium_implant_procedure",
+      "type": "INDICATES",
+      "label": "Orofacial trauma is the most common indication for customised titanium implant reconstruction",
+      "properties": {
+        "nice_section": "2.1.1",
+        "frequency": "Most common indication"
+      }
+    },
+    {
+      "id": "e002",
+      "source": "orofacial_tumour_ablation",
+      "target": "customised_titanium_implant_procedure",
+      "type": "INDICATES",
+      "label": "Orofacial tumour removal creates reconstruction defects requiring titanium implant",
+      "properties": {
+        "nice_section": "2.1.1"
+      }
+    },
+    {
+      "id": "e003",
+      "source": "congenital_facial_abnormality",
+      "target": "customised_titanium_implant_procedure",
+      "type": "INDICATES",
+      "label": "Congenital facial abnormality may indicate customised titanium reconstruction",
+      "properties": {
+        "nice_section": "2.1.1",
+        "frequency": "Less common indication"
+      }
+    },
+    {
+      "id": "e004",
+      "source": "orbital_floor_fracture",
+      "target": "enophthalmos",
+      "type": "CAUSES",
+      "label": "Orbital floor fracture causes enophthalmos by expanding orbital volume"
+    },
+    {
+      "id": "e005",
+      "source": "orbital_floor_fracture",
+      "target": "diplopia",
+      "type": "CAUSES",
+      "label": "Orbital floor fracture causes diplopia via muscle entrapment and disruption"
+    },
+    {
+      "id": "e006",
+      "source": "orbital_floor_fracture",
+      "target": "restricted_ocular_motility",
+      "type": "CAUSES",
+      "label": "Orbital floor fracture causes restricted ocular motility via extraocular muscle effects"
+    },
+    {
+      "id": "e007",
+      "source": "orofacial_trauma",
+      "target": "facial_asymmetry",
+      "type": "CAUSES",
+      "label": "Orofacial trauma causes facial asymmetry from displaced or comminuted fractures"
+    },
+    {
+      "id": "e008",
+      "source": "high_maxillary_defect",
+      "target": "speech_impairment",
+      "type": "CAUSES",
+      "label": "High maxillary defect causes speech impairment from palate and oral cavity disruption"
+    },
+    {
+      "id": "e009",
+      "source": "high_maxillary_defect",
+      "target": "masticatory_dysfunction",
+      "type": "CAUSES",
+      "label": "High maxillary defect causes masticatory dysfunction from dental arch disruption"
+    },
+    {
+      "id": "e010",
+      "source": "ct_cadcam_modelling",
+      "target": "customised_titanium_implant_procedure",
+      "type": "PRECEDES",
+      "label": "CT scanning and CAD-CAM modelling is the first step of the procedure",
+      "properties": {
+        "sequence": "Step 1 - mandatory precursor to implant manufacture",
+        "nice_section": "2.2.1"
+      }
+    },
+    {
+      "id": "e011",
+      "source": "ct_cadcam_modelling",
+      "target": "titanium_mesh",
+      "type": "SHAPES",
+      "label": "CAD-CAM model is used to shape the customised titanium mesh",
+      "properties": {
+        "method": "Implant shaped against contours of the anatomical model",
+        "nice_section": "2.2.1"
+      }
+    },
+    {
+      "id": "e012",
+      "source": "customised_titanium_implant_procedure",
+      "target": "titanium_mesh",
+      "type": "USES",
+      "label": "Procedure uses customised titanium mesh as primary structural material"
+    },
+    {
+      "id": "e013",
+      "source": "customised_titanium_implant_procedure",
+      "target": "titanium_screws",
+      "type": "USES",
+      "label": "Titanium screws fix implant to adjacent bone"
+    },
+    {
+      "id": "e014",
+      "source": "customised_titanium_implant_procedure",
+      "target": "soft_tissue_flap",
+      "type": "REQUIRES",
+      "label": "Procedure requires soft tissue coverage of implant in most cases",
+      "properties": {
+        "exception": "Paranasal sinus area - partial exposure acceptable",
+        "nice_section": "2.2.2"
+      }
+    },
+    {
+      "id": "e015",
+      "source": "soft_tissue_flap",
+      "target": "fibula_osteomyocutaneous_flap",
+      "type": "INCLUDES_OPTION",
+      "label": "Soft tissue coverage options include fibula osteomyocutaneous flap for maxillary reconstruction"
+    },
+    {
+      "id": "e016",
+      "source": "customised_titanium_implant_procedure",
+      "target": "traditional_titanium_implant",
+      "type": "SUPERIOR_TO",
+      "label": "Customised implant is superior to traditional intraoperative bending",
+      "properties": {
+        "outcome_data": "Statistically superior on multiple visual and facial outcomes",
+        "mechanism": "Pre-design eliminates iterative intraoperative adjustment",
+        "nice_section": "2.3.1, 2.3.2, 2.3.4"
+      }
+    },
+    {
+      "id": "e017",
+      "source": "customised_titanium_implant_procedure",
+      "target": "autologous_graft",
+      "type": "ALTERNATIVE_TO",
+      "label": "Customised titanium implant is an alternative to autologous bone graft",
+      "properties": {
+        "advantage_over_graft": "No donor site morbidity; no resorption; predictable long-term outcomes",
+        "disadvantage_vs_graft": "Implant not biological; theoretical infection and exposure risks"
+      }
+    },
+    {
+      "id": "e018",
+      "source": "navigation_augmentation",
+      "target": "customised_titanium_implant_procedure",
+      "type": "AUGMENTS",
+      "label": "Computer-assisted navigation augments implant placement accuracy",
+      "properties": {
+        "evidence": "He 2012: 100% perfect zygoma reduction with navigation vs 85.7% without",
+        "indication": "Complex anatomy, near optic nerve, orbital reconstruction",
+        "tacit_note": "Navigation is recommended when margin for error is small - particularly orbital floor near optic nerve"
+      }
+    },
+    {
+      "id": "e019",
+      "source": "customised_titanium_implant_procedure",
+      "target": "enophthalmos",
+      "type": "TREATS",
+      "label": "Procedure treats enophthalmos by restoring orbital volume and wall architecture",
+      "properties": {
+        "resolution_rates": "resolved 69-82%, improved 18-31% across case series",
+        "nice_section": "2.3.1"
+      }
+    },
+    {
+      "id": "e020",
+      "source": "customised_titanium_implant_procedure",
+      "target": "diplopia",
+      "type": "TREATS",
+      "label": "Procedure treats diplopia by correcting extraocular muscle position",
+      "properties": {
+        "resolution_rates": "resolved 21-67%; improvement common; incomplete resolution in some",
+        "tacit_note": "Diplopia outcomes are highly variable and depend on fracture age, degree of scarring, and patient anatomy"
+      }
+    },
+    {
+      "id": "e021",
+      "source": "customised_titanium_implant_procedure",
+      "target": "restricted_ocular_motility",
+      "type": "TREATS",
+      "label": "Procedure partially treats restricted ocular motility",
+      "properties": {
+        "resolution_rates": "resolved 15-71%; unchanged in 50% of cases (Lieger 2010)",
+        "tacit_note": "Motility is least likely to fully resolve; intraconal scarring is refractory to structural correction"
+      }
+    },
+    {
+      "id": "e022",
+      "source": "customised_titanium_implant_procedure",
+      "target": "facial_asymmetry",
+      "type": "TREATS",
+      "label": "Procedure most reliably resolves facial asymmetry",
+      "properties": {
+        "resolution_rates": "100% for malar depression/prominence (Bell 2009); 85.7-100% perfect zygoma reduction (He 2012)",
+        "tacit_note": "Facial asymmetry has the best and most consistent response to customised implants"
+      }
+    },
+    {
+      "id": "e023",
+      "source": "customised_titanium_implant_procedure",
+      "target": "speech_impairment",
+      "type": "TREATS",
+      "label": "Procedure treats speech impairment in maxillary reconstruction",
+      "properties": {
+        "resolution_rate": "95% intelligible speech at 6 months (Sun J 2011)"
+      }
+    },
+    {
+      "id": "e024",
+      "source": "customised_titanium_implant_procedure",
+      "target": "implant_exposure",
+      "type": "RISKS",
+      "label": "Procedure risks titanium mesh exposure if soft tissue coverage fails",
+      "properties": {
+        "incidence": "5.3% per site in irradiated patients (Sun J 2011)",
+        "timing": "Can occur months to years post-operatively",
+        "nice_section": "2.4.1"
+      }
+    },
+    {
+      "id": "e025",
+      "source": "customised_titanium_implant_procedure",
+      "target": "peri_implant_infection",
+      "type": "RISKS",
+      "label": "Procedure risks peri-implant infection",
+      "properties": {
+        "incidence": "~1.6-3.4% across studies",
+        "nice_section": "2.4.2"
+      }
+    },
+    {
+      "id": "e026",
+      "source": "customised_titanium_implant_procedure",
+      "target": "visual_deterioration",
+      "type": "RISKS",
+      "label": "Procedure risks visual deterioration including optic nerve injury",
+      "properties": {
+        "incidence": "4.5% (1/22) and 7% (1/15) across orbital reconstruction series",
+        "urgency": "Optic nerve encroachment requires immediate reoperation",
+        "nice_section": "2.4.4"
+      }
+    },
+    {
+      "id": "e027",
+      "source": "customised_titanium_implant_procedure",
+      "target": "oculomotor_nerve_palsy",
+      "type": "RISKS",
+      "label": "Procedure risks oculomotor nerve palsy",
+      "properties": {
+        "incidence": "1.6% (1/64)",
+        "nice_section": "2.4.6"
+      }
+    },
+    {
+      "id": "e028",
+      "source": "customised_titanium_implant_procedure",
+      "target": "intraconal_scarring",
+      "type": "RISKS",
+      "label": "Procedure or underlying injury may lead to intraconal scarring with persistent diplopia",
+      "properties": {
+        "incidence": "7% (1/15) in Bell 2009",
+        "note": "May be pre-existing from injury; compounded by surgical manipulation",
+        "nice_section": "2.4.5"
+      }
+    },
+    {
+      "id": "e029",
+      "source": "customised_titanium_implant_procedure",
+      "target": "eyelid_complications",
+      "type": "RISKS",
+      "label": "Procedure risks eyelid complications including ectropion and scleral show",
+      "properties": {
+        "incidence": "4.7-9% across series",
+        "nice_section": "safety data"
+      }
+    },
+    {
+      "id": "e030",
+      "source": "customised_titanium_implant_procedure",
+      "target": "oronasal_fistula",
+      "type": "RISKS",
+      "label": "Maxillary reconstruction risks oronasal fistula",
+      "properties": {
+        "incidence": "10.5% (2/19) in Sun J 2011",
+        "risk_factor": "Radiotherapy",
+        "nice_section": "2.4.3"
+      }
+    },
+    {
+      "id": "e031",
+      "source": "customised_titanium_implant_procedure",
+      "target": "flap_necrosis",
+      "type": "RISKS",
+      "label": "Maxillary reconstruction with fibula flap risks flap necrosis",
+      "properties": {
+        "incidence": "4.2-5% in Sun J 2011 series",
+        "risk_factor": "Radiotherapy"
+      }
+    },
+    {
+      "id": "e032",
+      "source": "customised_titanium_implant_procedure",
+      "target": "haematoma",
+      "type": "RISKS",
+      "label": "Procedure risks postoperative haematoma",
+      "properties": {
+        "incidence": "1/32 in Andrades 2009",
+        "management": "Immediate surgical evacuation"
+      }
+    },
+    {
+      "id": "e033",
+      "source": "customised_titanium_implant_procedure",
+      "target": "palpable_plate_rim",
+      "type": "RISKS",
+      "label": "Procedure risks palpable plate rim causing discomfort",
+      "properties": {
+        "incidence": "4.5% (1/22) in Mustafa 2011",
+        "location": "Orbital margin most common"
+      }
+    },
+    {
+      "id": "e034",
+      "source": "customised_titanium_implant_procedure",
+      "target": "overcorrection_enophthalmos",
+      "type": "RISKS",
+      "label": "Procedure risks overcorrection of enophthalmos",
+      "properties": {
+        "incidence": "10.3% (3/29) in Lieger 2010",
+        "tacit_note": "Expert practice is to plan slight undercorrection"
+      }
+    },
+    {
+      "id": "e035",
+      "source": "customised_titanium_implant_procedure",
+      "target": "bone_resorption",
+      "type": "RISKS_THEORETICAL",
+      "label": "Procedure carries theoretical risk of bone resorption",
+      "properties": {
+        "source": "Specialist advisers (NICE guidance section)",
+        "nice_section": "2.4.7"
+      }
+    },
+    {
+      "id": "e036",
+      "source": "customised_titanium_implant_procedure",
+      "target": "implant_loosening",
+      "type": "RISKS_THEORETICAL",
+      "label": "Procedure carries theoretical risk of implant loosening",
+      "properties": {
+        "source": "Specialist advisers",
+        "nice_section": "2.4.7"
+      }
+    },
+    {
+      "id": "e037",
+      "source": "radiotherapy_risk_criterion",
+      "target": "implant_exposure",
+      "type": "AMPLIFIES",
+      "label": "Prior radiotherapy significantly amplifies risk of implant exposure",
+      "properties": {
+        "evidence": "All mesh exposure cases in Sun J 2011 were in irradiated patients"
+      }
+    },
+    {
+      "id": "e038",
+      "source": "radiotherapy_risk_criterion",
+      "target": "flap_necrosis",
+      "type": "AMPLIFIES",
+      "label": "Prior radiotherapy significantly amplifies risk of flap necrosis",
+      "properties": {
+        "evidence": "All flap complications in Sun J 2011 were in irradiated patients"
+      }
+    },
+    {
+      "id": "e039",
+      "source": "radiotherapy_risk_criterion",
+      "target": "oronasal_fistula",
+      "type": "AMPLIFIES",
+      "label": "Prior radiotherapy amplifies oronasal fistula risk",
+      "properties": {
+        "evidence": "All oronasal fistulae in Sun J 2011 were in irradiated patients"
+      }
+    },
+    {
+      "id": "e040",
+      "source": "fracture_timing_criterion",
+      "target": "diplopia",
+      "type": "PREDICTS_OUTCOME_OF",
+      "label": "Fracture timing predicts diplopia resolution rate",
+      "properties": {
+        "fresh": "67% resolution",
+        "old": "30% resolution",
+        "source": "Tang W 2010",
+        "mechanism": "Established intraconal scarring in old fractures impairs muscle mobility"
+      }
+    },
+    {
+      "id": "e041",
+      "source": "soft_tissue_coverage_criterion",
+      "target": "customised_titanium_implant_procedure",
+      "type": "GATES",
+      "label": "Soft tissue coverage adequacy determines whether HTG307 or HTG313 applies",
+      "properties": {
+        "gate_logic": "Coverage achievable → HTG307 (normal arrangements); Coverage not achievable → HTG313 (special arrangements)",
+        "tacit_note": "This is the key branching decision. Coverage adequacy must be assessed pre-operatively, not assumed."
+      }
+    },
+    {
+      "id": "e042",
+      "source": "implant_exposure",
+      "target": "soft_tissue_flap",
+      "type": "REQUIRES_REVISION_WITH",
+      "label": "Implant exposure requires revision surgery to remove exposed mesh and cover with flap"
+    },
+    {
+      "id": "e043",
+      "source": "peri_implant_infection",
+      "target": "implant_exposure",
+      "type": "MAY_LEAD_TO",
+      "label": "Peri-implant infection may lead to implant exposure if untreated",
+      "properties": {
+        "tacit_note": "Infection weakens soft tissue coverage, creating a pathway to exposure"
+      }
+    },
+    {
+      "id": "e044",
+      "source": "visual_deterioration",
+      "target": "customised_titanium_implant_procedure",
+      "type": "TRIGGERS_URGENT_REVISION",
+      "label": "Visual deterioration from optic nerve encroachment triggers urgent reoperation",
+      "properties": {
+        "urgency": "Immediate",
+        "outcome_if_treated": "Complete recovery (Bell 2009)"
+      }
+    },
+    {
+      "id": "e045",
+      "source": "intraconal_scarring",
+      "target": "diplopia",
+      "type": "CAUSES_PERSISTENT",
+      "label": "Intraconal scarring causes persistent diplopia refractory to structural correction",
+      "properties": {
+        "management": "Revisional surgery for extraocular muscle entrapment - diplopia improved"
+      }
+    },
+    {
+      "id": "e046",
+      "source": "he_2012",
+      "target": "customised_vs_traditional_advantage",
+      "type": "DEMONSTRATES",
+      "label": "He 2012 demonstrates customised implant superiority for globe projection and zygoma reduction"
+    },
+    {
+      "id": "e047",
+      "source": "kozakiewicz_2011",
+      "target": "customised_vs_traditional_advantage",
+      "type": "DEMONSTRATES",
+      "label": "Kozakiewicz 2011 demonstrates statistically significant superiority for diplopia and globe position"
+    },
+    {
+      "id": "e048",
+      "source": "andrades_2009",
+      "target": "customised_vs_traditional_advantage",
+      "type": "DEMONSTRATES",
+      "label": "Andrades 2009 demonstrates prefabricated mesh superiority for orbital volume correction"
+    },
+    {
+      "id": "e049",
+      "source": "he_2012",
+      "target": "navigation_augmentation",
+      "type": "DEMONSTRATES",
+      "label": "He 2012 demonstrates further improvement with navigation: 90.9% globe projection, 100% zygoma reduction"
+    },
+    {
+      "id": "e050",
+      "source": "tang_2010",
+      "target": "fracture_timing_criterion",
+      "type": "ESTABLISHES",
+      "label": "Tang W 2010 establishes that fresh fractures have better diplopia outcomes than old fractures"
+    },
+    {
+      "id": "e051",
+      "source": "sun_2011",
+      "target": "radiotherapy_risk_criterion",
+      "type": "ESTABLISHES",
+      "label": "Sun J 2011 establishes that all major complications occurred in irradiated patients"
+    },
+    {
+      "id": "e052",
+      "source": "nice_htg307",
+      "target": "normal_governance",
+      "type": "REQUIRES",
+      "label": "NICE HTG307 requires normal (not special) governance arrangements",
+      "properties": {
+        "contrast": "HTG20 and HTG313 require special arrangements",
+        "nice_section": "1.1"
+      }
+    },
+    {
+      "id": "e053",
+      "source": "nice_htg307",
+      "target": "specialist_unit_requirement",
+      "type": "IMPLIES",
+      "label": "CAD-CAM technique requirements effectively limit procedure to specialist centres",
+      "properties": {
+        "source": "Specialist advisers comments in NICE overview",
+        "tacit_note": "The 'normal arrangements' recommendation does not mean 'any hospital can do this'. CAD-CAM manufacturing infrastructure exists only in specialist centres."
+      }
+    },
+    {
+      "id": "e054",
+      "source": "customised_vs_traditional_advantage",
+      "target": "traditional_titanium_implant",
+      "type": "SUPERSEDES",
+      "label": "Customised implants effectively supersede traditional intraoperative bending where available"
+    },
+    {
+      "id": "e055",
+      "source": "autologous_graft",
+      "target": "customised_titanium_implant_procedure",
+      "type": "PRECEDED_BY",
+      "label": "Autologous grafts were the historical standard before customised titanium became available",
+      "properties": {
+        "limitation": "Variable resorption was key limitation of autologous approach"
+      }
+    },
+    {
+      "id": "e056",
+      "source": "orbital_floor_fracture",
+      "target": "orofacial_trauma",
+      "type": "IS_A",
+      "label": "Orbital floor fracture is a subtype of orofacial trauma"
+    },
+    {
+      "id": "e057",
+      "source": "high_maxillary_defect",
+      "target": "orofacial_tumour_ablation",
+      "type": "RESULTS_FROM",
+      "label": "High maxillary defect typically results from tumour ablation"
+    },
+    {
+      "id": "e058",
+      "source": "fibula_osteomyocutaneous_flap",
+      "target": "flap_necrosis",
+      "type": "RISKS",
+      "label": "Fibula flap risks necrosis particularly in irradiated patients",
+      "properties": {
+        "incidence": "4.2% flap loss (Sun J 2011)"
+      }
+    },
+    {
+      "id": "e059",
+      "source": "soft_tissue_flap",
+      "target": "peri_implant_infection",
+      "type": "PROTECTS_AGAINST",
+      "label": "Adequate soft tissue coverage protects against peri-implant infection",
+      "properties": {
+        "mechanism": "Vascularised tissue brings immune cells and seals implant from oral/external flora"
+      }
+    },
+    {
+      "id": "e060",
+      "source": "customised_titanium_implant_procedure",
+      "target": "temporal_region_atrophy",
+      "type": "RISKS",
+      "label": "Surgical approach risks temporal region atrophy from temporalis muscle disruption",
+      "properties": {
+        "incidence": "6.3% (4/64) in He D 2012"
+      }
+    },
+    {
+      "id": "e061",
+      "source": "overcorrection_enophthalmos",
+      "target": "enophthalmos",
+      "type": "INVERSE_OF",
+      "label": "Overcorrection is the inverse failure mode to under-correction of enophthalmos",
+      "properties": {
+        "tacit_note": "Success requires landing in a narrow range. The surgeon must actively plan for post-operative swelling resolution when selecting implant dimensions."
+      }
+    },
+    {
+      "id": "e062",
+      "source": "lieger_2010",
+      "target": "overcorrection_enophthalmos",
+      "type": "DOCUMENTS",
+      "label": "Lieger 2010 documents 10.3% overcorrection rate"
+    },
+    {
+      "id": "e063",
+      "source": "mustafa_2011",
+      "target": "visual_deterioration",
+      "type": "DOCUMENTS",
+      "label": "Mustafa 2011 documents sudden visual deterioration with spontaneous recovery"
+    },
+    {
+      "id": "e064",
+      "source": "bell_2009",
+      "target": "visual_deterioration",
+      "type": "DOCUMENTS",
+      "label": "Bell 2009 documents transient visual acuity loss from optic nerve plate encroachment"
+    },
+    {
+      "id": "e065",
+      "source": "bell_2009",
+      "target": "intraconal_scarring",
+      "type": "DOCUMENTS",
+      "label": "Bell 2009 documents intraconal scarring with persistent diplopia requiring revisional surgery"
+    }
+  ],
+  "tacit_knowledge_summary": {
+    "key_clinical_reasoning_chains": [
+      {
+        "id": "tkr001",
+        "name": "Coverage adequacy as the primary branching decision",
+        "description": "The single most critical pre-operative assessment is whether adequate soft tissue coverage can be achieved or expected. This decision determines the entire governance pathway (HTG307 vs HTG313) and fundamentally changes the risk profile. A technically challenging coverage is not the same as adequate coverage - especially in irradiated fields.",
+        "nodes": ["soft_tissue_coverage_criterion", "customised_titanium_implant_procedure", "soft_tissue_flap", "radiotherapy_risk_criterion"]
+      },
+      {
+        "id": "tkr002",
+        "name": "Radiotherapy as a universal risk multiplier",
+        "description": "Prior radiotherapy changes the entire post-operative risk profile. Sun J 2011 showed that ALL major complications (flap necrosis, mesh exposure, osteoradionecrosis, oronasal fistula) occurred exclusively in irradiated patients. This history must be elicited as part of pre-operative assessment and should trigger higher-level surveillance and lower threshold for intervention.",
+        "nodes": ["radiotherapy_risk_criterion", "flap_necrosis", "implant_exposure", "oronasal_fistula"]
+      },
+      {
+        "id": "tkr003",
+        "name": "Navigation when optic nerve is at risk",
+        "description": "Computer-assisted intraoperative navigation should be used when implant placement is near the optic nerve. He 2012 demonstrated 100% perfect zygoma reduction with navigation vs 85.7% without. Transient visual loss from optic nerve encroachment (Bell 2009) highlights the consequence of 1-2mm mispositioning. Navigation moves from 'expert estimation' to 'verified positioning' in high-stakes anatomy.",
+        "nodes": ["navigation_augmentation", "visual_deterioration", "customised_vs_traditional_advantage"]
+      },
+      {
+        "id": "tkr004",
+        "name": "Fracture timing and functional outcome expectations",
+        "description": "Diplopia outcomes depend critically on fracture age. Old fractures (>2 weeks) have established intraconal scarring that impairs muscle function independent of implant position. The clinician must counsel patients that even perfect orbital volume restoration may not resolve diplopia if scarring has developed. Setting outcome expectations before surgery is part of the consultation.",
+        "nodes": ["fracture_timing_criterion", "diplopia", "intraconal_scarring", "restricted_ocular_motility"]
+      },
+      {
+        "id": "tkr005",
+        "name": "Overcorrection planning",
+        "description": "The 10.3% overcorrection rate in Lieger 2010 arises because surgeons aim for correction at the time of implant placement, not accounting for post-operative oedema resolution. Expert practice plans for 1-2mm undercorrection acutely, knowing that as oedema resolves, the apparent correction will decrease. This is not documented in guidance text but is essential tacit knowledge.",
+        "nodes": ["overcorrection_enophthalmos", "enophthalmos", "customised_titanium_implant_procedure"]
+      },
+      {
+        "id": "tkr006",
+        "name": "CAD-CAM infrastructure as de facto specialist centre restriction",
+        "description": "Despite NICE recommending 'normal arrangements', the CAD-CAM manufacturing infrastructure required is only available at specialist centres. Specialist advisers noted adoption into mainstream practice is 'extremely unlikely'. The practical governance effect is specialist centre restriction despite the guidance wording suggesting routine use.",
+        "nodes": ["specialist_unit_requirement", "ct_cadcam_modelling", "normal_governance"]
+      }
+    ]
+  }
+}

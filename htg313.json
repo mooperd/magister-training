@@ -1,0 +1,1195 @@
+{
+  "metadata": {
+    "source": "NICE HTG313",
+    "title": "Insertion of customised exposed titanium implants, without soft tissue cover, for complex orofacial reconstruction",
+    "published": "2013-07-23",
+    "supersedes": "IPG457",
+    "partial_review_of": "IPG28 (2003) - Exposed customised titanium implants for orofacial reconstruction",
+    "specialty": ["Oral and Maxillofacial Surgery", "Craniofacial Surgery", "Head and Neck Oncology", "Plastic Surgery"],
+    "specialty_societies": [
+      "British Association of Oral and Maxillofacial Surgeons",
+      "Craniofacial Society of Great Britain and Ireland",
+      "British Association of Head and Neck Oncologists"
+    ],
+    "nice_recommendation_tier": "special_arrangements",
+    "evidence_tier": "very_small_numbers",
+    "scope_definition": "Complex reconstruction involving multiple surfaces, including bony AND cartilaginous structures, WITHOUT soft tissue cover and WITHOUT expectation of substantial soft tissue cover. Excludes: orbital floor/roof/wall, malar implants, miniplate/reconstruction plate techniques, TMJ prostheses where implants are covered or expected to be covered (see HTG307).",
+    "key_distinction_from_htg307": "Implants deliberately left exposed with no expectation of soft tissue coverage. Last resort only.",
+    "graph_version": "1.0",
+    "graph_created": "2026-05-28",
+    "total_patients_in_evidence": 17,
+    "evidence_studies": "1 case series (n=14), 2 case reports (n=2 complications), 1 case report (n=1 novel implant)",
+    "related_guidance": "HTG307 (with soft tissue cover - normal arrangements)"
+  },
+  "nodes": [
+    {
+      "id": "exposed_titanium_implant_procedure",
+      "type": "INTERVENTION",
+      "label": "Customised exposed titanium implant insertion without soft tissue cover",
+      "aliases": [
+        "HTG313 procedure",
+        "IPG457",
+        "exposed customised titanium reconstruction",
+        "subperiosteal exposed titanium implant"
+      ],
+      "properties": {
+        "nice_recommendation": "special_arrangements",
+        "scope": "Complex orofacial reconstruction involving multiple surfaces including bony and cartilaginous structures, where soft tissue coverage is NOT possible or expected",
+        "last_resort_requirement": "NICE 1.3: only for patients with no other options for reconstruction",
+        "mdt_requirement": "Consideration by BOTH head and neck surgeons AND plastic surgeons before offering",
+        "anaesthesia": "General anaesthesia",
+        "fixation": "Titanium screws to adjacent bone",
+        "key_distinction_from_htg307": "No soft tissue coverage - implant deliberately left exposed; this changes entire safety and governance profile",
+        "single_stage_claimed_benefit": "Author (Peckitt) proposed: reduced theatre time, less ITU, earlier hospital discharge - from not needing to raise flaps",
+        "specialist_adviser_view": "All 4 specialist advisers consider procedure definitely novel and of uncertain safety and efficacy",
+        "practice_prevalence": "Fewer than 10% of specialists engaged in this area",
+        "conflict_of_interest_note": "Lead author of main case series (Peckitt) is Director of ComputerGen Implants Ltd - NICE documented this explicitly; biased reporting possible",
+        "tacit": "This is a last-resort procedure for patients where all conventional reconstruction options have been exhausted or are not feasible. The 'no other options' criterion (NICE 1.3) must be actively documented through MDT discussion - it is not a default when other options are difficult. The MDT must include plastic surgeons specifically because free tissue transfer expertise is needed to confirm flap-based options are genuinely unavailable."
+      }
+    },
+    {
+      "id": "thorp_implant",
+      "type": "MATERIAL",
+      "label": "THORP implant (Titanium-coated Hollow-screw Reconstruction Plate)",
+      "aliases": ["THORP", "titanium hollow screw plate", "titanium reconstruction plate"],
+      "properties": {
+        "type": "Titanium-coated hollow-screw reconstruction plate",
+        "used_in": "8 of 14 patients in Peckitt 1999 case series",
+        "specific_risk": "Ulceration through skin occurs in ALL patients with buccal plate placement",
+        "rivet_head_risk": "Rivet heads create focal pressure points - associated with fistula formation (1 pinhole fistula at rivet head site after 2 years; 1 recurrent discomfort/redness 2 years post-radiotherapy from tissue motility against rivet head)",
+        "mrsa_risk": "MRSA infection led to implant removal in 1 patient",
+        "osteoradionecrosis_risk": "Irradiated patient developed exposed plate with osteoradionecrosis at 1 year - required trimming + trapezius flap",
+        "loosening_risk": "Plate loosening caused tissue irritation",
+        "acrylic_cover_option": "Acrylic cover plate can be fitted over exposed THORP section - managed 1 patient",
+        "tacit": "THORP buccal placement causing universal skin ulceration is the most striking documented finding. In hindsight, buccal THORP placement should be avoided or managed with acrylic cover plate from the outset. This is tacit procedural knowledge not explicitly stated in guidance."
+      }
+    },
+    {
+      "id": "solid_titanium_implant",
+      "type": "MATERIAL",
+      "label": "Solid customised titanium implant",
+      "aliases": ["computer-milled titanium", "solid titanium", "large titanium implant"],
+      "properties": {
+        "fabrication": "Computer-milled from CT data using CAD-CAM",
+        "applications": "Nasal reconstruction, maxillary reconstruction",
+        "risk_in_nasal": "High risk of scar contracture causing progressive extrusion through nasal tip or nostrils",
+        "no_internal_vascularised_layer": "Key technical distinction in nasal cases - absence of internal lining increases exposure/extrusion risk",
+        "fracture_risk": "Implant fracture reported in Raghavan case 1 after multiple procedures",
+        "tacit": "Large solid titanium implants in the nose face unique biomechanical forces: scar tissue contracts centripetally, and the implant resists but eventually the skin thins and perforates. The larger the implant, the greater the force differential. An implant with internal vascularised coverage may partially mitigate this."
+      }
+    },
+    {
+      "id": "bifunctional_titanium_implant",
+      "type": "MATERIAL",
+      "label": "Bifunctional titanium implant (nasal + dental)",
+      "aliases": ["Nobel Biocare bifunctional implant", "nasal-dental prosthesis anchor"],
+      "properties": {
+        "manufacturer": "Nobel Biocare",
+        "design": "Customised, milled using CAD-CAM; intraoral placement approach",
+        "function": "Dual anchorage for both nasal prosthesis and dental prosthesis simultaneously",
+        "reported_by": "Dawood 2012 - single case report",
+        "safety_data": "None reported",
+        "tissue_response": "Nasal mucosa response to titanium inadequately studied",
+        "status": "Novel approach at time of guidance"
+      }
+    },
+    {
+      "id": "titanium_chain_mail_diaphragm",
+      "type": "MATERIAL",
+      "label": "Titanium chain mail with solid titanium diaphragm",
+      "aliases": ["titanium chain mail", "titanium diaphragm closure"],
+      "properties": {
+        "use": "Last-resort closure of refractory orocervical fistula - used after 4 flap procedures and HBO therapy failed",
+        "context": "Peckitt 1999 - single patient with arterial pathology",
+        "status": "Extreme salvage intervention; not a standard technique",
+        "tacit": "This represents the endpoint of a fistula management escalation ladder where all conventional soft tissue options have been exhausted. The use of more titanium to solve a titanium-implant complication illustrates the complexity of managing exposed implant sequelae."
+      }
+    },
+    {
+      "id": "complex_orofacial_defect",
+      "type": "CONDITION",
+      "label": "Complex orofacial defect requiring exposed reconstruction",
+      "aliases": ["complex facial defect", "multi-surface orofacial defect"],
+      "properties": {
+        "definition": "Defect involving multiple surfaces, including bony AND cartilaginous structures, where conventional flap-based coverage is not feasible",
+        "common_causes": ["head and neck tumour resection", "severe orofacial trauma", "congenital deformity"],
+        "distinguishing_feature": "Soft tissue coverage is impossible or unlikely to be substantial",
+        "sites": ["maxilla", "mandible (hemimandible, subtotal)", "nose", "orbit", "multiple combined sites"],
+        "complexity_indicator": "Involvement of multiple surfaces - not just single orbital floor or isolated zygomatic fracture (those are HTG307 territory)"
+      }
+    },
+    {
+      "id": "subtotal_mandible_defect",
+      "type": "CONDITION",
+      "label": "Subtotal mandibular defect",
+      "aliases": ["subtotal mandible reconstruction need", "near-total mandible loss"],
+      "properties": {
+        "definition": "Loss of majority of mandible",
+        "failed_in_evidence": "2 patients in Peckitt 1999 - reconstruction failed due to lack of soft tissue adherence → implants removed → conventional procedures",
+        "failure_mechanism": "Insufficient soft tissue to adhere to implant surface in subtotal defect",
+        "tacit": "This failure pattern reveals a critical limitation: exposed titanium implants require SOME soft tissue contact for stabilisation even when no coverage is planned. In subtotal defects, the tissue contact area is so reduced that the implant has inadequate purchase. This is the most important site-specific contraindication within the procedure's own scope."
+      }
+    },
+    {
+      "id": "nasal_defect",
+      "type": "CONDITION",
+      "label": "Complex nasal defect requiring titanium scaffold",
+      "aliases": ["nasal reconstruction defect", "nasal skeleton loss"],
+      "properties": {
+        "definition": "Loss of nasal skeletal structure requiring rigid scaffold reconstruction",
+        "unique_risk_factors": [
+          "Scar tissue contracts centripetally, applying progressive force to implant",
+          "Nasal skin is thin with limited capacity to resist implant pressure",
+          "Nasal mucosa response to titanium inadequately studied",
+          "High forces during breathing and movement"
+        ],
+        "failure_pattern": "Progressive soft tissue retraction → implant extrusion → implant visible/palpable → multiple corrective surgeries",
+        "raghavan_2006_outcome": "Both patients had severe complications; 1 became a recluse; 8+ procedures failed to cover in case 2",
+        "tacit": "Nasal reconstruction with large exposed titanium has a particularly poor safety profile compared to maxillary or orbital reconstruction. The geometry of the nose creates unique centripetal scar forces that no equivalent site experiences. Clinicians should be especially cautious about this application."
+      }
+    },
+    {
+      "id": "head_neck_cancer",
+      "type": "CONDITION",
+      "label": "Head and neck cancer (post-ablative reconstruction context)",
+      "aliases": ["head and neck tumour", "HNSCC", "oral cavity cancer"],
+      "properties": {
+        "relevance": "All 14 patients in Peckitt 1999 had head and neck tumours",
+        "special_considerations": [
+          "Radiotherapy common - significantly amplifies complication risk",
+          "Immunocompromised status may increase infection risk",
+          "Cancer surveillance requirements affect follow-up protocols",
+          "Poor wound healing capacity especially post-radiotherapy"
+        ],
+        "prognosis_consideration": "NICE specialist adviser: survival rates are a key efficacy outcome for cancer patients",
+        "disease_free_survival": "All 14 Peckitt patients disease-free at 2 years follow-up"
+      }
+    },
+    {
+      "id": "recurrent_infection",
+      "type": "COMPLICATION",
+      "label": "Recurrent infection",
+      "aliases": ["chronic implant infection", "persistent peri-implant infection"],
+      "properties": {
+        "significance": "Named as primary safety concern in NICE recommendation 1.1: 'concern about the risk of recurrent infection and other complications resulting from long-term exposure'",
+        "mechanism": "Permanently exposed titanium creates a permanent portal for oral/nasal flora to access implant surface and underlying bone",
+        "organisms": "MRSA documented; oral mixed flora likely; anaerobes possible",
+        "management_spectrum": "Antibiotics (mild/acute) → HBO therapy → implant removal (severe, intractable)",
+        "mrsa_case": "1/14 patients required THORP removal due to MRSA infection",
+        "tacit": "Recurrent infection is not just a complication of this procedure - it is an expected consequence of long-term implant exposure. The exposure creates a permanent interface between a foreign body and the contaminated oral/nasal environment. Clinicians should counsel patients that infection management is likely to be a chronic component of aftercare, not a one-off event."
+      }
+    },
+    {
+      "id": "mrsa_infection",
+      "type": "COMPLICATION",
+      "label": "MRSA infection requiring implant removal",
+      "aliases": ["methicillin-resistant Staphylococcus aureus infection", "drug-resistant implant infection"],
+      "properties": {
+        "incidence": "1/14 in Peckitt 1999",
+        "outcome": "THORP implant removed",
+        "significance": "MRSA represents the severe end of the infection spectrum - treatment-resistant, may necessitate implant removal",
+        "tacit": "MRSA is the key clinical indicator that an exposed implant infection has become uncontrollable. Once MRSA is established on a titanium surface (biofilm formation), antibiotic penetration is severely limited. Implant removal becomes the only definitive treatment. Early swab culture to detect MRSA guides treatment decisions before biofilm establishes."
+      }
+    },
+    {
+      "id": "fistula_formation",
+      "type": "COMPLICATION",
+      "label": "Fistula formation",
+      "aliases": ["orocervical fistula", "oronasal fistula", "titanium-related fistula"],
+      "properties": {
+        "incidence": "4/14 (28.6%) in Peckitt 1999",
+        "types": [
+          "Pinhole fistula at THORP rivet head (1 case)",
+          "Orocervical fistula with arterial pathology (1 case - refractory)",
+          "Fistula closed with infrahyoid flap (1 case)",
+          "Fistula closed with HBO therapy (1 case)"
+        ],
+        "management_ladder": [
+          "Simple lateral rotation flap (1 case - successful)",
+          "Infrahyoid flap (1 case - did not recur)",
+          "Hyperbaric oxygen (HBO) therapy (1 case - successful; 1 case - adjuvant to failed flap attempts)",
+          "4 flap procedures + HBO (1 case - all failed)",
+          "Titanium chain mail + solid titanium diaphragm (1 case - last resort, eventually successful)"
+        ],
+        "refractory_case_details": "1 orocervical fistula in patient with arterial pathology: 4 separate flap procedures + HBO all failed; eventually required titanium chain mail closure - extreme case",
+        "tacit": "The fistula management escalation ladder encodes critical tacit knowledge: early fistulae may be manageable with simple flap procedures, but delayed or recurrent fistulae (especially at rivet heads or in compromised tissue) may require HBO as adjuvant. The refractory orocervical fistula case shows that conventional management can fail completely, requiring extraordinary measures. HBO's role is both as primary treatment and as adjuvant to improve tissue oxygenation for flap healing."
+      }
+    },
+    {
+      "id": "skin_ulceration_implant",
+      "type": "COMPLICATION",
+      "label": "Skin ulceration over THORP implant",
+      "aliases": ["THORP skin ulceration", "implant extrusion through skin", "plate ulceration"],
+      "properties": {
+        "incidence": "ALL patients with buccal placement of THORP plate (exact denominator unclear - 8/14 had THORP but buccal subset not stated)",
+        "mechanism": "Pressure necrosis of overlying tissue from rigid implant against mobile cheek",
+        "management_options": [
+          "Acrylic cover plate over exposed section (1 case)",
+          "Trimming of exposed plate (1 irradiated case - showed osteoradionecrosis)",
+          "Trapezius flap closure (1 irradiated case after trimming)"
+        ],
+        "osteoradionecrosis_link": "In irradiated patient: exposed plate showed osteoradionecrosis at 1 year",
+        "tacit": "THORP buccal placement causing universal skin ulceration implies a design/placement mismatch: the buccal location subjects the plate to continuous pressure from cheek movement and mastication. The tacit clinical lesson is that buccal placement should be avoided or should routinely use an acrylic cover plate from the outset to prevent ulceration. This is not stated explicitly in NICE guidance."
+      }
+    },
+    {
+      "id": "scar_contracture_failure",
+      "type": "COMPLICATION",
+      "label": "Implant failure from scar contracture",
+      "aliases": ["scar contracture", "implant dislodgement from fibrosis", "contracture implant failure"],
+      "properties": {
+        "incidence": "2/14 in Peckitt 1999",
+        "mechanism": "Post-operative scar tissue contracts, displacing or distorting exposed implant",
+        "consequence": "Implant failure → conventional reconstruction required",
+        "nasal_context": "Progressive soft tissue retraction is a variant of this - seen in Raghavan 2006 nasal cases; implant progressively extrudes through nose as scar contracts",
+        "tacit": "Scar contracture is the biomechanical enemy of all exposed implants. Unlike covered implants where fibrosis stabilises the construct, in exposed implants the contractile forces are unopposed and transmitted directly to the implant. Sites with high scar-forming tendency (post-radiation, post-oncological surgery, healing by secondary intention) carry disproportionate risk. In nasal reconstruction, the centripetal contraction of healing skin is relentless."
+      }
+    },
+    {
+      "id": "soft_tissue_adherence_failure",
+      "type": "COMPLICATION",
+      "label": "Failure of soft tissue adherence to implant",
+      "aliases": ["tissue non-adherence", "implant rejection by tissue", "lack of soft tissue integration"],
+      "properties": {
+        "incidence": "2/14 subtotal mandible reconstruction patients in Peckitt 1999",
+        "mechanism": "In subtotal mandible, insufficient residual tissue surface area for adequate implant-tissue contact; implant not stabilised",
+        "outcome": "Reconstruction failed; implants removed; conventional procedures performed",
+        "site_specific": "Subtotal mandible is uniquely high risk for this failure mode",
+        "tacit": "This is a distinct failure mechanism from infection or mechanical failure. The implant requires some tissue contact to remain stable, even when deliberate coverage is not planned. In near-total defects, the reconstruction geometry does not provide enough tissue interface. The subtotal mandible case demonstrates the outer boundary of the procedure's application - a useful failure that defines the contraindication."
+      }
+    },
+    {
+      "id": "nasal_implant_extrusion",
+      "type": "COMPLICATION",
+      "label": "Nasal implant extrusion / progressive protrusion",
+      "aliases": ["nasal implant extrusion", "titanium nose protrusion", "implant through nasal skin"],
+      "properties": {
+        "source": "Raghavan 2006 case reports",
+        "case_1_trajectory": "Scar contracture → implant tip protrudes through nose → 5 procedures trimming implant tip as skin retracts → unfavourable appearance → patient became recluse → at 6th procedure implant in left nostril with pus/granulation/scar tissue + implant fracture → removal → 1 further procedure → patient satisfied",
+        "case_2_trajectory": "Palatal perforation from cautery attempt → implant exposed over right medial canthus (internal + external) → 8 failed rotation flap operations → zygomatic nerve weakness → multiple failed nasal tip/columella/ala corrections",
+        "patient_psychosocial_impact": "Patient in case 1 became a recluse due to unfavourable appearance - extreme QoL impact",
+        "fracture_risk": "Implant fracture occurred after multiple trimming procedures (case 1)",
+        "tacit": "The trajectory of nasal implant extrusion is progressive and self-worsening: the more the implant extrudes, the more scar tissue forms, the more contracture occurs. Each surgical trimming provides temporary relief but does not address the underlying force imbalance. This creates a negative spiral that may only be escaped by complete implant removal. The patient in case 1 required 7 total procedures over years before satisfactory outcome. This timeline must be disclosed during consent."
+      }
+    },
+    {
+      "id": "disseminated_intravascular_coagulation",
+      "type": "COMPLICATION",
+      "label": "Disseminated intravascular coagulation (DIC)",
+      "aliases": ["DIC", "consumptive coagulopathy"],
+      "properties": {
+        "incidence": "1/14 in Peckitt 1999",
+        "severity": "Life-threatening systemic coagulopathy",
+        "outcome": "Patient underwent further conventional procedures after implant removal",
+        "context": "Post-surgical context in head and neck cancer reconstruction",
+        "tacit": "DIC in this context is likely triggered by the combination of extensive surgery, tumour-related pro-coagulant state, and possible sepsis. Its occurrence in 1/14 patients in this small series is a significant signal - approximately 7% of this high-risk surgical population developed a life-threatening coagulopathy."
+      }
+    },
+    {
+      "id": "post_op_bleeding",
+      "type": "COMPLICATION",
+      "label": "Post-operative bleeding",
+      "aliases": ["haemorrhage", "post-operative haemorrhage"],
+      "properties": {
+        "incidence": "2/14 in Peckitt 1999",
+        "cases": [
+          "Nasal bleed - arrested with nasal packs (removed at 20 hours)",
+          "Bleed at feeding tube site - required laparoscopic procedure to arrest"
+        ],
+        "note": "Both patients managed successfully; no implant-related sequelae reported"
+      }
+    },
+    {
+      "id": "lip_retraction_palate_separation",
+      "type": "COMPLICATION",
+      "label": "Lip retraction, soft palate separation, buccal sulcus obliteration",
+      "aliases": ["soft tissue retraction from implant", "palate-implant separation"],
+      "properties": {
+        "incidence": "1/14 in Peckitt 1999",
+        "mechanism": "Soft tissue retracts away from implant surface; local soft tissue-implant interface failure",
+        "functional_consequences": "Speech, swallowing, mastication potentially affected",
+        "tacit": "This represents a milder version of the soft tissue adherence failure problem. Where the subtotal mandible cases showed complete structural failure, this case shows partial retraction at specific interfaces (lip, soft palate junction, buccal sulcus). These are the anatomical sites under highest dynamic forces during function."
+      }
+    },
+    {
+      "id": "facial_nerve_weakness",
+      "type": "COMPLICATION",
+      "label": "Residual facial nerve weakness",
+      "aliases": ["buccal nerve palsy", "facial nerve branch weakness"],
+      "properties": {
+        "incidence_peckitt": "1/14 (buccal branch) in Peckitt 1999",
+        "incidence_raghavan": "Zygomatic branch weakness in Raghavan case 2",
+        "mechanism": "Surgical injury or compression from implant or scar tissue on facial nerve branches",
+        "tacit": "Both buccal and zygomatic branch weaknesses are documented across the studies. Unlike orbital surgery (HTG307) where facial nerve injury is primarily a risk of accessing the deep parotid lobe, in exposed complex reconstruction the nerve is at risk from direct dissection and from late scar compression."
+      }
+    },
+    {
+      "id": "trismus",
+      "type": "COMPLICATION",
+      "label": "Trismus",
+      "aliases": ["lockjaw", "reduced mouth opening", "inability to open mouth normally"],
+      "properties": {
+        "incidence": "1/14 in Peckitt 1999",
+        "management": "Physiotherapy instigated",
+        "mechanism": "Scar contracture restricting temporomandibular joint mobility; pterygomasseteric sling disruption",
+        "tacit": "Trismus in the context of complex orofacial reconstruction is a separate management challenge requiring dedicated physiotherapy protocol. Without physiotherapy, contracture worsens. Early post-operative physiotherapy should be planned as part of the reconstruction management, not as a reactive response to established trismus."
+      }
+    },
+    {
+      "id": "osteoradionecrosis",
+      "type": "COMPLICATION",
+      "label": "Osteoradionecrosis of bone adjacent to implant",
+      "aliases": ["ORN", "radiation-related bone necrosis"],
+      "properties": {
+        "documented_in": "1 irradiated patient in Peckitt 1999 - exposed plate at 1 year showing ORN evidence",
+        "mechanism": "Radiation damages blood supply to bone; chronic exposure and minor trauma lead to bone death",
+        "management": "Plate trimmed + trapezius flap closure",
+        "relationship_to_implant": "Exposed implant creates ongoing mechanical stimulus that impairs vascularisation of already-compromised irradiated bone",
+        "tacit": "ORN and exposed titanium are synergistic risks. Radiation compromises bone vascularity; exposed implant creates chronic mechanical trauma and microbial contamination. Together, they create conditions for bone necrosis that would not occur with either factor alone. HBO therapy is both treatment and prevention in this setting."
+      }
+    },
+    {
+      "id": "hyperbaric_oxygen_therapy",
+      "type": "INTERVENTION",
+      "label": "Hyperbaric oxygen (HBO) therapy",
+      "aliases": ["HBO", "hyperbaric oxygen", "adjuvant HBO"],
+      "properties": {
+        "role_in_context": "Adjuvant treatment for fistulae and radiation-related complications",
+        "mechanism": "Increases tissue oxygen tension → promotes angiogenesis, wound healing, kills anaerobic organisms",
+        "applications_in_evidence": [
+          "Closed 1 fistula directly",
+          "Adjuvant to flap procedures for refractory orocervical fistula (4 procedures + HBO - failed; eventually chain mail used)",
+          "Treatment of transient discomfort/redness from tissue motility against THORP rivet head + antibiotics"
+        ],
+        "tacit": "HBO therapy is an important adjuvant in the escalation ladder for fistula management, not a standalone cure. Its role is most important in irradiated tissue where conventional wound healing is impaired. The failure of 4 flap procedures + HBO in the refractory orocervical fistula case shows its limits when arterial pathology is present."
+      }
+    },
+    {
+      "id": "conventional_biological_reconstruction",
+      "type": "INTERVENTION",
+      "label": "Conventional biological reconstruction",
+      "aliases": ["flap-based reconstruction", "soft tissue flap reconstruction", "free tissue transfer", "pedicled flap"],
+      "properties": {
+        "types": ["local flap", "pedicled flap", "free tissue transfer"],
+        "comparator_to_htg313": "Specialist advisers identified this as the primary comparator to the exposed implant procedure",
+        "advantage": "Vascularised tissue provides coverage, infection resistance, wound healing capacity",
+        "requirement": "Feasible donor site; patient fitness for extended surgery",
+        "limitation": "Requires complex surgery; not always available in multiply-operated field; may not be feasible for complex multi-surface defects",
+        "fallback_role": "Used when exposed titanium reconstruction fails (Peckitt: 2 subtotal mandible patients + DIC patient reverted to conventional procedures after implant removal)",
+        "tacit": "The clinician assessing eligibility for HTG313 must have sufficient expertise in flap reconstruction to genuinely determine that flap-based options are not feasible. If plastic surgery expertise is unavailable to make this determination, HTG313 should not be offered - NICE 1.3 requires plastic surgeon involvement for exactly this reason."
+      }
+    },
+    {
+      "id": "ct_cadcam_3d_printing",
+      "type": "INTERVENTION",
+      "label": "CT scan / CAD-CAM / 3D printing for implant design",
+      "aliases": ["CT-guided CAD-CAM", "3D printing implant", "rapid prototyping", "stereolithography"],
+      "properties": {
+        "methods": [
+          "CT scan data → CAD-CAM → 3D printed implant",
+          "CT scan data → skull model → implant shaped on model (directly or indirectly)"
+        ],
+        "3d_printing_note": "More explicitly described in HTG313 than HTG307 - '3-dimensional printing techniques' named",
+        "mirror_technique": "Unilateral defects: unaffected side mirrored to create reconstruction template",
+        "training_required": "CAD design training necessary (specialist adviser)",
+        "tacit": "The design step for exposed implants carries additional complexity: the implant must account for expected scar contracture, soft tissue movement forces, and long-term material fatigue. An implant designed only for static anatomical fit will fail under dynamic functional loads. This biomechanical modelling is part of expert implant design knowledge."
+      }
+    },
+    {
+      "id": "peckitt_1999",
+      "type": "EVIDENCE_ITEM",
+      "label": "Peckitt 1999 case series",
+      "aliases": ["Peckitt series", "ComputerGen Implants series"],
+      "properties": {
+        "author": "Peckitt NS",
+        "title": "Stereoscopic lithography: customized titanium implants in orofacial reconstruction",
+        "journal": "British Journal of Oral and Maxillofacial Surgery",
+        "year": 1999,
+        "volume": "37",
+        "pages": "353-69",
+        "study_type": "Case series",
+        "country": "UK",
+        "recruitment_period": "1996-1999",
+        "n": 14,
+        "population": "Head and neck tumour patients",
+        "follow_up": "Average 2 years",
+        "implant_types_used": ["THORP (8 patients)", "solid computer-milled titanium"],
+        "sites_treated": ["maxilla", "hemimandible", "subtotal mandible (2 failures)", "nose", "orbit"],
+        "critical_conflict_of_interest": "Author is Director of ComputerGen Implants Ltd - manufacturer of the implants used",
+        "reporting_quality": "Highly selective; full efficacy data not available; most reported complications occurred with THORP implants",
+        "evidence_grade": "very_low",
+        "tacit": "This is the only substantial dataset for HTG313. Its conflict of interest is significant: the author stands to benefit commercially from positive outcomes. NICE explicitly documented this. Clinicians should apply additional scrutiny to optimistic claims from this study, particularly regarding efficacy."
+      }
+    },
+    {
+      "id": "raghavan_2006",
+      "type": "EVIDENCE_ITEM",
+      "label": "Raghavan 2006 case reports",
+      "aliases": ["Raghavan nasal titanium complications"],
+      "properties": {
+        "authors": ["Raghavan U", "Jones NS"],
+        "title": "The complications of giant titanium implants in nasal reconstruction",
+        "journal": "Journal of Plastic, Reconstructive and Aesthetic Surgery",
+        "year": 2006,
+        "volume": "59",
+        "pages": "74-9",
+        "study_type": "Case reports (complications study)",
+        "country": "UK",
+        "n": 2,
+        "note": "Both patients were REFERRED TO AUTHORS after complications at another hospital - studies serious complications specifically",
+        "tacit": "This study deliberately captures failures rather than successes. It is therefore a highly informative safety document despite its small n. The number of successful nasal titanium reconstructions was not reported, making absolute risk quantification impossible."
+      }
+    },
+    {
+      "id": "dawood_2012",
+      "type": "EVIDENCE_ITEM",
+      "label": "Dawood 2012 case report",
+      "aliases": ["Dawood bifunctional implant", "Nobel Biocare nasal implant case"],
+      "properties": {
+        "authors": ["Dawood A", "Tanner S", "Hutchison I"],
+        "title": "A new implant for nasal reconstruction",
+        "journal": "International Journal of Oral and Maxillofacial Implants",
+        "year": 2012,
+        "volume": "27",
+        "pages": "e90-2",
+        "study_type": "Case report",
+        "country": "UK",
+        "n": 1,
+        "sex": "Female",
+        "design_type": "Bifunctional titanium implant (nasal + dental prosthesis anchor)",
+        "safety_data": "None reported",
+        "key_note": "Nasal mucosa tissue response to titanium inadequately studied or reported"
+      }
+    },
+    {
+      "id": "nice_htg313",
+      "type": "EVIDENCE_ITEM",
+      "label": "NICE HTG313 guidance",
+      "aliases": ["IPG457", "NICE HTG313"],
+      "properties": {
+        "document_type": "NICE HealthTech guidance (formerly Interventional Procedures Guidance)",
+        "reference": "HTG313 (formerly IPG457)",
+        "published": "2013-07-23",
+        "migrated": "January 2026 (IPG457 → HTG313)",
+        "recommendation_tier": "special_arrangements",
+        "partial_review_of": "IPG28 (2003)"
+      }
+    },
+    {
+      "id": "no_other_options_criterion",
+      "type": "DECISION_CRITERION",
+      "label": "No other reconstruction options criterion (NICE 1.3)",
+      "aliases": ["last resort criterion", "exhausted alternatives criterion"],
+      "properties": {
+        "nice_section": "1.3",
+        "requirement": "Procedure should only be offered to patients for whom there are NO OTHER OPTIONS for reconstruction",
+        "mdt_requirement": "Must be determined after consideration by BOTH head and neck surgeons AND plastic surgeons",
+        "documentation": "MDT decision must be documented to satisfy this criterion",
+        "options_to_be_excluded": [
+          "Local flap reconstruction",
+          "Pedicled flap reconstruction",
+          "Free tissue transfer (free flap)",
+          "Prosthetic management without implant",
+          "Delayed reconstruction",
+          "HTG307 procedure (if soft tissue coverage could be achieved)"
+        ],
+        "tacit": "This is the most important and most under-specified NICE requirement. 'No other options' is a high bar - it means not just 'technically difficult' but genuinely not feasible after expert plastic surgical assessment. The involvement of a plastic surgeon is mandatory, not advisory. Without plastic surgery input, a head and neck surgeon alone cannot meet this criterion, as free tissue transfer expertise may not be available in their own skillset."
+      }
+    },
+    {
+      "id": "mdt_assessment_requirement",
+      "type": "GOVERNANCE_REQUIREMENT",
+      "label": "Multi-disciplinary team assessment",
+      "aliases": ["MDT requirement", "joint surgical assessment", "head neck + plastics review"],
+      "properties": {
+        "disciplines_required": ["Head and neck surgeons", "Plastic surgeons"],
+        "purpose": "To confirm that all other reconstruction options have been genuinely considered and excluded",
+        "nice_section": "1.3",
+        "tacit": "The specific naming of two surgical specialties reflects the breadth of reconstructive options that must be excluded. Head and neck surgeons cover ablative and local reconstruction; plastic surgeons cover all forms of tissue transfer. Only together can they confirm that the full range of conventional options is unavailable."
+      }
+    },
+    {
+      "id": "special_arrangements_governance",
+      "type": "GOVERNANCE_REQUIREMENT",
+      "label": "Special arrangements for governance, consent, and audit",
+      "aliases": ["special governance", "special consent", "special audit"],
+      "properties": {
+        "components": [
+          "Inform clinical governance leads in Trust",
+          "Special informed consent (patient understands uncertainty about safety and efficacy)",
+          "Written information provided (NICE public information recommended)",
+          "Clinical audit and review of all patients"
+        ],
+        "mandatory": true,
+        "contrast_with_htg307": "HTG307 = normal arrangements; HTG313 = special arrangements despite same anatomical region",
+        "tacit": "The special arrangements here have a different character to HTG20. HTG20's uncertainty is epistemic (we simply don't know). HTG313's uncertainty is compounded by documented serious complications in a very small patient series - the evidence suggests this can go very badly. The consent process must communicate not just generic uncertainty but specific documented risks including MRSA-related implant loss, refractory fistulae, and the possibility of a years-long complication journey."
+      }
+    },
+    {
+      "id": "infection_escalation_ladder",
+      "type": "CONTEXTUAL_KNOWLEDGE",
+      "label": "Infection management escalation ladder",
+      "aliases": ["infection treatment sequence", "peri-implant infection escalation"],
+      "properties": {
+        "levels": [
+          "Level 1: Antibiotics (mild/acute infection, discomfort, redness)",
+          "Level 2: Antibiotics + HBO therapy (infection with radiation compromise)",
+          "Level 3: Debridement and drainage",
+          "Level 4: Implant removal (MRSA / uncontrollable infection)"
+        ],
+        "tacit": "Knowing when to escalate is entirely expert judgement. Moving from antibiotics to implant removal is not a linear progression - some infections resolve with antibiotics alone, others require early implant removal before MRSA biofilm establishes. Culture results (especially MRSA) should trigger early escalation consideration rather than continued conservative management."
+      }
+    },
+    {
+      "id": "fistula_escalation_ladder",
+      "type": "CONTEXTUAL_KNOWLEDGE",
+      "label": "Fistula management escalation ladder",
+      "aliases": ["fistula treatment sequence", "fistula closure escalation"],
+      "properties": {
+        "levels": [
+          "Level 1: Simple local rotation flap (e.g. lateral rotation, infrahyoid)",
+          "Level 2: HBO therapy as primary or adjuvant",
+          "Level 3: Multiple flap procedures with HBO adjuvant",
+          "Level 4: Pedicled regional flap (e.g. trapezius flap)",
+          "Level 5: Titanium chain mail + solid titanium diaphragm (last resort when all else fails)"
+        ],
+        "documented_failure_case": "1 orocervical fistula with arterial pathology: 4 flaps + HBO all failed → ultimately required titanium diaphragm closure",
+        "tacit": "The escalation ladder is not linear and each step requires fresh assessment of tissue viability, arterial supply, and patient fitness for further surgery. The presence of arterial pathology fundamentally impairs flap healing and should prompt earlier consideration of HBO and later consideration of flap options. Level 5 (titanium chain mail) is an extraordinary measure that demonstrates the extreme end of complication management in this procedure."
+      }
+    },
+    {
+      "id": "soft_tissue_adherence_principle",
+      "type": "CONTEXTUAL_KNOWLEDGE",
+      "label": "Soft tissue adherence requirement",
+      "aliases": ["tissue-implant interface", "minimum tissue contact requirement"],
+      "properties": {
+        "principle": "Even deliberately exposed implants require some soft tissue contact for structural stability. Subtotal defects may not provide enough tissue interface.",
+        "failure_demonstration": "2/14 subtotal mandible reconstructions failed specifically due to lack of soft tissue adherence",
+        "site_risk": "Subtotal mandible is the highest-risk site for this failure mode",
+        "tacit": "This is the fundamental biomechanical principle underlying the limits of the procedure. Exposed does not mean unsupported. The implant still relies on surrounding tissue for three-dimensional stability. When that tissue is too sparse (near-total defect), the implant has no anchor. This is a pre-operative contraindication that must be assessed before surgery, not managed after failure."
+      }
+    },
+    {
+      "id": "implant_exposure_spectrum",
+      "type": "CONTEXTUAL_KNOWLEDGE",
+      "label": "Spectrum: intentional vs unintentional exposure",
+      "aliases": ["planned exposure vs unplanned exposure", "exposure type classification"],
+      "properties": {
+        "intentional_exposure": "Core feature of HTG313 procedure - by design in nasal and oral cavity surfaces",
+        "unintentional_exposure": "Complication when exposure occurs at sites not planned for exposure; seen in Raghavan 2006 nasal cases where protrusion through nasal tip was not intended",
+        "htg307_unintentional": "In HTG307, any exposure is unintentional and a complication",
+        "tacit": "The boundary between 'planned' and 'unplanned' exposure can blur during follow-up. An implant planned for partial nasal cavity exposure may progressively extrude through the nasal tip - this transition from planned to unplanned exposure is not always clearly documented or recognised in clinical notes. Vigilance for early signs of extrusion is needed."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e001",
+      "source": "complex_orofacial_defect",
+      "target": "exposed_titanium_implant_procedure",
+      "type": "INDICATES",
+      "label": "Complex orofacial defect without feasible soft tissue coverage indicates HTG313 procedure",
+      "properties": {
+        "conditions": "Only when all conventional reconstruction options are genuinely unavailable",
+        "nice_section": "1.1, 1.3"
+      }
+    },
+    {
+      "id": "e002",
+      "source": "head_neck_cancer",
+      "target": "complex_orofacial_defect",
+      "type": "CAUSES",
+      "label": "Head and neck tumour resection creates complex orofacial defects requiring reconstruction",
+      "properties": {
+        "population": "All 14 patients in Peckitt 1999 were head and neck cancer patients"
+      }
+    },
+    {
+      "id": "e003",
+      "source": "subtotal_mandible_defect",
+      "target": "complex_orofacial_defect",
+      "type": "IS_SUBTYPE_OF",
+      "label": "Subtotal mandible defect is a subtype of complex orofacial defect"
+    },
+    {
+      "id": "e004",
+      "source": "nasal_defect",
+      "target": "complex_orofacial_defect",
+      "type": "IS_SUBTYPE_OF",
+      "label": "Complex nasal defect is a subtype of complex orofacial defect"
+    },
+    {
+      "id": "e005",
+      "source": "no_other_options_criterion",
+      "target": "exposed_titanium_implant_procedure",
+      "type": "GATES",
+      "label": "No-other-options criterion (NICE 1.3) is the gatekeeping requirement before offering HTG313",
+      "properties": {
+        "nice_section": "1.3",
+        "gate_mechanism": "Procedure must not be offered unless MDT confirms all alternatives exhausted"
+      }
+    },
+    {
+      "id": "e006",
+      "source": "mdt_assessment_requirement",
+      "target": "no_other_options_criterion",
+      "type": "FULFILS",
+      "label": "MDT assessment by head and neck surgeons AND plastic surgeons fulfils the no-other-options criterion",
+      "properties": {
+        "nice_section": "1.3",
+        "tacit_note": "Both surgical specialties required - plastic surgeons specifically for free tissue transfer assessment"
+      }
+    },
+    {
+      "id": "e007",
+      "source": "conventional_biological_reconstruction",
+      "target": "no_other_options_criterion",
+      "type": "MUST_BE_EXCLUDED_BY",
+      "label": "Conventional biological reconstruction must be genuinely excluded before HTG313 is offered",
+      "properties": {
+        "types_excluded": ["local flap", "pedicled flap", "free tissue transfer"],
+        "tacit_note": "Exclusion must be expert opinion, not absence of attempt"
+      }
+    },
+    {
+      "id": "e008",
+      "source": "ct_cadcam_3d_printing",
+      "target": "exposed_titanium_implant_procedure",
+      "type": "PRECEDES",
+      "label": "CT scan and CAD-CAM design is the mandatory first step",
+      "properties": {
+        "nice_section": "2.2.1"
+      }
+    },
+    {
+      "id": "e009",
+      "source": "exposed_titanium_implant_procedure",
+      "target": "thorp_implant",
+      "type": "MAY_USE",
+      "label": "Procedure may use THORP implant system",
+      "properties": {
+        "note": "8/14 patients in Peckitt 1999 used THORP"
+      }
+    },
+    {
+      "id": "e010",
+      "source": "exposed_titanium_implant_procedure",
+      "target": "solid_titanium_implant",
+      "type": "MAY_USE",
+      "label": "Procedure may use solid computer-milled titanium implant"
+    },
+    {
+      "id": "e011",
+      "source": "exposed_titanium_implant_procedure",
+      "target": "bifunctional_titanium_implant",
+      "type": "MAY_USE",
+      "label": "Procedure may use bifunctional nasal/dental titanium implant (novel approach)"
+    },
+    {
+      "id": "e012",
+      "source": "thorp_implant",
+      "target": "skin_ulceration_implant",
+      "type": "CAUSES_RELIABLY",
+      "label": "THORP buccal placement causes skin ulceration in all such patients",
+      "properties": {
+        "incidence": "100% of patients with buccal THORP placement",
+        "source": "Peckitt 1999",
+        "tacit_note": "This is predictable, not just a risk - buccal THORP placement should be avoided or managed with acrylic cover plate prophylactically"
+      }
+    },
+    {
+      "id": "e013",
+      "source": "thorp_implant",
+      "target": "fistula_formation",
+      "type": "RISKS",
+      "label": "THORP rivet heads create focal fistula risk at rivet sites",
+      "properties": {
+        "mechanism": "Rivet heads create focal pressure and mechanical motion against tissue, promoting breakdown",
+        "tacit_note": "Most fistulae in Peckitt 1999 were associated with THORP implants"
+      }
+    },
+    {
+      "id": "e014",
+      "source": "thorp_implant",
+      "target": "mrsa_infection",
+      "type": "RISKS",
+      "label": "THORP implant risks MRSA infection requiring removal",
+      "properties": {
+        "incidence": "1/14 in Peckitt 1999"
+      }
+    },
+    {
+      "id": "e015",
+      "source": "exposed_titanium_implant_procedure",
+      "target": "recurrent_infection",
+      "type": "RISKS_CHRONICALLY",
+      "label": "Deliberately exposed implant creates chronic recurring infection risk",
+      "properties": {
+        "mechanism": "Permanent implant-to-oral/nasal-environment interface; no soft tissue barrier",
+        "nice_statement": "NICE 1.1: 'concern about the risk of recurrent infection and other complications resulting from long-term exposure'",
+        "nice_section": "1.1"
+      }
+    },
+    {
+      "id": "e016",
+      "source": "exposed_titanium_implant_procedure",
+      "target": "fistula_formation",
+      "type": "RISKS",
+      "label": "Exposed implant procedure risks fistula formation",
+      "properties": {
+        "incidence": "4/14 (28.6%) in Peckitt 1999",
+        "nice_section": "2.4.3"
+      }
+    },
+    {
+      "id": "e017",
+      "source": "exposed_titanium_implant_procedure",
+      "target": "scar_contracture_failure",
+      "type": "RISKS",
+      "label": "Exposed implant risks failure from scar contracture",
+      "properties": {
+        "incidence": "2/14 in Peckitt 1999"
+      }
+    },
+    {
+      "id": "e018",
+      "source": "exposed_titanium_implant_procedure",
+      "target": "soft_tissue_adherence_failure",
+      "type": "RISKS",
+      "label": "Exposed implant risks failure from insufficient soft tissue adherence",
+      "properties": {
+        "site_specific": "Subtotal mandible - 2/14 failures in Peckitt 1999"
+      }
+    },
+    {
+      "id": "e019",
+      "source": "exposed_titanium_implant_procedure",
+      "target": "nasal_implant_extrusion",
+      "type": "RISKS",
+      "label": "Nasal exposed titanium implant risks progressive extrusion",
+      "properties": {
+        "source": "Raghavan 2006",
+        "tacit_note": "Nasal reconstruction has uniquely poor risk profile due to centripetal scar contracture forces"
+      }
+    },
+    {
+      "id": "e020",
+      "source": "exposed_titanium_implant_procedure",
+      "target": "disseminated_intravascular_coagulation",
+      "type": "RISKS",
+      "label": "Major reconstruction in head and neck cancer patients risks DIC",
+      "properties": {
+        "incidence": "1/14 in Peckitt 1999"
+      }
+    },
+    {
+      "id": "e021",
+      "source": "exposed_titanium_implant_procedure",
+      "target": "post_op_bleeding",
+      "type": "RISKS",
+      "label": "Procedure risks post-operative bleeding",
+      "properties": {
+        "incidence": "2/14 in Peckitt 1999"
+      }
+    },
+    {
+      "id": "e022",
+      "source": "exposed_titanium_implant_procedure",
+      "target": "lip_retraction_palate_separation",
+      "type": "RISKS",
+      "label": "Procedure risks lip retraction and soft tissue-implant separation",
+      "properties": {
+        "incidence": "1/14 in Peckitt 1999"
+      }
+    },
+    {
+      "id": "e023",
+      "source": "exposed_titanium_implant_procedure",
+      "target": "facial_nerve_weakness",
+      "type": "RISKS",
+      "label": "Procedure risks facial nerve branch weakness",
+      "properties": {
+        "incidence": "Buccal 1/14 (Peckitt); zygomatic in Raghavan case 2"
+      }
+    },
+    {
+      "id": "e024",
+      "source": "exposed_titanium_implant_procedure",
+      "target": "trismus",
+      "type": "RISKS",
+      "label": "Procedure risks trismus from scar contracture",
+      "properties": {
+        "incidence": "1/14 in Peckitt 1999",
+        "management": "Physiotherapy"
+      }
+    },
+    {
+      "id": "e025",
+      "source": "exposed_titanium_implant_procedure",
+      "target": "osteoradionecrosis",
+      "type": "RISKS",
+      "label": "Exposed implant in irradiated tissue risks osteoradionecrosis",
+      "properties": {
+        "tacit_note": "Combination of radiation and mechanical stimulation from exposed implant creates synergistic ORN risk"
+      }
+    },
+    {
+      "id": "e026",
+      "source": "fistula_formation",
+      "target": "fistula_escalation_ladder",
+      "type": "TRIGGERS",
+      "label": "Fistula triggers escalating management interventions",
+      "properties": {
+        "tacit_note": "Entry point to escalation ladder depends on fistula characteristics, tissue quality, and patient arterial supply"
+      }
+    },
+    {
+      "id": "e027",
+      "source": "fistula_escalation_ladder",
+      "target": "hyperbaric_oxygen_therapy",
+      "type": "INCLUDES",
+      "label": "Fistula escalation ladder includes HBO as both primary and adjuvant therapy"
+    },
+    {
+      "id": "e028",
+      "source": "fistula_escalation_ladder",
+      "target": "titanium_chain_mail_diaphragm",
+      "type": "TERMINATES_IN_EXTREME_CASES",
+      "label": "Refractory fistula escalation may ultimately require titanium chain mail closure",
+      "properties": {
+        "context": "After 4 flap procedures + HBO all failed in patient with arterial pathology"
+      }
+    },
+    {
+      "id": "e029",
+      "source": "recurrent_infection",
+      "target": "infection_escalation_ladder",
+      "type": "TRIGGERS",
+      "label": "Recurrent infection requires management through escalation ladder",
+      "properties": {
+        "tacit_note": "Chronicity distinguishes this from surgical site infection - ongoing colonisation of exposed implant surface"
+      }
+    },
+    {
+      "id": "e030",
+      "source": "infection_escalation_ladder",
+      "target": "mrsa_infection",
+      "type": "MAY_ESCALATE_TO",
+      "label": "Infection escalation ladder may ultimately require implant removal when MRSA establishes biofilm"
+    },
+    {
+      "id": "e031",
+      "source": "mrsa_infection",
+      "target": "conventional_biological_reconstruction",
+      "type": "REQUIRES_FALLBACK_TO",
+      "label": "MRSA-forced implant removal requires fallback to conventional reconstruction",
+      "properties": {
+        "tacit_note": "This fallback to the very option that was deemed unavailable pre-operatively highlights the importance of keeping surgical options open until the last moment"
+      }
+    },
+    {
+      "id": "e032",
+      "source": "soft_tissue_adherence_failure",
+      "target": "conventional_biological_reconstruction",
+      "type": "REQUIRES_FALLBACK_TO",
+      "label": "Soft tissue adherence failure in subtotal mandible requires conventional reconstruction",
+      "properties": {
+        "source": "Peckitt 1999 - 2 patients"
+      }
+    },
+    {
+      "id": "e033",
+      "source": "disseminated_intravascular_coagulation",
+      "target": "conventional_biological_reconstruction",
+      "type": "REQUIRED_AFTER",
+      "label": "DIC resulting in implant removal was followed by conventional reconstruction",
+      "properties": {
+        "source": "Peckitt 1999"
+      }
+    },
+    {
+      "id": "e034",
+      "source": "subtotal_mandible_defect",
+      "target": "soft_tissue_adherence_failure",
+      "type": "HIGH_RISK_FOR",
+      "label": "Subtotal mandible defect carries highest risk of soft tissue adherence failure",
+      "properties": {
+        "incidence": "2/2 subtotal mandible patients failed in Peckitt 1999"
+      }
+    },
+    {
+      "id": "e035",
+      "source": "nasal_defect",
+      "target": "nasal_implant_extrusion",
+      "type": "HIGH_RISK_FOR",
+      "label": "Nasal defect reconstruction with large exposed implant carries high extrusion risk",
+      "properties": {
+        "source": "Raghavan 2006",
+        "mechanism": "Centripetal scar contracture forces are unique to nasal geometry"
+      }
+    },
+    {
+      "id": "e036",
+      "source": "head_neck_cancer",
+      "target": "recurrent_infection",
+      "type": "AMPLIFIES_RISK_OF",
+      "label": "Head and neck cancer context (prior radiotherapy, immunocompromise) amplifies infection risk"
+    },
+    {
+      "id": "e037",
+      "source": "head_neck_cancer",
+      "target": "osteoradionecrosis",
+      "type": "AMPLIFIES_RISK_OF",
+      "label": "Prior radiotherapy in head and neck cancer amplifies osteoradionecrosis risk around implant"
+    },
+    {
+      "id": "e038",
+      "source": "peckitt_1999",
+      "target": "exposed_titanium_implant_procedure",
+      "type": "PRIMARY_EVIDENCE_FOR",
+      "label": "Peckitt 1999 is the primary (and near-sole) efficacy/safety evidence for HTG313",
+      "properties": {
+        "caveat": "Significant conflict of interest; highly selective reporting; biased reporting possible"
+      }
+    },
+    {
+      "id": "e039",
+      "source": "raghavan_2006",
+      "target": "nasal_implant_extrusion",
+      "type": "DOCUMENTS",
+      "label": "Raghavan 2006 documents severe nasal implant extrusion complications"
+    },
+    {
+      "id": "e040",
+      "source": "dawood_2012",
+      "target": "bifunctional_titanium_implant",
+      "type": "DESCRIBES",
+      "label": "Dawood 2012 describes bifunctional nasal/dental titanium implant approach"
+    },
+    {
+      "id": "e041",
+      "source": "nice_htg313",
+      "target": "special_arrangements_governance",
+      "type": "MANDATES",
+      "label": "NICE HTG313 mandates special arrangements for governance, consent and audit",
+      "properties": {
+        "nice_section": "1.1, 1.2"
+      }
+    },
+    {
+      "id": "e042",
+      "source": "nice_htg313",
+      "target": "no_other_options_criterion",
+      "type": "MANDATES",
+      "label": "NICE HTG313 mandates last-resort criterion before procedure is offered",
+      "properties": {
+        "nice_section": "1.3"
+      }
+    },
+    {
+      "id": "e043",
+      "source": "nice_htg313",
+      "target": "mdt_assessment_requirement",
+      "type": "MANDATES",
+      "label": "NICE HTG313 mandates MDT assessment including plastic surgeons",
+      "properties": {
+        "nice_section": "1.3"
+      }
+    },
+    {
+      "id": "e044",
+      "source": "exposed_titanium_implant_procedure",
+      "target": "conventional_biological_reconstruction",
+      "type": "COMPARATOR_TO",
+      "label": "Conventional biological reconstruction is the primary clinical comparator to HTG313",
+      "properties": {
+        "source": "Specialist advisers",
+        "tacit_note": "This comparator relationship is bidirectional: the choice of HTG313 only occurs when biological reconstruction fails or is not feasible"
+      }
+    },
+    {
+      "id": "e045",
+      "source": "skin_ulceration_implant",
+      "target": "thorp_implant",
+      "type": "MANAGED_BY_MODIFYING",
+      "label": "THORP skin ulceration may be managed with acrylic cover plate over exposed section",
+      "properties": {
+        "prophylactic_option": "Acrylic cover plate can be applied proactively for buccal placements"
+      }
+    },
+    {
+      "id": "e046",
+      "source": "osteoradionecrosis",
+      "target": "skin_ulceration_implant",
+      "type": "CO_OCCURS_WITH",
+      "label": "Osteoradionecrosis co-occurs with THORP plate exposure in irradiated patients",
+      "properties": {
+        "source": "Peckitt 1999 - irradiated patient with exposed plate showing ORN at 1 year"
+      }
+    },
+    {
+      "id": "e047",
+      "source": "hyperbaric_oxygen_therapy",
+      "target": "osteoradionecrosis",
+      "type": "TREATS",
+      "label": "HBO therapy is part of treatment for osteoradionecrosis associated with exposed implant"
+    },
+    {
+      "id": "e048",
+      "source": "hyperbaric_oxygen_therapy",
+      "target": "fistula_formation",
+      "type": "TREATS",
+      "label": "HBO therapy used in fistula management as primary and adjuvant treatment"
+    },
+    {
+      "id": "e049",
+      "source": "soft_tissue_adherence_principle",
+      "target": "subtotal_mandible_defect",
+      "type": "EXPLAINS_FAILURE_IN",
+      "label": "Soft tissue adherence principle explains why subtotal mandible reconstruction failed"
+    },
+    {
+      "id": "e050",
+      "source": "implant_exposure_spectrum",
+      "target": "exposed_titanium_implant_procedure",
+      "type": "CONTEXTUALISES",
+      "label": "The intentional/unintentional exposure spectrum contextualises HTG313 within the broader implant exposure landscape"
+    },
+    {
+      "id": "e051",
+      "source": "nasal_implant_extrusion",
+      "target": "scar_contracture_failure",
+      "type": "IS_SITE_SPECIFIC_FORM_OF",
+      "label": "Nasal implant extrusion is the nasal-specific form of scar contracture failure"
+    },
+    {
+      "id": "e052",
+      "source": "trismus",
+      "target": "hyperbaric_oxygen_therapy",
+      "type": "NOT_TREATED_BY",
+      "label": "Trismus is treated by physiotherapy not HBO",
+      "properties": {
+        "treatment": "Physiotherapy",
+        "tacit_note": "Must be distinguished from infection-related trismus, which requires antibiotic management"
+      }
+    },
+    {
+      "id": "e053",
+      "source": "peckitt_1999",
+      "target": "fistula_formation",
+      "type": "DOCUMENTS",
+      "label": "Peckitt 1999 documents 4/14 fistulae with escalating management",
+      "properties": {
+        "includes": "Titanium chain mail closure as last resort"
+      }
+    },
+    {
+      "id": "e054",
+      "source": "peckitt_1999",
+      "target": "mrsa_infection",
+      "type": "DOCUMENTS",
+      "label": "Peckitt 1999 documents MRSA-related THORP removal"
+    },
+    {
+      "id": "e055",
+      "source": "peckitt_1999",
+      "target": "soft_tissue_adherence_failure",
+      "type": "DOCUMENTS",
+      "label": "Peckitt 1999 documents 2 subtotal mandible failures from lack of tissue adherence"
+    },
+    {
+      "id": "e056",
+      "source": "exposed_titanium_implant_procedure",
+      "target": "soft_tissue_adherence_principle",
+      "type": "REQUIRES_UNDERSTANDING_OF",
+      "label": "Pre-operative patient selection requires understanding of minimum tissue adherence requirements",
+      "properties": {
+        "tacit_note": "Sites with near-total soft tissue loss may lack sufficient interface for implant stability even without planned coverage"
+      }
+    },
+    {
+      "id": "e057",
+      "source": "ct_cadcam_3d_printing",
+      "target": "thorp_implant",
+      "type": "DOES_NOT_APPLY_TO",
+      "label": "THORP uses hollow screw plate system distinct from computer-milled solid implants",
+      "properties": {
+        "note": "THORP system is pre-fabricated plate system; customisation via skull model not same as milled solid implant"
+      }
+    },
+    {
+      "id": "e058",
+      "source": "peckitt_1999",
+      "target": "disseminated_intravascular_coagulation",
+      "type": "DOCUMENTS",
+      "label": "Peckitt 1999 documents 1 case of DIC leading to implant removal"
+    },
+    {
+      "id": "e059",
+      "source": "exposed_titanium_implant_procedure",
+      "target": "implant_exposure_spectrum",
+      "type": "ILLUSTRATES",
+      "label": "HTG313 procedure illustrates the intentional end of the implant exposure spectrum"
+    }
+  ],
+  "cross_guidance_links": {
+    "htg307_relationship": {
+      "shared_indications": ["orofacial trauma", "post-tumour reconstruction", "congenital abnormalities"],
+      "shared_materials": ["customised titanium mesh", "titanium screws", "CAD-CAM process"],
+      "differentiating_variable": "Soft tissue coverage availability - the single binary criterion that routes to HTG307 (normal arrangements) or HTG313 (special arrangements, last resort)",
+      "governance_difference": "HTG307 = adequate evidence, normal arrangements; HTG313 = very small numbers, special arrangements, last resort only",
+      "clinical_escalation_path": "When soft tissue coverage breaks down in HTG307, the patient may effectively transition to an HTG313 risk profile even though the original intention was covered reconstruction"
+    },
+    "htg20_relationship": {
+      "shared_features": ["special arrangements required", "inadequate evidence", "clinical audit mandatory"],
+      "different_nature": "HTG20 evidence inadequacy is epistemic (unknown); HTG313 evidence inadequacy is compounded by documented serious complications in small series",
+      "governance_tier": "Both require special arrangements but for different reasons - HTG20 from absence of data; HTG313 from presence of concerning data"
+    }
+  },
+  "tacit_knowledge_summary": {
+    "key_clinical_reasoning_chains": [
+      {
+        "id": "tkr001",
+        "name": "Last resort determination is an active MDT decision",
+        "description": "NICE 1.3 requires that patients have 'no other options'. This is not a default when options are difficult - it requires documented MDT consideration including a plastic surgeon to confirm free tissue transfer is genuinely not feasible. Offering HTG313 without plastic surgeon involvement fails this criterion.",
+        "nodes": ["no_other_options_criterion", "mdt_assessment_requirement", "conventional_biological_reconstruction", "exposed_titanium_implant_procedure"]
+      },
+      {
+        "id": "tkr002",
+        "name": "THORP buccal placement as predictable ulceration",
+        "description": "Skin ulceration occurs in ALL patients with buccal THORP placement. This is predictable, not merely a risk. Expert practice should either avoid buccal THORP placement or routinely use acrylic cover plate prophylactically. Treating this as an unexpected complication rather than an expected outcome is a clinical error.",
+        "nodes": ["thorp_implant", "skin_ulceration_implant", "exposed_titanium_implant_procedure"]
+      },
+      {
+        "id": "tkr003",
+        "name": "Nasal reconstruction as the highest-risk application",
+        "description": "Large solid titanium implants for nasal reconstruction have a distinctly poor safety profile. Centripetal scar contracture creates progressive extrusion forces unique to nasal geometry. Raghavan 2006 documents catastrophic outcomes: one patient became a recluse after multiple failed procedures. This application requires additional caution beyond the general HTG313 warnings.",
+        "nodes": ["nasal_defect", "nasal_implant_extrusion", "scar_contracture_failure", "solid_titanium_implant"]
+      },
+      {
+        "id": "tkr004",
+        "name": "Subtotal mandible defect as near-contraindication",
+        "description": "Both subtotal mandible reconstructions in Peckitt 1999 failed due to insufficient soft tissue adherence. This 100% failure rate at this specific site defines an effective site-specific contraindication within the procedure's scope. The minimum soft tissue adherence requirement must be assessed preoperatively.",
+        "nodes": ["subtotal_mandible_defect", "soft_tissue_adherence_failure", "soft_tissue_adherence_principle", "conventional_biological_reconstruction"]
+      },
+      {
+        "id": "tkr005",
+        "name": "Fistula management escalation",
+        "description": "Fistulae in 4/14 patients (28.6%) require a prepared escalation strategy. Simple flaps work for some; refractory orocervical fistulae with arterial pathology may require 4+ procedures before titanium chain mail closure as last resort. HBO is both primary treatment and surgical adjuvant. The ladder must be planned preoperatively, not improvised reactively.",
+        "nodes": ["fistula_formation", "fistula_escalation_ladder", "hyperbaric_oxygen_therapy", "titanium_chain_mail_diaphragm"]
+      },
+      {
+        "id": "tkr006",
+        "name": "Recurrent infection as an expected chronic feature",
+        "description": "Permanently exposed titanium in the oral/nasal environment creates a permanent infection portal. MRSA colonisation is a distinct and severe endpoint requiring implant removal. Clinicians and patients must understand that infection management is a likely chronic feature of aftercare, not a one-off complication. This changes the consent conversation fundamentally.",
+        "nodes": ["recurrent_infection", "mrsa_infection", "infection_escalation_ladder", "thorp_implant"]
+      },
+      {
+        "id": "tkr007",
+        "name": "Conflict of interest in primary evidence",
+        "description": "The only substantial dataset (Peckitt 1999, 14 patients) is authored by the Director of ComputerGen Implants Ltd. NICE explicitly flagged 'biased reporting is possible'. Optimistic efficacy claims from this study should be interpreted cautiously. The complication data, however, is likely under-reported given this bias.",
+        "nodes": ["peckitt_1999", "exposed_titanium_implant_procedure", "recurrent_infection", "fistula_formation"]
+      }
+    ]
+  }
+}
