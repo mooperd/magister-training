@@ -42,7 +42,7 @@ header{background:var(--bg2);border-bottom:1px solid var(--border);padding:10px 
 .panel{flex:1;min-width:280px;background:var(--bg2);border-left:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden}
 
 /* Top row: Node Types + Connections side by side */
-.panel-top{display:flex;border-bottom:1px solid var(--border);max-height:34%;flex-shrink:0}
+.panel-top{display:flex;border-bottom:1px solid var(--border);height:75%;flex-shrink:0}
 .panel-col{flex:1;display:flex;flex-direction:column;overflow:hidden;padding:10px 12px}
 .panel-col + .panel-col{border-left:1px solid var(--border)}
 .legend-scroll,.conn-scroll{overflow-y:auto;flex:1;margin-top:2px}
@@ -199,7 +199,7 @@ async function load(key){
     G = await fetch(`${key}.json`).then(r => r.json());
     document.getElementById('stats').textContent = `${G.nodes.length} nodes · ${G.edges.length} edges`;
     render(G);
-    setTimeout(() => pick(sc.start), 2200);
+    setTimeout(() => { pick(sc.start); fitView(); }, 2200);
   } catch(e){
     document.getElementById('loading').textContent = 'Error loading ' + key + '.json';
   }
@@ -296,20 +296,23 @@ function render(data){
   svg._nodeData = nodes;
 }
 
-// Zoom/pan so the whole graph fits the viewport with breathing room
+// Zoom/pan so the activated nodes (selection + neighbors) fill the viewport.
+// Falls back to fitting the whole graph when nothing is selected.
 function fitView(){
   if(!svg || !svg._nodeData || !svg._nodeData.length) return;
   const wrap = document.getElementById('graph-wrap');
   const W = wrap.clientWidth, H = wrap.clientHeight;
+  const lit = svg._lit;
+  const frame = (lit && lit.size) ? svg._nodeData.filter(d=>lit.has(d.id)) : svg._nodeData;
   let x0=Infinity,y0=Infinity,x1=-Infinity,y1=-Infinity;
-  svg._nodeData.forEach(d=>{
+  frame.forEach(d=>{
     if(d.x==null) return;
     x0=Math.min(x0,d.x-d._r); y0=Math.min(y0,d.y-d._r);
     x1=Math.max(x1,d.x+d._r); y1=Math.max(y1,d.y+d._r);
   });
   if(!isFinite(x0)) return;
-  const pad=60, gw=(x1-x0)||1, gh=(y1-y0)||1;
-  const scale=Math.min((W-pad*2)/gw, (H-pad*2)/gh, 1.2);
+  const pad=70, gw=(x1-x0)||1, gh=(y1-y0)||1;
+  const scale=Math.min((W-pad*2)/gw, (H-pad*2)/gh, 1.6);
   const tx=W/2-scale*(x0+x1)/2, ty=H/2-scale*(y0+y1)/2;
   svg.transition().duration(600).call(
     svg._zoom.transform, d3.zoomIdentity.translate(tx,ty).scale(scale)
@@ -335,6 +338,9 @@ function pick(id){
     return [s,t];
   }));
 
+  adj.add(id);
+  svg._lit = adj;
+
   nodeSel.selectAll('circle')
     .classed('dim', d=>d.id!==id && !adj.has(d.id))
     .classed('sel', d=>d.id===id);
@@ -350,6 +356,7 @@ function pick(id){
 
 function clear(){
   if(!svg._links) return;
+  svg._lit = null;
   svg._nodes.selectAll('circle').classed('dim',false).classed('sel',false);
   svg._links.classed('lit',false).classed('dim',false).attr('stroke','#444c56').attr('marker-end','url(#arrow)');
 }
