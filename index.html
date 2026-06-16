@@ -27,27 +27,34 @@ header{background:var(--bg2);border-bottom:1px solid var(--border);padding:10px 
 /* LAYOUT */
 .main{display:flex;flex:1;overflow:hidden;min-height:0}
 
-/* SIDEBAR */
-.sidebar{width:210px;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden;flex-shrink:0}
-.sb-block{padding:10px 12px;border-bottom:1px solid var(--border)}
 .sb-label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:6px}
+.sb-block{padding:10px 12px;border-bottom:1px solid var(--border)}
 .vignette-text{font-size:11px;line-height:1.5;color:var(--muted)}
 .vignette-title{font-size:11px;font-weight:600;color:var(--accent);margin-bottom:5px}
-.legend-scroll{overflow-y:auto;flex:1;padding:8px 12px}
-.leg-item{display:flex;align-items:center;gap:7px;padding:3px 0;font-size:10px;color:var(--muted)}
-.leg-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
 
-/* GRAPH */
-.graph-wrap{flex:1;position:relative;background:var(--bg);overflow:hidden;min-width:0}
+/* GRAPH — 2/3 of the viewport */
+.graph-wrap{flex:2;position:relative;background:var(--bg);overflow:hidden;min-width:0}
 #graph-svg{width:100%;height:100%;display:block}
 .graph-hint{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);font-size:10px;color:var(--muted);background:rgba(13,17,23,.85);padding:3px 10px;border-radius:4px;pointer-events:none;white-space:nowrap}
 #loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--bg);font-size:12px;color:var(--muted);z-index:9}
 
-/* DETAIL PANEL */
-.detail{width:290px;background:var(--bg2);border-left:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden;flex-shrink:0}
-.detail-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:var(--muted);font-size:12px;gap:6px;text-align:center;padding:20px}
+/* RIGHT PANEL — 1/3 of the viewport, stacked content */
+.panel{flex:1;min-width:280px;background:var(--bg2);border-left:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden}
+
+/* Top row: Node Types + Connections side by side */
+.panel-top{display:flex;border-bottom:1px solid var(--border);max-height:34%;flex-shrink:0}
+.panel-col{flex:1;display:flex;flex-direction:column;overflow:hidden;padding:10px 12px}
+.panel-col + .panel-col{border-left:1px solid var(--border)}
+.legend-scroll,.conn-scroll{overflow-y:auto;flex:1;margin-top:2px}
+.leg-item{display:flex;align-items:center;gap:7px;padding:3px 0;font-size:10px;color:var(--muted)}
+.leg-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+.conn-empty{font-size:10px;color:var(--muted);opacity:.6}
+
+/* Body: vignette + node detail stacked, scrollable */
+.panel-body{flex:1;overflow-y:auto;min-height:0}
+.detail-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--muted);font-size:12px;gap:6px;text-align:center;padding:30px 20px}
 .detail-empty svg{opacity:.25}
-.detail-scroll{overflow-y:auto;flex:1;padding:14px}
+.detail-scroll{padding:14px}
 .d-type{display:inline-block;padding:2px 7px;border-radius:4px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px}
 .d-label{font-size:14px;font-weight:600;line-height:1.3;margin-bottom:3px}
 .d-aliases{font-size:10px;color:var(--muted);margin-bottom:10px}
@@ -89,30 +96,38 @@ header{background:var(--bg2);border-bottom:1px solid var(--border);padding:10px 
 </header>
 
 <div class="main">
-  <div class="sidebar">
-    <div class="sb-block">
-      <div class="sb-label">Patient Vignette</div>
-      <div class="vignette-title" id="v-title"></div>
-      <div class="vignette-text" id="v-text"></div>
-    </div>
-    <div class="sb-label" style="padding:10px 12px 4px">Node Types</div>
-    <div class="legend-scroll" id="legend"></div>
-  </div>
-
   <div class="graph-wrap" id="graph-wrap">
     <svg id="graph-svg"></svg>
     <div id="loading">Loading graph…</div>
     <div class="graph-hint">Scroll to zoom · Drag to pan · Click node to inspect</div>
   </div>
 
-  <div class="detail" id="detail-panel">
-    <div class="detail-empty" id="d-empty">
-      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
-      </svg>
-      Click any node<br>to inspect it
+  <div class="panel" id="right-panel">
+    <div class="panel-top">
+      <div class="panel-col">
+        <div class="sb-label">Node Types</div>
+        <div class="legend-scroll" id="legend"></div>
+      </div>
+      <div class="panel-col">
+        <div class="sb-label">Connections</div>
+        <div class="conn-scroll" id="connections"><div class="conn-empty">Select a node to see its connections</div></div>
+      </div>
     </div>
-    <div class="detail-scroll" id="d-content" style="display:none"></div>
+
+    <div class="panel-body">
+      <div class="sb-block">
+        <div class="sb-label">Patient Vignette</div>
+        <div class="vignette-title" id="v-title"></div>
+        <div class="vignette-text" id="v-text"></div>
+      </div>
+      <div class="detail-empty" id="d-empty">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        Click any node<br>to inspect it
+      </div>
+      <div class="detail-scroll" id="d-content" style="display:none"></div>
+    </div>
   </div>
 </div>
 
@@ -130,22 +145,22 @@ const SCENARIOS = {
   htg20:{
     title:'Cyanoacrylate Instillation for Parotid Sinus Occlusion — NICE HTG20',
     vignette:'52-year-old, 3 weeks post-superficial parotidectomy. Wet patch on cheek, skin excoriation, visible fistula orifice. Saliva leaks when eating. No fever.',
-    start:'parotid_sinus'
+    start:'cyanoacrylate_instillation'
   },
   htg307:{
     title:'Customised Titanium Implants with Soft Tissue Cover — NICE HTG307',
     vignette:'28-year-old male, 6 weeks post-RTA. CT: right orbital floor fracture, 3mm enophthalmos, upgaze diplopia, malar depression. No prior surgery. Adequate local soft tissue.',
-    start:'orbital_floor_fracture'
+    start:'customised_titanium_implant_procedure'
   },
   htg313:{
     title:'Exposed Titanium Implants without Soft Tissue Cover — NICE HTG313',
     vignette:'58-year-old, post-total maxillectomy for T3 SCC. Multi-surface defect, bony and cartilaginous structures involved. Radiotherapy planned. Plastic surgery MDT confirms free flap not feasible.',
-    start:'complex_orofacial_defect'
+    start:'exposed_titanium_implant_procedure'
   },
   htg352:{
     title:'Total Prosthetic Replacement of the TMJ — NICE HTG352',
     vignette:'44-year-old female. 11 years bilateral TMJ disorder. Three prior right-side open procedures. Long-term opiates. MIO 14mm. Bilateral Wilkes class V on CT. All conservative options exhausted.',
-    start:'tmj_disorder'
+    start:'tmj_total_replacement'
   }
 };
 
@@ -191,8 +206,9 @@ function render(data){
   d3.select('#graph-svg').selectAll('*').remove();
 
   svg = d3.select('#graph-svg');
-  const zoom = d3.zoom().scaleExtent([.15,5]).on('zoom', ev => gMain.attr('transform', ev.transform));
+  const zoom = d3.zoom().scaleExtent([.1,5]).on('zoom', ev => gMain.attr('transform', ev.transform));
   svg.call(zoom).on('click', () => { selId=null; clear(); showEmpty(); });
+  svg._zoom = zoom;
 
   const defs = svg.append('defs');
   ['arrow','arrow-h'].forEach((id,i) => {
@@ -214,10 +230,12 @@ function render(data){
   }));
 
   sim = d3.forceSimulation(nodes)
-    .force('link', d3.forceLink(edges).id(d=>d.id).distance(90).strength(.4))
-    .force('charge', d3.forceManyBody().strength(-220))
+    .force('link', d3.forceLink(edges).id(d=>d.id).distance(160).strength(.35))
+    .force('charge', d3.forceManyBody().strength(-650).distanceMax(900))
     .force('center', d3.forceCenter(W/2, H/2))
-    .force('collide', d3.forceCollide().radius(d=>d._r+14));
+    .force('x', d3.forceX(W/2).strength(.03))
+    .force('y', d3.forceY(H/2).strength(.03))
+    .force('collide', d3.forceCollide().radius(d=>d._r+30));
 
   const linkSel = gMain.append('g').attr('class','links')
     .selectAll('path').data(edges).join('path')
@@ -262,12 +280,33 @@ function render(data){
     nodeSel.attr('transform', d=>`translate(${d.x||0},${d.y||0})`);
   });
 
-  sim.on('end', ()=> { document.getElementById('loading').style.display='none'; });
-  setTimeout(()=> document.getElementById('loading').style.display='none', 3000);
+  sim.on('end', ()=> { document.getElementById('loading').style.display='none'; fitView(); });
+  setTimeout(()=> { document.getElementById('loading').style.display='none'; fitView(); }, 3200);
 
   // store selections for highlight
   svg._links = linkSel;
   svg._nodes = nodeSel;
+  svg._nodeData = nodes;
+}
+
+// Zoom/pan so the whole graph fits the viewport with breathing room
+function fitView(){
+  if(!svg || !svg._nodeData || !svg._nodeData.length) return;
+  const wrap = document.getElementById('graph-wrap');
+  const W = wrap.clientWidth, H = wrap.clientHeight;
+  let x0=Infinity,y0=Infinity,x1=-Infinity,y1=-Infinity;
+  svg._nodeData.forEach(d=>{
+    if(d.x==null) return;
+    x0=Math.min(x0,d.x-d._r); y0=Math.min(y0,d.y-d._r);
+    x1=Math.max(x1,d.x+d._r); y1=Math.max(y1,d.y+d._r);
+  });
+  if(!isFinite(x0)) return;
+  const pad=60, gw=(x1-x0)||1, gh=(y1-y0)||1;
+  const scale=Math.min((W-pad*2)/gw, (H-pad*2)/gh, 1.2);
+  const tx=W/2-scale*(x0+x1)/2, ty=H/2-scale*(y0+y1)/2;
+  svg.transition().duration(600).call(
+    svg._zoom.transform, d3.zoomIdentity.translate(tx,ty).scale(scale)
+  );
 }
 
 function pick(id){
@@ -311,6 +350,7 @@ function clear(){
 function showEmpty(){
   document.getElementById('d-empty').style.display='flex';
   document.getElementById('d-content').style.display='none';
+  document.getElementById('connections').innerHTML='<div class="conn-empty">Select a node to see its connections</div>';
 }
 
 function showDetail(node){
@@ -345,6 +385,12 @@ function showDetail(node){
 
   const tacitEdges = [...outE,...inE].filter(e=>e.properties?.tacit_note);
 
+  // Connections render into their own top panel (beside Node Types)
+  const connEl = document.getElementById('connections');
+  connEl.innerHTML = (outE.length+inE.length)
+    ? `${outE.map(e=>edgeRow(e,'out')).join('')}${inE.map(e=>edgeRow(e,'in')).join('')}`
+    : `<div class="conn-empty">No connections</div>`;
+
   el.innerHTML = `
     <div style="margin-bottom:12px">
       <div class="d-type" style="background:${c}1a;color:${c}">${node.type.replace(/_/g,' ')}</div>
@@ -365,13 +411,6 @@ function showDetail(node){
         Tacit Knowledge
       </div>
       <div class="tacit-text">${esc(p.tacit)}</div>
-    </div>` : ''}
-
-    ${outE.length+inE.length ? `
-    <div class="d-section">
-      <div class="d-section-title">Connections (${outE.length+inE.length})</div>
-      ${outE.slice(0,8).map(e=>edgeRow(e,'out')).join('')}
-      ${inE.slice(0,6).map(e=>edgeRow(e,'in')).join('')}
     </div>` : ''}
 
     ${tacitEdges.length ? `
