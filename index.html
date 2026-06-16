@@ -31,6 +31,9 @@ header{background:var(--bg2);border-bottom:1px solid var(--border);padding:10px 
 .sb-block{padding:10px 12px;border-bottom:1px solid var(--border)}
 .vignette-text{font-size:11px;line-height:1.5;color:var(--muted)}
 .vignette-title{font-size:11px;font-weight:600;color:var(--accent);margin-bottom:5px}
+.vignette-bar{flex-basis:100%;width:100%;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;border-top:1px solid var(--border);margin-top:4px;padding-top:8px}
+.vignette-bar .vignette-title{margin-bottom:0;flex-shrink:0}
+.vignette-bar .vignette-text{flex:1;min-width:200px}
 
 /* GRAPH — 2/3 of the viewport */
 .graph-wrap{flex:2;position:relative;background:var(--bg);overflow:hidden;min-width:0}
@@ -84,7 +87,7 @@ header{background:var(--bg2);border-bottom:1px solid var(--border);padding:10px 
 /* PHONE — stack graph (2/3) on top, info panel (1/3) at the bottom */
 @media (max-width:700px){
   .main{flex-direction:column}
-  .graph-wrap{flex:2;min-height:0}
+  .graph-wrap{flex:1;min-height:0}
   .panel{flex:1;min-width:0;border-left:none;border-top:1px solid var(--border)}
 }
 </style>
@@ -100,6 +103,11 @@ header{background:var(--bg2);border-bottom:1px solid var(--border);padding:10px 
     <button class="pill" data-g="htg352">HTG352 · TMJ Replacement</button>
   </div>
   <div id="stats"></div>
+  <div class="vignette-bar">
+    <span class="sb-label" style="margin:0">Patient Vignette</span>
+    <span class="vignette-title" id="v-title"></span>
+    <span class="vignette-text" id="v-text"></span>
+  </div>
 </header>
 
 <div class="main">
@@ -122,11 +130,6 @@ header{background:var(--bg2);border-bottom:1px solid var(--border);padding:10px 
     </div>
 
     <div class="panel-body">
-      <div class="sb-block">
-        <div class="sb-label">Patient Vignette</div>
-        <div class="vignette-title" id="v-title"></div>
-        <div class="vignette-text" id="v-text"></div>
-      </div>
       <div class="detail-empty" id="d-empty">
         <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
           <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
